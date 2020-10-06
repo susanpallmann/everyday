@@ -43,7 +43,7 @@ $(document).ready(function() {
 	// Renders in DOM
 	ReactDOM.render(
 	    // Element
-	    r(Day("something"), {
+	    r(Day, {
 			day: "Wednesday"
 		}, null),
 	    document.getElementById('calendar')
