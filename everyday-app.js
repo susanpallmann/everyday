@@ -40,9 +40,6 @@ $(document).ready(function() {
 		}
 	}
 	
-	
-	function multiply(a, b = 1) 
-	
 	// Renders in DOM
 	ReactDOM.render(
 	    // Element
