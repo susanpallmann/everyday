@@ -32,7 +32,7 @@ $(document).ready(function() {
 	class Day extends React.Component {
 		render() {
 			return r('div', {
-				class: '${this.props.day}',
+				class: this.props.day,
 				valid: "something", // yes/no
 				filled: "something", // yes/no
 				mood: "something", // yes/no
