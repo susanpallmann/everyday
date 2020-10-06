@@ -27,6 +27,6 @@ $(document).ready(function() {
 
 	ReactDOM.render(
 	    e(Hello, {toWhat: 'World'}, null),
-	    $('#app')
+	    document.getElementById('app')
 	);
 });
