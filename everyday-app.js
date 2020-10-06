@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	
 	/* Shorthand notation to make life easier */
-	const e = React.createElement;
+	const r = React.createElement;
 	
 	
 	/* Just for my reference for now:
@@ -21,12 +21,12 @@ $(document).ready(function() {
 	
 	class Hello extends React.Component {
 		render() {
-			return e('h1', null, `Hello ${this.props.toWhat}`);
+			return r('h1', null, `Hello ${this.props.toWhat}`);
 		}
 	}
 
 	ReactDOM.render(
-	    e(Hello, {toWhat: 'World'}, null),
+	    r(Hello, {toWhat: 'World'}, null),
 	    document.getElementById('app')
 	);
 });
