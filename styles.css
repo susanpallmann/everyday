@@ -19,6 +19,8 @@ body {
 .day {
   min-height: 20px;
   min-width: 20px;
+  display: inline-block;
+  margin: 3px;
 }
 
 .day[valid="false"] {
