@@ -82,3 +82,4 @@ $(document).ready(function() {
 	    document.getElementById('calendar')
 	);*/
 });
+/* Magic Comment */
