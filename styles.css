@@ -30,16 +30,21 @@ body {
 }
 
 .day[valid="true"][filled="true"][mood="1"] {
+  background-color: var(--mood-1);
 }
 
 .day[valid="true"][filled="true"][mood="2"] {
+  background-color: var(--mood-2);
 }
 
 .day[valid="true"][filled="true"][mood="3"] {
+  background-color: var(--mood-3);
 }
 
 .day[valid="true"][filled="true"][mood="4"] {
+  background-color: var(--mood-4);
 }
 
 .day[valid="true"][filled="true"][mood="5"] {
+  background-color: var(--mood-5);
 }
