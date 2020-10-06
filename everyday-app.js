@@ -72,7 +72,7 @@ $(document).ready(function() {
 
 
 	ReactDOM.render(
-		{dayElements}, 
+		r("div", {dayElements}, null),
 		document.getElementById('calendar')
 	);
 	
