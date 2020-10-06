@@ -65,9 +65,9 @@ $(document).ready(function() {
 	
 	var dayElements = dayArray.map(day => r(Day, {
 			class: "day",
-			valid: day[valid],
-			filled: day[filled],
-			mood: day[mood]
+			valid: day['valid'],
+			filled: day['filled'],
+			mood: day['mood']
 		}, null));
 
 
