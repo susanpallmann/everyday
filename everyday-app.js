@@ -50,9 +50,9 @@ $(document).ready(function() {
 	    document.getElementById('calendar')
 	);
 	
-	ReactDOM.render(
+	/*ReactDOM.render(
 	    // Element
 	    r(Day(null), null, null),
 	    document.getElementById('calendar')
-	);
+	);*/
 });
