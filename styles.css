@@ -1,3 +1,45 @@
 body {
   font-family: "Open Sans", sans-serif;
 }
+
+:root {
+  --background: #102438;
+  --darker: #26435F;
+  --mood-1: #40C8C2;
+  --mood-2: #09A2AA;
+  --mood-3: #4C98CF;
+  --mood-4: #316DB3;
+  --mood-5: #506498;
+}
+
+#calendar {
+  background-color: var(--background);
+}
+
+.day {
+  min-height: 20px;
+  min-width: 20px;
+}
+
+.day[valid="false"] {
+  background-color: var(--background);
+}
+
+.day[valid="true"][filled="false"] {
+  background-color: var(--darker);
+}
+
+.day[valid="true"][filled="true"][mood="1"] {
+}
+
+.day[valid="true"][filled="true"][mood="2"] {
+}
+
+.day[valid="true"][filled="true"][mood="3"] {
+}
+
+.day[valid="true"][filled="true"][mood="4"] {
+}
+
+.day[valid="true"][filled="true"][mood="5"] {
+}
