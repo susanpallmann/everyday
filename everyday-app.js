@@ -29,10 +29,10 @@ $(document).ready(function() {
 	    document.getElementById('app')
 	);
 	
-	class Day extends React.Component(example = "nothing") {
+	class Day extends React.Component {
 		render() {
 			return r('div', {
-				class: example,
+				class: '${this.props.day}',
 				valid: "something", // yes/no
 				filled: "something", // yes/no
 				mood: "something", // yes/no
@@ -43,7 +43,9 @@ $(document).ready(function() {
 	// Renders in DOM
 	ReactDOM.render(
 	    // Element
-	    r(Day("something"), null, null),
+	    r(Day("something"), {
+			day: "Wednesday"
+		}, null),
 	    document.getElementById('calendar')
 	);
 	
