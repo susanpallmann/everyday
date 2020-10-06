@@ -64,20 +64,15 @@ $(document).ready(function() {
 	];
 	
 	var dayElements = dayArray.map(day => r(Day, {
-			class: "Day"
-			valid: dayArray[i][valid]
-			filled: dayArray[i][filled]
-			mood: dayArray[i][mood]
+			class: "day",
+			valid: day[valid],
+			filled: day[filled],
+			mood: day[mood]
 		}, null));
 
 
 	ReactDOM.render(
-		r(Day, {
-			class: "Day"
-			valid: day[valid]
-			filled: day[filled]
-			mood: day[mood]
-		}, null), 
+		r(Day, null, dayElements), 
 		document.getElementById('calendar')
 	);
 	
