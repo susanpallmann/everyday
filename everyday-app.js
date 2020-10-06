@@ -17,7 +17,7 @@ $(document).ready(function() {
 	
 	class Hello extends React.Component {
 		render() {
-			return React.createElement('div', null, `Hello ${this.props.toWhat}`);
+			return React.createElement('h1', null, `Hello ${this.props.toWhat}`);
 		}
 	}
 
