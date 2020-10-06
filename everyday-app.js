@@ -32,20 +32,48 @@ $(document).ready(function() {
 	class Day extends React.Component {
 		render() {
 			return r('div', {
-				class: this.props.day,
-				valid: "something", // yes/no
-				filled: "something", // yes/no
-				mood: "something", // yes/no
+				class: this.props.class,
+				valid: this.props.valid,
+				filled: this.props.filled,
+				mood: this.props.mood,
 			});
 		}
 	}
 	
+	var dayArray = [
+		{
+			valid: "false",
+			filled: "false",
+			mood: null
+		},
+		{
+			valid: "true",
+			filled: "true",
+			mood: 5
+		},
+		{
+			valid: "true",
+			filled: "false",
+			mood: null
+		},
+		{
+			valid: "true",
+			filled: "true",
+			mood: 3
+		}
+	];
+	
 	// Renders in DOM
 	ReactDOM.render(
 	    // Element
-	    r(Day, {
-			day: "Wednesday"
-		}, null),
+		for (var i = 0; i < dayArray.length; i++) {
+	    	r(Day, {
+				class: "Day"
+				valid: dayArray[i][valid]
+				filled: dayArray[i][filled]
+				mood: dayArray[i][mood]
+			}, null),
+		}
 	    document.getElementById('calendar')
 	);
 	
