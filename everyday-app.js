@@ -63,12 +63,12 @@ $(document).ready(function() {
 		}
 	];
 	
-	var dayElements = dayArray.map(day => r(Day, {
+	var dayElements = dayArray.map(day => r(Day, null, {
 			class: "day",
 			valid: day['valid'],
 			filled: day['filled'],
 			mood: day['mood']
-		}, null));
+		}));
 
 
 	ReactDOM.render(
