@@ -68,7 +68,7 @@ $(document).ready(function() {
 			valid: day['valid'],
 			filled: day['filled'],
 			mood: day['mood']
-		}, day));
+		}));
 
 
 	ReactDOM.render(
