@@ -3,8 +3,8 @@ body {
 }
 
 :root {
-  --background: #26435F;
-  --darker: #102438;
+  --background: #102438;
+  --lighter: #26435F;
   --mood-1: #40C8C2;
   --mood-2: #09A2AA;
   --mood-3: #4C98CF;
@@ -28,7 +28,7 @@ body {
 }
 
 .day[valid="true"][filled="false"] {
-  background-color: var(--darker);
+  background-color: var(--lighter);
 }
 
 .day[valid="true"][filled="true"][mood="1"] {
