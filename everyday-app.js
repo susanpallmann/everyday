@@ -1,24 +1,28 @@
 $(document).ready(function() {
-	const e = React.createElement;
-
-	class LikeButton extends React.Component {
-  		constructor(props) {
-    		super(props);
-    		this.state = { liked: false };
-  		}
-
+	
+	/* Just for my reference for now:
+	
+	class Hello extends React.Component {
   		render() {
-    		if (this.state.liked) {
-      			return 'You liked this.';
-    		}
-
-   			return e(
-      			'button',
-      			{ onClick: () => this.setState({ liked: true }) },
-      			'Like'
-    		);
+    		return <div>Hello {this.props.toWhat}</div>;
   		}
 	}
+
+	ReactDOM.render(
+  		<Hello toWhat="World" />,
+  		document.getElementById('root')
+	);
+
+	*/
 	
-	const domContainer = document.querySelector('#like_button_container');ReactDOM.render(e(LikeButton), domContainer);
+	class Hello extends React.Component {
+		render() {
+			return React.createElement('div', null, `Hello ${this.props.toWhat}`);
+		}
+	}
+
+	ReactDOM.render(
+	    React.createElement(Hello, {toWhat: 'World'}, null),
+	    document.getElementById('app')
+	);
 });
