@@ -63,18 +63,22 @@ $(document).ready(function() {
 		}
 	];
 	
-	// Renders in DOM
+	var dayElements = dayArray.map(day => r(Day, {
+			class: "Day"
+			valid: dayArray[i][valid]
+			filled: dayArray[i][filled]
+			mood: dayArray[i][mood]
+		}, null));
+
+
 	ReactDOM.render(
-	    // Element
-		for (var i = 0; i < dayArray.length; i++) {
-	    	r(Day, {
-				class: "Day"
-				valid: dayArray[i][valid]
-				filled: dayArray[i][filled]
-				mood: dayArray[i][mood]
-			}, null),
-		}
-	    document.getElementById('calendar')
+		r(Day, {
+			class: "Day"
+			valid: day[valid]
+			filled: day[filled]
+			mood: day[mood]
+		}, null), 
+		document.getElementById('calendar')
 	);
 	
 	/*ReactDOM.render(
