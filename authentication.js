@@ -22,8 +22,10 @@ function logInUser(email, password) {
 function logOutUser() {
   firebase.auth().signOut().then(function() {
     // Sign-out successful.
+    return true;
   }).catch(function(error) {
     // An error happened.
+    return error;
   });
 }
 
@@ -43,14 +45,15 @@ function checkLogInStatus() {
 
 $(document).ready(function() {
     $("#log-in").submit(function(e){
-        console.log("this ran");
-        logInUser($('#log-in-email').val(), $('#log-in-password').val());
+        //console.log("this ran");
+        //logInUser($('#log-in-email').val(), $('#log-in-password').val());
+        console.log(logInUser($('#log-in-email').val(), $('#log-in-password').val()));
         e.preventDefault();
     });
   
     $("#sign-up").submit(function(e){
         console.log("this ran 2");
-        logInUser($('#sign-up-email').val(), $('#sign-up-password').val());
+        //createUser($('#sign-up-email').val(), $('#sign-up-password').val());
         e.preventDefault();
     });
 });
