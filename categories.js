@@ -1,10 +1,3 @@
-type:
-	range (productivity)
-	
-	number (caffeine, hours of sleep)
-	true/false (traffic, fight w/partner, exercise)
-	text (misc.)
-	
 var caffeine = {
 	key: "caffeine",
 	title: "Caffeine",
@@ -32,11 +25,11 @@ var water = {
 	quant: "cups"
 }
 
-var mood = {
-	key: "water",
-	title: "Water",
-	categ-icon: "local_drink",
-	icon: "local_drink"
+var aaaMood = {
+	key: "aaaMood",
+	title: "Mood",
+	categ-icon: "mood",
+	icon: "null"
 	type: "select",
 	options: [
 		"sentiment_very_dissatisfied",
