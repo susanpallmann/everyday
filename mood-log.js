@@ -11,36 +11,37 @@ function updateDay(date, data) {
     });    
 }
 
-function loadDay(date) {
-    firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-            // User is signed in.
-            let uid = user.uid;
-            var path = firebase.database().ref('users/' + uid + '/' + date);
-            path.on('value', function(snapshot) {
-                if (date) {
-                    let data = {};
-                    // Do something with this data, send it to React
-                    
-                    snapshot.forEach((child) => {
-                        let key = child.key;
-                        let value = child.val();
-                        // Do something with react
-                        data[key] = value;
-                    });
-                    $('#day-overview').attr('day', date)
-                    initializeDayButtons();
-                    populateDay(date, data);
-                } else {
-                }
-            });
-        } else {
-            // No user is signed in.
-        }
-    });  
-}
-
 $(document).ready(function() {
+    
+    function loadDay(date) {
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                // User is signed in.
+                let uid = user.uid;
+                var path = firebase.database().ref('users/' + uid + '/' + date);
+                path.on('value', function(snapshot) {
+                    if (date) {
+                        let data = {};
+                        // Do something with this data, send it to React
+
+                        snapshot.forEach((child) => {
+                            let key = child.key;
+                            let value = child.val();
+                            // Do something with react
+                            data[key] = value;
+                        });
+                        $('#day-overview').attr('day', date)
+                        initializeDayButtons();
+                        populateDay(date, data);
+                    } else {
+                    }
+                });
+            } else {
+                // No user is signed in.
+            }
+        });  
+    }
+    
     let date = new Date();
     let year = date.getFullYear();
     let month = date.getMonth() + 1;
