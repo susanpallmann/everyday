@@ -393,7 +393,7 @@ body[splash="true"] footer {
   text-align: center;
   max-width: 350px;
   width: 100%;
-  margin: 1em auto 2em;
+  margin: 1em auto 0;
 }
 
 /* Icons */
