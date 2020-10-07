@@ -47,6 +47,7 @@ footer nav#main-nav ul {
 
 footer nav#main-nav ul li {
   display: inline-block;
+  margin: 0 1em;
 }
 
 footer nav#main-nav ul li a {
