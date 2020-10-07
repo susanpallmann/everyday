@@ -32,7 +32,7 @@ $(document).ready(function() {
 		} else {
 			console.log("else");
 		}*/
-		e.preventDefault();
+		//e.preventDefault();
 	});
 });
 
