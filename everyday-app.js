@@ -31,7 +31,8 @@ function populateDataOverview(date, data) {
 		}
 		
 		loadDay(value) {
-			stopBubbling(this.event);
+			/*stopBubbling(this.event);*/
+			this.stopBubbling(this.event);
 			console.log("clicked!");
 			let oldDate = $('#day-overview').find('h2').text();
 			let dateSeparated = oldDate.split("-");
