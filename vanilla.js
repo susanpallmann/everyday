@@ -3,7 +3,7 @@ function loadNextDay() {
 	let oldDate = $('#day-overview').find('h2').text();
 	let dateSeparated = oldDate.split("-");
 	console.log(dateSeparated);
-	let dateActual = new Date(dateSeparated[0], dateSeparated[1] + 1, dateSeparated[2]);
+	let dateActual = new Date(parseInt(dateSeparated[0]), parseInt(dateSeparated[1]) - 1, parseInt(dateSeparated[2]));
 	console.log(dateActual);
 	let dateNext = dateActual.setDate(dateActual.getDate() + 1 );
 	let year = dateNext.getFullYear();
@@ -16,9 +16,10 @@ function loadPreviousDay() {
 	console.log("clicked!");
 	let oldDate = $('#day-overview').find('h2').text();
 	let dateSeparated = oldDate.split("-");
-	let dateActual = new Date(dateSeparated[0], dateSeparated[1] - 1, dateSeparated[2]);
+	console.log(dateSeparated);
+	let dateActual = new Date(parseInt(dateSeparated[0]), parseInt(dateSeparated[1]) - 1, parseInt(dateSeparated[2]));
 	console.log(dateActual);
-	let dateNext = dateActual.setDate(dateActual.getDate() + 1 );
+	let dateNext = dateActual.setDate(dateActual.getDate() - 1 );
 	let year = dateNext.getFullYear();
 	let month = dateNext.getMonth() + 1;
 	let day = dateNext.getDate();
