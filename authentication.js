@@ -1,25 +1,3 @@
-// Creates a new user in Firebase Authentication with provided email and password.
-function createUser(email, password) {
-  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // ...
-  });
-}
-
-// Logs in an existing user with Firebase Authentication given a provided email and password.
-function logInUser(email, password) {
-  firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // ...
-    console.log(errorCode + ' ' + errorMessage);
-    return errorMessage;
-  });
-}
-
 // Signs out an existing user from Firebase Authentication.
 function logOutUser() {
   firebase.auth().signOut().then(function() {
@@ -45,15 +23,24 @@ function checkLogInStatus() {
 
 $(document).ready(function() {
     $("#log-in").submit(function(e){
-        //console.log("this ran");
-        //logInUser($('#log-in-email').val(), $('#log-in-password').val());
-        console.log(logInUser($('#log-in-email').val(), $('#log-in-password').val()));
+        firebase.auth().signInWithEmailAndPassword($('#log-in-email').val(), $('#log-in-password').val()).catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // TODO: maybe convert to react idk man too many new things at once
+            $('#log-in').find('.error-message').text(errorMessage);
+        });
         e.preventDefault();
     });
   
     $("#sign-up").submit(function(e){
-        console.log("this ran 2");
-        //createUser($('#sign-up-email').val(), $('#sign-up-password').val());
+        firebase.auth().createUserWithEmailAndPassword($('#sign-up-email').val(), $('#sign-up-password').val()).catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // TODO: maybe convert to react idk man too many new things at once
+            $('#sign-up').find('.error-message').text(errorMessage);
+        });
         e.preventDefault();
     });
 });
