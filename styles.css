@@ -27,6 +27,16 @@ body {
   color: var(--text);
 }
 
+h2 {
+  font-weight: 500;
+}
+
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
 header {
   position: fixed;
   top: 0;
