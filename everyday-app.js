@@ -71,10 +71,10 @@ $(document).ready(function() {
 
 function getInside(type, value) {
 	if (type === "water") {
-	    value = parseInt(value);
+		value = parseInt(value);
 		console.log(value);
 		let waters = [];
-		for (var j; j < value; j++) {
+		for (i = 0; i < value; i++) {
 			console.log("our loop runs");
 			waters.push("something");
 		}
