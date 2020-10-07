@@ -19,17 +19,16 @@ function loadDay(date) {
             var path = firebase.database().ref('users/' + uid + '/' + date);
             path.on('value', function(snapshot) {
                 if (date) {
-                    let data = snapshot;
+                    let data = {};
                     // Do something with this data, send it to React
-                    populateDay(data);
                     
-                    //TODO: remove this or save elsewhere for future reference:
-                    /* snapshot.forEach((child) => {
+                    snapshot.forEach((child) => {
                         let key = child.key;
                         let value = child.val();
                         // Do something with react
-                        console.log(key + ': ' + value);
-                    }); */
+                        data[key] = value;
+                    });
+                    populateDay(data);
                 } else {
                 }
             });
