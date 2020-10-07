@@ -284,3 +284,9 @@ body[splash="true"] footer {
 .day[valid="true"][filled="true"][mood="5"] {
   background-color: var(--mood-5);
 }
+
+/* Icons */
+.icon-set .large-icon {
+  font-family: 'Material Icons';
+  -webkit-font-feature-settings: 'liga';
+}
