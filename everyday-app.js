@@ -31,7 +31,7 @@ function populateDataOverview(date, data) {
 	class DayOverview extends React.Component {
 		constructor(props) {
 			super(props);
-			this.handleClick = this.handleClick.bind(this);
+			/*this.handleClick = this.handleClick.bind(this);*/
 		}
 		
 		loadDay(value) {
