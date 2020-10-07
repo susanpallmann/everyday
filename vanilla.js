@@ -2,7 +2,7 @@ function initializeDayButtons() {
 	console.log("initialized");
 	$('.next-day').click(function(e) {
 		console.log("this ran");
-		/*let date = $('#day-overview').attr('day');
+		let date = $('#day-overview').attr('day');
 		console.log(date);
 		if (date !== "default") {
 			let dateSeparated = date.split("-");
@@ -11,7 +11,7 @@ function initializeDayButtons() {
 			loadDay(date);
 		} else {
 			console.log("else");
-		}*/
+		}
 		e.preventDefault();
 	});
 }
@@ -37,24 +37,6 @@ $(document).ready(function() {
 		$('#splash-sign-up').addClass('hide');
 		e.preventDefault();
 	});
-	
-	/*function initializeDayButtons() {
-		console.log("initialized");
-		$('.next-day').click(function(e) {
-			console.log("this ran");
-			/*let date = $('#day-overview').attr('day');
-			console.log(date);
-			if (date !== "default") {
-				let dateSeparated = date.split("-");
-				let dateActual = new Date(dateSeparated[0], dateSeparated[1] - 1, dateSeparated[2]);
-				console.log(dateActual);
-				loadDay(date);
-			} else {
-				console.log("else");
-			}*//*
-			e.preventDefault();
-		});
-	}*/
 });
 
 function appendError(element, message) {
