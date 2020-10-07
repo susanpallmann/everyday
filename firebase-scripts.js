@@ -1,4 +1,4 @@
-function updateDay(date, data) {
+function updateDay(date, data, callback) {
     var user = firebase.auth().currentUser;
 
     firebase.auth().onAuthStateChanged(function(user) {
@@ -7,11 +7,16 @@ function updateDay(date, data) {
             console.log('signed in');
             let uid = user.uid;
             var path = firebase.database().ref('users/' + uid + '/' + date);
-            path.update(data, function () { return "update successful"});
+            path.update(data, callback("complete"));
         } else {
             // No user is signed in.
+            callback("not signed in");
         }
-    });  
+    });
+}
+
+function sendCallbackMessage(string) {
+    console.log(string);
 }
 
 function loadDay(date) {
@@ -61,7 +66,7 @@ $(document).ready(function() {
         "sleep": 8
     }
     
-    console.log(updateDay(date, data));
+    console.log(updateDay(date, data, sendCallbackMessage));
     
     /*
     loadDay(date);
