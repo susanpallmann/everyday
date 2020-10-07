@@ -13,6 +13,8 @@
   --mood-5: #506498;
   --error-border: #F56D6D;
   --error-background: rgba(245, 109, 109, 0.35);
+  --dark-button-hover: #4C98CF;
+  --white: #fff; /* This looks stupid, but if I add "light mode" later I'll want an easy way to change this. */
 }
 
 body {
@@ -28,7 +30,7 @@ header {
   top: 0;
   width: 100%;
   text-align: center;
-  color: #fff;
+  color: var(--white);
 }
 
 footer {
@@ -36,7 +38,7 @@ footer {
   bottom: 0;
   width: 100%;
   text-align: center;
-  color: #fff;
+  color: var(--white);
 }
 
 footer nav#main-nav ul {
@@ -48,8 +50,15 @@ footer nav#main-nav ul li {
 }
 
 footer nav#main-nav ul li a {
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
+}
+
+
+footer nav#main-nav ul li a:focus,
+footer nav#main-nav ul li a:active,
+footer nav#main-nav ul li a:hover {
+  color: var(--accent);
 }
 
 .hide {
@@ -64,7 +73,7 @@ footer nav#main-nav ul li a {
 /* Errors */
 .error-message {
   border: 2px solid var(--error-border);
-  color: #fff;
+  color: var(--white);
   background-color: var(--error-background);
   padding: 0.2em;
 }
@@ -95,7 +104,7 @@ footer nav#main-nav ul li a {
 .button {
   display: inline-block;
   background-color: var(--accent);
-  color: #fff;
+  color: var(--white);
   font-family: "Raleway", sans-serif;
   padding: 1em;
   border: none;
@@ -126,7 +135,7 @@ footer nav#main-nav ul li a {
 input[type="text"], input[type="password"], input[type="number"] {
   background-color: var(--lighter);
   border: 2px solid var(--border);
-  color: #fff;
+  color: var(--white);
   outline: none;
   border-radius: 3px;
   padding: 0.5em;
@@ -160,7 +169,7 @@ body[splash="true"] footer {
 
 #splash-start {
   background-color: var(--accent);
-  color: #fff;
+  color: var(--white);
 }
 
 #splash-start .button {
@@ -177,7 +186,7 @@ body[splash="true"] footer {
 #splash-start .button:nth-child(2n):hover,
 #splash-start .button:nth-child(2n):focus,
 #splash-start .button:nth-child(2n):active {
-  background-color: #4C98CF;
+  background-color: var(--dark-button-hover);
 }
 
 #calendar {
