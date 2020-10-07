@@ -54,11 +54,15 @@ footer nav#main-nav ul li a {
   text-decoration: none;
 }
 
-
 footer nav#main-nav ul li a:focus,
 footer nav#main-nav ul li a:active,
 footer nav#main-nav ul li a:hover {
   color: var(--accent);
+}
+
+footer nav#main-nav ul li a i,
+footer nav#main-nav ul li a span {
+  vertical-align: middle;
 }
 
 .hide {
