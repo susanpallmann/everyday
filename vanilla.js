@@ -1,5 +1,6 @@
 function initializeButtons() {
-	$(document).on('click', '.next-day', function(e) {
+	console.log("buttons initialized");
+	$('.next--day').click(function(e) {
 		console.log("this ran");
 		/*let date = $('#day-overview').attr('day');
 		console.log(date);
@@ -12,7 +13,6 @@ function initializeButtons() {
 			console.log("else");
 		}*/
 		e.preventDefault();
-		e.stopPropogation();
 		console.log("test?");
 		//return false;
 	});
