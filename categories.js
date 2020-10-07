@@ -6,9 +6,6 @@ var caffeine = {
 	type: "number",
 	quant: "beverages"
 };
-$(document).ready(function() {
-	console.log(caffeine.icon);
-});
 var sleep = {
 	key: "sleep",
 	title: "Sleep",
