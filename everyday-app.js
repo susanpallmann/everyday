@@ -62,7 +62,7 @@ function populateDataOverview(date, data) {
     		}, r("span", {
       			href: "",
       			class: "previous-day",
-			onClick: /*() => { 
+			onClick: ""/*() => { 
 				stopBubbling(this.handleClick);
 				this.handleClick.loadDay(-1)
 			}*/
@@ -79,7 +79,7 @@ function populateDataOverview(date, data) {
     		}, r("span", {
       			href: "",
       			class: "next-day",
-			onClick: /*() => { 
+			onClick: ""/*() => { 
 				stopBubbling(this.handleClick);
 				this.handleClick.loadDay(1)
 			}*/
