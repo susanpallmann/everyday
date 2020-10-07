@@ -28,6 +28,7 @@ $(document).ready(function() {
             var errorMessage = error.message;
             // TODO: maybe convert to react idk man too many new things at once
             //$('#log-in').find('.error-message').text(errorMessage);
+            clearError($('#log-in'));
             appendError($('#log-in').find('.error-container'), errorMessage);
         });
         e.preventDefault();
@@ -40,6 +41,7 @@ $(document).ready(function() {
             var errorMessage = error.message;
             // TODO: maybe convert to react idk man too many new things at once
             //$('#sign-up').find('.error-container').text(errorMessage);
+            clearError($('#sign-up'));
             appendError($('#sign-up').find('.error-container'), errorMessage);
         });
         e.preventDefault();
