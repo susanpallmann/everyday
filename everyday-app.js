@@ -99,7 +99,7 @@ function populateDay(data) {
 				dataValue: this.props.dataValue,
 			}, r('h3', null, this.props.class),
 			   getInside(this.props.class, this.props.dataValue)
-			));
+			);
 		}
 	}
 	
