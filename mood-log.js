@@ -17,7 +17,7 @@ function loadDay(date) {
             // User is signed in.
             let uid = user.uid;
             var path = firebase.database().ref('users/' + uid + '/' + date);
-            path.on('value', function(snapshot) {
+            path.once('value', function(snapshot) {
                 if (date) {
                     let data = {};
                     // Do something with this data, send it to React
