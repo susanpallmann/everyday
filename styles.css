@@ -68,6 +68,8 @@ footer nav#main-nav ul li {
 footer nav#main-nav ul li a {
   color: var(--white);
   text-decoration: none;
+  height: 100%;
+  width: 100%;
 }
 
 footer nav#main-nav ul li.selected:after {
