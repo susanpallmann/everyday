@@ -3,7 +3,7 @@ function updateDay(date, data) {
         if (user) {
             // User is signed in.
             let uid = user.uid;
-            var path = firebase.database().ref('users/' + uid + date);
+            var path = firebase.database().ref('users/' + uid + '/' + date);
             path.push(data);
         } else {
             // No user is signed in.
