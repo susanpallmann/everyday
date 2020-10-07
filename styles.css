@@ -39,6 +39,19 @@ footer {
   color: #fff;
 }
 
+footer nav#main-nav ul {
+  list-style: none;
+}
+
+footer nav#main-nav ul li {
+  display: inline-block;
+}
+
+footer nav#main-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .hide {
   display: none;
 }
