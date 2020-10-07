@@ -33,7 +33,7 @@ body {
 input[type="text"], input[type="password"], input[type="number"] {
   background-color: var(--lighter);
   border: 2px solid var(--border);
-  color: var(--border);
+  color: #fff;
   outline: none;
   border-radius: 3px;
   padding: 0.2em;
