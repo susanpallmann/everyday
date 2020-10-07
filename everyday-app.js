@@ -100,7 +100,11 @@ function getInside(type, value) {
 	}
 }
 
-function populateDay(data) {
+function populateDay(date, data) {
+	ReactDOM.render(
+		r(date),
+		document.getElementById('date')
+	);
 	class Information extends React.Component {
 		render() {
 			return r('div', {
