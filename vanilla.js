@@ -23,7 +23,6 @@ $(document).ready(function() {
 		$('#splash-start').addClass('hide');
 		$('#splash-log-in').removeClass('hide');
 		$('#splash-sign-up').addClass('hide');
-		initializeButtons();
 		e.preventDefault();
 	});
 	
@@ -31,7 +30,6 @@ $(document).ready(function() {
 		$('#splash-start').addClass('hide');
 		$('#splash-log-in').addClass('hide');
 		$('#splash-sign-up').removeClass('hide');
-		initializeButtons();
 		e.preventDefault();
 	});
 	
@@ -39,7 +37,6 @@ $(document).ready(function() {
 		$('#splash-log-in').addClass('hide');
 		$('#splash-start').removeClass('hide');
 		$('#splash-sign-up').addClass('hide');
-		initializeButtons();
 		e.preventDefault();
 	});
 });
