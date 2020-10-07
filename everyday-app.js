@@ -84,9 +84,12 @@ function getInside(type, value) {
 		value = parseInt(value);
 		let waters = [];
 		for (var i; i < value; i++) {
-			waters.push(r('div', {class: "water large-icon"}, "water"));
+			waters.push(i);
 		}
-		return r('div', {class: "icon-set"}, waters);
+		let watersArray = waters.map(water => r("span", {
+			class: "water large-icon",
+		}));
+		return r('div', {class: "icon-set"}, watersArray);
 		break;
 	}
 }
