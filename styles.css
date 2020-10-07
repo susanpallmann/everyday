@@ -6,6 +6,7 @@
   --accent-1: #18B4BC;
   --accent-2: #40C8C2;
   --border: #B4DFF1;
+  --selected: #DD8FFF;
   --mood-1: #40C8C2;
   --mood-2: #09A2AA;
   --mood-3: #4C98CF;
@@ -60,11 +61,25 @@ footer nav#main-nav ul li {
   display: inline-block;
   margin: 0 1em;
   padding: 1em 0;
+  position: relative;
 }
 
 footer nav#main-nav ul li a {
   color: var(--white);
   text-decoration: none;
+}
+
+footer nav#main-nav ul li.selected:after {
+  position: absolute;
+  bottom: 0;
+  height: 3px;
+  content: "";
+  border-radius: 3px 0 3px 0;
+  background-color: var(--selected);
+}
+
+footer nav#main-nav ul li.selected a {
+  color: var(--selected);
 }
 
 footer nav#main-nav ul li a:focus,
