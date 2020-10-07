@@ -1,7 +1,7 @@
+/* Shorthand notation to make life easier */
+const r = React.createElement;
+
 $(document).ready(function() {
-	
-	/* Shorthand notation to make life easier */
-	const r = React.createElement;
 	
 	class Hello extends React.Component {
 		render() {
