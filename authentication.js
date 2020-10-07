@@ -15,6 +15,7 @@ function logInUser(email, password) {
     var errorCode = error.code;
     var errorMessage = error.message;
     // ...
+    return errorMessage;
   });
 }
 
@@ -22,10 +23,8 @@ function logInUser(email, password) {
 function logOutUser() {
   firebase.auth().signOut().then(function() {
     // Sign-out successful.
-    return true;
   }).catch(function(error) {
     // An error happened.
-    return error;
   });
 }
 
