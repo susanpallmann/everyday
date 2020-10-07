@@ -42,7 +42,8 @@ function checkLogInStatus() {
 }
 
 $(document).ready(function() {
-  $('#log-in-submit').click(function() {
-    console.log("this ran");
-  });
+    $("#log-in").submit(function(e){
+        console.log("this ran");
+        e.preventDefault();
+    });
 }
