@@ -289,4 +289,5 @@ body[splash="true"] footer {
 .icon-set .large-icon {
   font-family: 'Material Icons';
   -webkit-font-feature-settings: 'liga';
+  font-size: 48px;
 }
