@@ -345,6 +345,10 @@ body[splash="true"] footer {
 
 #date {
   position: absolute;
+  width: 100%;
+}
+
+#date h2 {
   margin: 0;
   text-align: center;
   width: 100%;
