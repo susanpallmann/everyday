@@ -334,13 +334,13 @@ body[splash="true"] footer {
 #day-overview .arrow-previous {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 1em;
 }
 
 #day-overview .arrow-next {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 1em;
 }
 
 #date {
