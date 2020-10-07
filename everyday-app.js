@@ -1,5 +1,5 @@
 /* Shorthand notation to make life easier */
-/*const r = React.createElement;
+const r = React.createElement;
 
 $(document).ready(function() {
 	
@@ -66,7 +66,7 @@ $(document).ready(function() {
 	    r(Day(null), null, null),
 	    document.getElementById('calendar')
 	);*/
-/*	
+	
 });
 
 function iconLookup(type) {
