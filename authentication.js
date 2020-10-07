@@ -27,7 +27,8 @@ $(document).ready(function() {
             var errorCode = error.code;
             var errorMessage = error.message;
             // TODO: maybe convert to react idk man too many new things at once
-            $('#log-in').find('.error-message').text(errorMessage);
+            //$('#log-in').find('.error-message').text(errorMessage);
+            appendError($('#log-in').find('.error-container'), errorMessage);
         });
         e.preventDefault();
     });
@@ -38,7 +39,8 @@ $(document).ready(function() {
             var errorCode = error.code;
             var errorMessage = error.message;
             // TODO: maybe convert to react idk man too many new things at once
-            $('#sign-up').find('.error-message').text(errorMessage);
+            //$('#sign-up').find('.error-container').text(errorMessage);
+            appendError($('#sign-up').find('.error-container'), errorMessage);
         });
         e.preventDefault();
     });
