@@ -13,6 +13,7 @@ function checkLogInStatus() {
         if (user) {
             // User is signed in.
             $('body').attr('splash', 'false');
+            
         } else {
             // No user is signed in.
             $('body').attr('splash', 'true');
