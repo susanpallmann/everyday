@@ -12,6 +12,8 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: "Raleway", sans-serif;
   background-color: var(--background);
   color: var(--text);
@@ -20,6 +22,7 @@ body {
 /* Forms */
 
 .button {
+  display: inline-block;
   background-color: var(--accent);
   color: #fff;
   font-family: "Raleway", sans-serif;
