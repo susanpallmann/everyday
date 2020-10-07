@@ -10,6 +10,8 @@
   --mood-3: #4C98CF;
   --mood-4: #316DB3;
   --mood-5: #506498;
+  --error-border: #F56D6D;
+  --error-background: rgba(245, 109, 109, 0.35);
 }
 
 body {
@@ -18,6 +20,20 @@ body {
   font-family: "Raleway", sans-serif;
   background-color: var(--background);
   color: var(--text);
+}
+
+/* Errors */
+.error-message {
+  border: 2px solid var(--error-border);
+  color: #fff;
+  background-color: var(--error-background);
+}
+
+.error-message:before {
+  display: inline-block;
+  content: "error";
+  font-family: 'Material Icons';
+  -webkit-font-feature-settings: 'liga';
 }
 
 /* Forms */
