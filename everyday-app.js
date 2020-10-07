@@ -97,9 +97,9 @@ function populateDay(data) {
 			return r('div', {
 				class: this.props.class + ' bubble',
 				dataValue: this.props.dataValue,
-			}, r('h3', null, this.props.class),
+			}, r('h3', null, this.props.class,
 			   getInside(this.props.class, this.props.dataValue)
-			);
+			));
 		}
 	}
 	
