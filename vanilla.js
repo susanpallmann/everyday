@@ -22,6 +22,7 @@ $(document).ready(function() {
 	
 	$('#next-day').click(function(e) {
 		let date = $('#day-overview').attr('day');
+		console.log(date);
 		if (date !== "default") {
 			let dateSeparated = date.split("-");
 			let dateActual = new Date(dateSeparated[0], dateSeparated[1] - 1, dateSeparated[2]);
