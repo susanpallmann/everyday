@@ -43,6 +43,11 @@ body {
 
 /* Forms */
 
+.bottom-buttons {
+  width: 100%;
+  display: flex;
+}
+
 .button {
   display: inline-block;
   background-color: var(--accent);
