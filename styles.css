@@ -94,6 +94,10 @@ footer nav#main-nav ul li a span {
   vertical-align: middle;
 }
 
+footer nav#main-nav ul li a span {
+  margin-right: 0.5em;
+}
+
 .hide {
   display: none;
 }
