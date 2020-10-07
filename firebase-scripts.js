@@ -26,7 +26,7 @@ function readDay(date) {
             let uid = user.uid;
             var path = firebase.database().ref('users/' + uid + '/' + date);
             path.once('value', function(snapshot) {
-                return "complete";
+                console.log("complete");
             });
         }
     });
