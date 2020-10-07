@@ -1,3 +1,21 @@
+function initializeDayButtons() {
+	console.log("initialized");
+	$('.next-day').click(function(e) {
+		console.log("this ran");
+		/*let date = $('#day-overview').attr('day');
+		console.log(date);
+		if (date !== "default") {
+			let dateSeparated = date.split("-");
+			let dateActual = new Date(dateSeparated[0], dateSeparated[1] - 1, dateSeparated[2]);
+			console.log(dateActual);
+			loadDay(date);
+		} else {
+			console.log("else");
+		}*/
+		e.preventDefault();
+	});
+}
+
 $(document).ready(function() {
 	$('.nav-log-in').click(function(e) {
 		$('#splash-start').addClass('hide');
@@ -20,7 +38,7 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 	
-	function initializeDayButtons() {
+	/*function initializeDayButtons() {
 		console.log("initialized");
 		$('.next-day').click(function(e) {
 			console.log("this ran");
@@ -33,10 +51,10 @@ $(document).ready(function() {
 				loadDay(date);
 			} else {
 				console.log("else");
-			}*/
+			}*//*
 			e.preventDefault();
 		});
-	}
+	}*/
 });
 
 function appendError(element, message) {
