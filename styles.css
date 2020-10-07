@@ -349,7 +349,7 @@ body[splash="true"] footer {
   font-weight: 500;
 }
 
-#day-overview .column.span12 {
+#day-overview {
   position: relative;
   padding-top: calc(1em + 1.5em);
 }
@@ -380,7 +380,7 @@ body[splash="true"] footer {
   right: 0;
 }
 
-#date h2 {
+#day-overview h2 {
   margin: 0;
   text-align: center;
   width: 100%;
