@@ -87,7 +87,7 @@ body {
 
 .button:hover,
 .button:active,
-.button:focus.
+.button:focus,
 .button:nth-child(2n):hover,
 .button:nth-child(2n):active,
 .button:nth-child(2n):focus {
