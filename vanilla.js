@@ -1,14 +1,17 @@
 function initializeDayButtons() {
 	console.log("initialized");
 	$('.next-day').click(function(e) {
-		console.log("this ran");
 		let date = $('#day-overview').attr('day');
-		console.log(date);
 		if (date !== "default") {
 			let dateSeparated = date.split("-");
 			let dateActual = new Date(dateSeparated[0], dateSeparated[1] - 1, dateSeparated[2]);
 			console.log(dateActual);
-			loadDay(date);
+			let dateNext = dateActual.setDate(dateActual.getDate() + 1 );
+			let year = dateNext.getFullYear();
+			let month = date.getMonth() + 1;
+    			let day = date.getDate();
+			let dateFormatted = year + '-' + month + '-' + day;
+			loadDay(dateFormatted);
 		} else {
 			console.log("else");
 		}
