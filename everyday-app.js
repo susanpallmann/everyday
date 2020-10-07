@@ -85,7 +85,7 @@ function getInside(type, value) {
 		console.log(value);
 		let waters = [];
 		for (var i; i < value; i++) {
-			waters.push(i);
+			waters.push("something");
 		}
 		console.log(waters);
 		let watersArray = waters.map(water => r("span", {
