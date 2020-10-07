@@ -1,7 +1,7 @@
 function updateDay(date, data) {
     let user = firebase.auth().currentUser;
-    let uid = user.uid;
-    var path = firebase.database().ref('users/' + uid + date);
+    //let uid = user.uid;
+    var path = firebase.database().ref('users/' + user + date);
     path.push(data)
 }
 
