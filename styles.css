@@ -290,4 +290,5 @@ body[splash="true"] footer {
   font-family: 'Material Icons';
   -webkit-font-feature-settings: 'liga';
   font-size: 48px;
+  display: inline-block;
 }
