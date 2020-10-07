@@ -3,6 +3,7 @@
   --lighter: #26435F;
   --text: #DDDDDD;
   --accent: #09A2AA;
+  --accent-2: #40C8C2;
   --border: #B4DFF1;
   --mood-1: #40C8C2;
   --mood-2: #09A2AA;
@@ -31,6 +32,14 @@ body {
   outline: none;
   font-size: 1em;
   font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+  background-color: var(--accent-2);
 }
 
 input[type="text"], input[type="password"], input[type="number"] {
