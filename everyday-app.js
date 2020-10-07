@@ -72,16 +72,13 @@ $(document).ready(function() {
 function getInside(type, value) {
 	if (type === "water") {
 		value = parseInt(value);
-		console.log(value);
 		let waters = [];
 		for (i = 0; i < value; i++) {
-			console.log("our loop runs");
-			waters.push("something");
+			waters.push(i);
 		}
-		console.log(waters);
 		let watersArray = waters.map(water => r("span", {
 			class: "water large-icon"
-		}));
+		}, "water"));
 		return r('div', {class: "icon-set"}, watersArray);
 	} else {
 		return r('h1', null, 'Hello');
