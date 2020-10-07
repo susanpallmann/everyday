@@ -9,7 +9,7 @@
 /* 'Discount Bootstrap' Responsive Grid (Mobile First) */
 .container {
   margin:auto;
-  max-width: 1024px;
+  max-width: 800px;
 }
 .container-fluid {
   width: 100%;
@@ -113,7 +113,7 @@
   }
 }
 /* Major Breakpoint || Desktop & Up */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 800px) {
   .column {
   }
   .column.span1 {
@@ -193,7 +193,7 @@ main .container {
     padding: 0 1em 0 1em;
   }
 }
-@media only screen and (min-width: 1056px) {
+@media only screen and (min-width: 832px) {
   .column {
     padding: 0 0.5em 0 0.5em;
   }
