@@ -64,7 +64,7 @@ input[type="text"], input[type="password"], input[type="number"] {
   color: #fff;
   outline: none;
   border-radius: 3px;
-  padding: 0.2em;
+  padding: 0.5em;
   font-size: 1em;
   font-family: "Raleway", sans-serif;
 }
