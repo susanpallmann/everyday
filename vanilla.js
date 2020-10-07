@@ -26,7 +26,7 @@ function startListener() {
 		readDay(dateFormatted, populateDataOverview);
 		e.preventDefault();
 	});
-});
+}
 
 function loadNextDay(e) {
 	console.log("clicked!");
