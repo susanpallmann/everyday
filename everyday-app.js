@@ -81,7 +81,7 @@ function populateDay(data) {
 				} else {
 					('p', null, "it was not mood")
 				}
-			));
+			);
 		}
 	}
 	
