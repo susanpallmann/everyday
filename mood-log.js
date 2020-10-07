@@ -16,9 +16,9 @@ function loadDay(date) {
             snapshot.forEach((child) => {
                 let key = child.key;
                 let value = child.val();
+                // Do something with react
             }
         } else {
-            chooseRandomAvatar(chosenAvatar);
         }
     });
 }
