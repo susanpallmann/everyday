@@ -54,6 +54,8 @@ body {
   flex-direction: row;
   position: absolute;
   bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .button {
@@ -89,6 +91,7 @@ input[type="text"], input[type="password"], input[type="number"] {
   font-family: "Raleway", sans-serif;
   width: 100%;
   max-width: 350px;
+  box-sizing: border-box;
 }
 
 /* Splash */
