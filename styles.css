@@ -83,6 +83,20 @@ input[type="text"], input[type="password"], input[type="number"] {
   width: 100%:
 }
 
+/* Splash */
+#splash-start {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+#splash-start .button {
+  background-color: var(--background);
+}
+
+#splash-start .button:nth-child(2n) {
+  background-color: var(--lighter);
+}
+
 #calendar {
   background-color: var(--background);
 }
