@@ -20,3 +20,12 @@ firebase.auth().signOut().then(function() {
 }).catch(function(error) {
   // An error happened.
 });
+
+// Observes to determine if user is logged in or not.
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+  } else {
+    // No user is signed in.
+  }
+});
