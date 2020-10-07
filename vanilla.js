@@ -1,18 +1,3 @@
-function loadNextDay() {
-	console.log("clicked!");
-	let oldDate = $('#day-overview').find('h2').text();
-	let dateSeparated = oldDate.split("-");
-	console.log(dateSeparated);
-	let dateActual = new Date(parseInt(dateSeparated[0]), parseInt(dateSeparated[1]) - 1, parseInt(dateSeparated[2]));
-	let dateNext = dateActual.setDate(dateActual.getDate() + 1 );
-	let dateIntermediate = new Date(dateNext);
-	console.log(dateIntermediate);
-	let year = dateIntermediate.getFullYear();
-	let month = dateIntermediate.getMonth() + 1;
-	let day = dateIntermediate.getDate();
-	let dateFormatted = year + '-' + month + '-' + day;
-	readDay(dateFormatted, populateDataOverview);
-}
 function loadPreviousDay() {
 	console.log("clicked!");
 	let oldDate = $('#day-overview').find('h2').text();
@@ -29,6 +14,21 @@ function loadPreviousDay() {
 	readDay(dateFormatted, populateDataOverview);
 }
 
+function loadNextDay() {
+	console.log("clicked!");
+	let oldDate = $('#day-overview').find('h2').text();
+	let dateSeparated = oldDate.split("-");
+	console.log(dateSeparated);
+	let dateActual = new Date(parseInt(dateSeparated[0]), parseInt(dateSeparated[1]) - 1, parseInt(dateSeparated[2]));
+	let dateNext = dateActual.setDate(dateActual.getDate() + 1 );
+	let dateIntermediate = new Date(dateNext);
+	console.log(dateIntermediate);
+	let year = dateIntermediate.getFullYear();
+	let month = dateIntermediate.getMonth() + 1;
+	let day = dateIntermediate.getDate();
+	let dateFormatted = year + '-' + month + '-' + day;
+	readDay(dateFormatted, populateDataOverview);
+}
 /*function initializeDayButtons() {
 	console.log("initialized");
 	$('.next-day').click(function(e) {
