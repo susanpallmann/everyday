@@ -17,7 +17,7 @@ function loadDay(date) {
                 let key = child.key;
                 let value = child.val();
                 // Do something with react
-            }
+            });
         } else {
         }
     });
