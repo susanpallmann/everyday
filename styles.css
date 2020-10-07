@@ -27,6 +27,7 @@ body {
   border: 2px solid var(--error-border);
   color: #fff;
   background-color: var(--error-background);
+  padding: 0.2em;
 }
 
 .error-message:before {
@@ -37,6 +38,7 @@ body {
   color: var(--error-border);
   font-size: 18px;
   vertical-align: middle;
+  margin-right: 0.5em;
 }
 
 /* Forms */
