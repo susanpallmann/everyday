@@ -22,10 +22,6 @@ body {
   color: var(--text);
 }
 
-.column {
-  position: relative;
-}
-
 /* Errors */
 .error-message {
   border: 2px solid var(--error-border);
@@ -93,6 +89,7 @@ input[type="text"], input[type="password"], input[type="number"] {
 #splash-start {
   background-color: var(--accent);
   color: #fff;
+  position: relative;
 }
 
 #splash-start .button {
