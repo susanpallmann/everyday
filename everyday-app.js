@@ -102,7 +102,7 @@ function getInside(type, value) {
 
 function populateDay(date, data) {
 	ReactDOM.render(
-		r(date),
+		r("h2", null, date),
 		document.getElementById('date')
 	);
 	class Information extends React.Component {
