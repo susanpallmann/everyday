@@ -22,6 +22,11 @@ body {
   color: var(--text);
 }
 
+.has-buttons .column.span12 {
+  height: 100vh;
+  position: relative;
+}
+
 /* Errors */
 .error-message {
   border: 2px solid var(--error-border);
