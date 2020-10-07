@@ -68,4 +68,26 @@ $(document).ready(function() {
 	);*/
 	
 });
+
+function populateDay(data) {
+	class Information extends React.Component {
+		render() {
+			return r('div', {
+				class: this.props.class,
+				dataValue: this.props.dataValue,
+			});
+		}
+	}
+	
+	var dataEntries = Object.entries(data);
+	var dataElements = dataEntries.map(property => r(Information, {
+			class: property[0],
+			dataValue: property[1],
+	}));
+	
+	ReactDOM.render(
+		r("div", null, dataElements),
+		document.getElementById('day-info')
+	);
+}
 /* Magic Comment | */
