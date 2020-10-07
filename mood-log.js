@@ -29,7 +29,6 @@ function loadDay(date) {
                         data[key] = value;
                     });
                     $('#day-overview').attr('day', date);
-                    initializeDayButtons();
                     populateDay(date, data);
                 } else {
                 }
