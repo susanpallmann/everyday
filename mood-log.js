@@ -28,7 +28,7 @@ function loadDay(date) {
                         // Do something with react
                         data[key] = value;
                     });
-                    populateDay(data);
+                    populateDay(date, data);
                 } else {
                 }
             });
