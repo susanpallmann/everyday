@@ -19,8 +19,8 @@ function populateDataOverview(date, data) {
 	
 	var originalData = data;
 	var dataElements = Object.entries(originalData).map(([key,value])=> r(DayOverviewBubble, {
-			class: key,
-			dataValue: value.toString(),
+		class: key,
+		dataValue: value.toString(),
 	}));
 	
 	class DayOverview extends React.Component {
@@ -65,7 +65,7 @@ function populateDataOverview(date, data) {
 		
 	}
 	ReactDOM.render(
-		r("DayOverview", null),
+		r(DayOverview, null),
 		document.getElementById('day-overview')
 	);
 }
