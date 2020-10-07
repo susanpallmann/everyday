@@ -8,7 +8,7 @@ function updateDay(date, data) {
 function loadDay(date) {
     let user = firebase.auth().currentUser;
     let uid = user.uid;
-    var path = firebase.database().ref('users/' + uid + date);
+    var path = firebase.database().ref('users/' + uid + '/' + date);
     
     path.once('value', function(snapshot) {
         var date = snapshot.val();
