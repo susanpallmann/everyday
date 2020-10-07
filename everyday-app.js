@@ -35,7 +35,7 @@ function populateDataOverview(date, data) {
     		}, r("a", {
       			href: "",
       			class: "previous-day",
-			onClick: () => {loadPreviousDay(e)}
+			onClick: () => {this.loadPreviousDay(e)}
 				
     		}, r("span", {
       			class: "material-icons"
@@ -49,7 +49,7 @@ function populateDataOverview(date, data) {
     		}, r("a", {
       			href: "",
       			class: "next-day",
-			onClick: () => {loadNextDay(e)}
+			onClick: () => {this.loadNextDay(e)}
 				
     		}, r("span", {
       			class: "material-icons"
