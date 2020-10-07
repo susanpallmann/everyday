@@ -126,5 +126,6 @@ function populateDay(date, data) {
 		r("div", null, dataElements),
 		document.getElementById('day-info')
 	);
+	initializeDayButtons();
 }
 /* Magic Comment | */
