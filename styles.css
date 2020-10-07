@@ -1,5 +1,6 @@
 :root {
   --background: #102438;
+  --lighter-ish: #1E3852;
   --lighter: #26435F;
   --text: #DDDDDD;
   --accent: #09A2AA;
@@ -283,6 +284,17 @@ body[splash="true"] footer {
 
 .day[valid="true"][filled="true"][mood="5"] {
   background-color: var(--mood-5);
+}
+
+/* Bubbles */
+.bubble {
+  background-color: var(--lighter-ish);
+  border-radius: 10px;
+}
+
+.bubble h3 {
+  background-color: var(--lighter);
+  border-radius: 10px 10px 0px 0px;
 }
 
 /* Icons */
