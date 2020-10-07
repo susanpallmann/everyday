@@ -26,6 +26,15 @@ body {
   outline: none;
 }
 
+input[type="text"], input[type="password"], input[type="number"] {
+	border: 2px solid var(--text);
+	outline: none;
+	border-radius: 3px;
+	padding: 0.2em;
+	font-size: 1em;
+	font-family: "Raleway", sans-serif;
+}
+
 #calendar {
   background-color: var(--background);
 }
