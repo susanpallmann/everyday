@@ -29,6 +29,9 @@ function startListener() {
 }
 
 function loadNextDay(e) {
+	e.preventDefault();
+	e.stopPropagation();
+  	e.nativeEvent.stopImmediatePropagation();
 	console.log("clicked!");
 	let oldDate = $('#day-overview').find('h2').text();
 	let dateSeparated = date.split("-");
@@ -39,11 +42,11 @@ function loadNextDay(e) {
 	let day = dateNext.getDate();
 	let dateFormatted = year + '-' + month + '-' + day;
 	readDay(dateFormatted, populateDataOverview);
+}
+function loadPreviousDay(e) {
 	e.preventDefault();
 	e.stopPropagation();
   	e.nativeEvent.stopImmediatePropagation();
-}
-function loadPreviousDay(e) {
 	console.log("clicked!");
 	let oldDate = $('#day-overview').find('h2').text();
 	let dateSeparated = date.split("-");
@@ -54,9 +57,6 @@ function loadPreviousDay(e) {
 	let day = dateNext.getDate();
 	let dateFormatted = year + '-' + month + '-' + day;
 	readDay(dateFormatted, populateDataOverview);
-	e.preventDefault();
-	e.stopPropagation();
-  	e.nativeEvent.stopImmediatePropagation();
 }
 
 /*function initializeDayButtons() {
