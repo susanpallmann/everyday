@@ -26,7 +26,19 @@ function readDay(date, callback) {
             let uid = user.uid;
             var path = firebase.database().ref('users/' + uid + '/' + date);
             path.once('value', function(snapshot) {
-                callback();
+                if (date) {
+                    let data = {};
+                    // Do something with this data, send it to React
+                    snapshot.forEach((child) => {
+                        let key = child.key;
+                        let value = child.val();
+                        // Do something with react
+                        data[key] = value;
+                    });
+                    callback(date, data);
+                } else {
+                    callback(null, null);
+                }
             });
         }
     });
@@ -77,7 +89,7 @@ $(document).ready(function() {
     };
     
     console.log(updateDay(date, data, sendCallbackMessage));
-    readDay(date, function() {console.log("this is complete");});
+    readDay(date, populateDataOverview;);
     /*
     loadDay(date);
     */
