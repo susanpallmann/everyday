@@ -4,6 +4,71 @@ const r = React.createElement;
 $(document).ready(function() {	
 });
 
+
+function populateDataOverview(date, data) {
+	class DayOverviewBubble extends React.Component {
+		render() {
+			return r('div', {
+				class: this.props.class + ' bubble',
+				dataValue: this.props.dataValue,
+			}, r('h3', null, this.props.class),
+			   r('p', null, 'You logged "' + this.props.dataValue + '" for ' + this.props.class[this.props.data] + '.')
+			);
+		}
+	}
+	
+	var dataElements = data.map(dataElement => r(DayOverviewBubble, {
+			class: dataElement[0],
+			dataValue: dataElement[1],
+	}));
+	
+	class DayOverview extends React.Component {
+		
+		render() {
+			return r("div", {
+      			id: "day-overview"
+				
+    		}, r("div", {
+      			class: "arrow-previous"
+				
+    		}, r("a", {
+      			href: "",
+      			class: "previous-day"
+				
+    		}, r("span", {
+      			class: "material-icons"
+    			}, "chevron_left"))), 
+					 
+			   r("h2", null, date), 
+					 
+			   r("div", {
+      			class: "arrow-next"
+				
+    		}, r("a", {
+      			href: "",
+      			class: "next-day"
+				
+    		}, r("span", {
+      			class: "material-icons"
+    			}, "chevron_right"))), 
+					 
+			   r("p", null, "Here's an overview of your log for this day."), 
+					 
+			   r("div", {
+      			id: "day-info"
+				},
+				dataElements
+			   )
+			);
+		}
+		
+	}
+	ReactDOM.render(
+		r("DayOverview", null),
+		document.getElementById('day-overview')
+	);
+}
+
 function iconLookup(type) {
 	switch(type) {
 		case "water":
