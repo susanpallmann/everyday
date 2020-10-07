@@ -20,10 +20,7 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 	
-});
-
-function initializeDayNav() {
-	$('#next-day').click(function(e) {
+	$('.next-day').click(function(e) {
 		console.log("this ran");
 		let date = $('#day-overview').attr('day');
 		console.log(date);
@@ -37,7 +34,7 @@ function initializeDayNav() {
 		}
 		e.preventDefault();
 	});
-}
+});
 
 function appendError(element, message) {
 	element.append('<p class="error-message">' + message + '</p>');
