@@ -47,4 +47,10 @@ $(document).ready(function() {
         logInUser($('#log-in-email').val(), $('#log-in-password').val());
         e.preventDefault();
     });
+  
+    $("#sign-up").submit(function(e){
+        console.log("this ran 2");
+        logInUser($('#sign-up-email').val(), $('#sign-up-password').val());
+        e.preventDefault();
+    });
 });
