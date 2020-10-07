@@ -23,9 +23,9 @@ function populateDataOverview(date, data) {
 		dataValue: value.toString(),
 	}));
 	
-	function stopBubbling(evt) {
-		evt.stopPropagation();
-    		evt.cancelBubble = true;
+	function stopBubbling(e) {
+		e.stopPropagation();
+    		e.cancelBubble = true;
 	}
 	
 	class DayOverview extends React.Component {
@@ -58,8 +58,10 @@ function populateDataOverview(date, data) {
     		}, r("span", {
       			href: "",
       			class: "previous-day",
-			onClick: () => { this.loadDay(-1);
-				       stopBubbling(this.event);}
+			onClick: () => { 
+				stopBubbling(this.event);
+				this.loadDay(-1)
+			}
 				
     		}, r("span", {
       			class: "material-icons"
@@ -73,8 +75,10 @@ function populateDataOverview(date, data) {
     		}, r("span", {
       			href: "",
       			class: "next-day",
-			onClick: () => { this.loadDay(1);
-				       stopBubbling(this.event);}
+			onClick: () => { 
+				stopBubbling(this.event);
+				this.loadDay(1)
+			}
 				
     		}, r("span", {
       			class: "material-icons"
