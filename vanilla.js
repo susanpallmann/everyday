@@ -20,7 +20,7 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 	
-	$(document).on('click','.next-day',function(e) {
+	$(document).on('click', '.next-day', function(e) {
 		console.log("this ran");
 		/*let date = $('#day-overview').attr('day');
 		console.log(date);
@@ -33,6 +33,7 @@ $(document).ready(function() {
 			console.log("else");
 		}*/
 		e.preventDefault();
+		e.stopPropogation();
 		console.log("test?");
 		//return false;
 	});
