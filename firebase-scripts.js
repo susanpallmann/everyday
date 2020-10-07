@@ -4,19 +4,19 @@ function updateDay(date, data, callback) {
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             // User is signed in.
-            console.log('signed in');
             let uid = user.uid;
             var path = firebase.database().ref('users/' + uid + '/' + date);
-            path.update(data, callback("complete"));
+            path.update(data, callback(true));
         } else {
             // No user is signed in.
-            callback("not signed in");
+            callback(false);
         }
     });
 }
 
 function sendCallbackMessage(string) {
-    console.log(string);
+    /*console.log(string);*/
+    return string;
 }
 
 function loadDay(date) {
