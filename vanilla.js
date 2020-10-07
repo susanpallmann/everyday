@@ -11,13 +11,11 @@ function initializeDayButtons() {
 			let month = dateNext.getMonth() + 1;
     			let day = dateNext.getDate();
 			let dateFormatted = year + '-' + month + '-' + day;
-			loadDay(dateFormatted);
+			$('#day-overview').attr('day', dateFormatted);
 		} else {
 			console.log("else");
 		}
 		e.preventDefault();
-		e.stopPropagation();
-		return false;
 	});
 	
 	$('.previous-day').click(function(e) {
@@ -31,7 +29,7 @@ function initializeDayButtons() {
 			let month = dateNext.getMonth() + 1;
     			let day = dateNext.getDate();
 			let dateFormatted = year + '-' + month + '-' + day;
-			loadDay(dateFormatted);
+			$('#day-overview').attr('day', dateFormatted);
 		} else {
 			console.log("else");
 		}
