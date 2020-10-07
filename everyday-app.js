@@ -17,7 +17,8 @@ function populateDataOverview(date, data) {
 		}
 	}
 	
-	var dataElements = data.map(dataElement => r(DayOverviewBubble, {
+	var originalData = data;
+	var dataElements = originalData.map(dataElement => r(DayOverviewBubble, {
 			class: dataElement[0],
 			dataValue: dataElement[1],
 	}));
