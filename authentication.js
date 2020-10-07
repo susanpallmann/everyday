@@ -27,6 +27,8 @@ function logOutUser {
   });
 }
 
+/* Note: this part is called in everyday-app.js because it's used with React to change the webpage to/from the splash screen.
+
 // Observes to determine if user is logged in or not.
 function checkLogInStatus() {
   firebase.auth().onAuthStateChanged(function(user) {
@@ -37,3 +39,4 @@ function checkLogInStatus() {
     }
   });
 }
+*/
