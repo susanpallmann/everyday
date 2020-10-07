@@ -26,6 +26,8 @@ body {
   padding: 1em;
   border: none;
   outline: none;
+  font-size: 1em;
+  font-weight: 600;
 }
 
 input[type="text"], input[type="password"], input[type="number"] {
