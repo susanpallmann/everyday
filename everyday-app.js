@@ -82,18 +82,5 @@ $(document).ready(function() {
 	    document.getElementById('calendar')
 	);*/
 	
-	
-	
-	// Observes to determine if user is logged in or not.
-	firebase.auth().onAuthStateChanged(function(user) {
- 		if (user) {
-    		// User is signed in.
-			console.log("test");
-  		} else {
-    		// No user is signed in.
-			console.log("test2");
-  		}
-	});
-	
 });
 /* Magic Comment | */
