@@ -113,8 +113,16 @@ body[splash="false"] #splash {
   display: none;
 }
 
+body[splash="false"] main {
+  display: block;
+}
+
 body[splash="true"] #splash {
   display: block;
+}
+
+body[splash="true"] main {
+  display: none;
 }
 
 #splash-start {
