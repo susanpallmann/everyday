@@ -32,7 +32,7 @@ function populateDataOverview(date, data) {
     		}, r("div", {
       			class: "arrow-previous"
 				
-    		}, r("a", {
+    		}, r("span", {
       			href: "",
       			class: "previous-day",
 			onClick: e => {this.loadPreviousDay(e)}
@@ -46,7 +46,7 @@ function populateDataOverview(date, data) {
 			   r("div", {
       			class: "arrow-next"
 				
-    		}, r("a", {
+    		}, r("span", {
       			href: "",
       			class: "next-day",
 			onClick: e => {this.loadNextDay(e)}
