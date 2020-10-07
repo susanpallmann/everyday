@@ -44,6 +44,7 @@ function checkLogInStatus() {
 $(document).ready(function() {
     $("#log-in").submit(function(e){
         console.log("this ran");
+        logInUser($('#log-in-email').val(), $('#log-in-password').val());
         e.preventDefault();
     });
 });
