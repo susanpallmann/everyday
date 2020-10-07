@@ -70,16 +70,16 @@ $(document).ready(function() {
 });
 
 function getInside(type, value) {
-	if (type === "water") {
+	if (type === "water" || type === "coffee") {
 		value = parseInt(value);
-		let waters = [];
+		let types = [];
 		for (i = 0; i < value; i++) {
-			waters.push(i);
+			types.push(i);
 		}
-		let watersArray = waters.map(water => r("span", {
-			class: "water large-icon"
-		}, "water"));
-		return r('div', {class: "icon-set"}, watersArray);
+		let typesArray = types.map(singleType => r("span", {
+			class: type + " large-icon"
+		}, type));
+		return r('div', {class: "icon-set"}, typesArray);
 	} else {
 		return r('h1', null, 'Hello');
 	}
