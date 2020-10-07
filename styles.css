@@ -290,13 +290,13 @@ body[splash="true"] footer {
 .bubble {
   background-color: var(--lighter-ish);
   border-radius: 10px;
+  padding: 1em;
 }
 
 .bubble h3 {
   background-color: var(--lighter);
   border-radius: 10px 10px 0px 0px;
-  margin: 0;
-  padding: 0.5em;
+  margin: -1em -1em 0 -1em;
   text-transform: uppercase;
   font-weight: 500;
 }
