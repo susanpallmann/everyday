@@ -313,4 +313,5 @@ body[splash="true"] footer {
   -webkit-font-feature-settings: 'liga';
   font-size: 48px;
   display: inline-block;
+  color: var(--accent);
 }
