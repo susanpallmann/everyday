@@ -332,6 +332,10 @@ body[splash="true"] footer {
   padding-top: calc(1em + 1.5em);
 }
 
+#day-overview a {
+  color: #fff;
+}
+
 #day-overview .arrow-previous {
   position: absolute;
   top: 0;
