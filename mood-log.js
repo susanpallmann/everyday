@@ -1,8 +1,14 @@
 function updateDay(date, data) {
-    let user = firebase.auth().currentUser;
-    let uid = user.uid;
-    var path = firebase.database().ref('users/' + uid + date);
-    path.push(data);
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            // User is signed in.
+            let uid = user.uid;
+            var path = firebase.database().ref('users/' + uid + date);
+            path.push(data);
+        } else {
+            // No user is signed in.
+        }
+    });    
 }
 
 function loadDay(date) {
