@@ -23,12 +23,12 @@ function populateDataOverview(date, data) {
 		dataValue: value.toString(),
 	}));
 	
+	function stopBubbling(evt) {
+		evt.stopPropagation();
+    		evt.cancelBubble = true;
+	}
+	
 	class DayOverview extends React.Component {
-		
-		stopBubbling(evt) {
-			evt.stopPropagation();
-    			evt.cancelBubble = true;
-		}
 		
 		loadDay(value) {
 			/*stopBubbling(this.event);*/
@@ -59,7 +59,7 @@ function populateDataOverview(date, data) {
       			href: "",
       			class: "previous-day",
 			onClick: () => { this.loadDay(-1);
-				       this.stopBubbling(this.event);}
+				       stopBubbling(this.event);}
 				
     		}, r("span", {
       			class: "material-icons"
@@ -74,7 +74,7 @@ function populateDataOverview(date, data) {
       			href: "",
       			class: "next-day",
 			onClick: () => { this.loadDay(1);
-				       this.stopBubbling(this.event);}
+				       stopBubbling(this.event);}
 				
     		}, r("span", {
       			class: "material-icons"
