@@ -76,11 +76,7 @@ function populateDay(data) {
 				class: this.props.class + ' bubble',
 				dataValue: this.props.dataValue,
 			}, r('h3', null, this.props.class),
-			    if (this.props.class === "mood") { 
-					r('p', null, "it was mood")
-				} else {
-					('p', null, "it was not mood")
-				}
+			   r('p', null, "it was mood")
 			);
 		}
 	}
