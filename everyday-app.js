@@ -80,6 +80,7 @@ function iconLookup(type) {
 		default:
 			return "all-inclusive";
 		break;
+	}
 }
 
 function getInside(type, value) {
