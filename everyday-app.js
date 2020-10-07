@@ -12,7 +12,7 @@ function populateDataOverview(date, data) {
 				class: this.props.class + ' bubble',
 				dataValue: this.props.dataValue,
 			}, r('h3', null, this.props.class),
-			   r('p', null, 'You logged "' + this.props.dataValue + '" for ' + this.props.class[this.props.data] + '.')
+			   r('p', null, 'You logged "' + this.props.dataValue + '" for ' + this.props.class + '.')
 			);
 		}
 	}
