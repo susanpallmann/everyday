@@ -1,5 +1,15 @@
 function updateDay(date, data) {
-    firebase.auth().onAuthStateChanged(function(user) {
+    var user = firebase.auth().currentUser;
+
+    if (user) {
+        // User is signed in.
+        console.log('signed in');
+    } else {
+        // No user is signed in.
+        console.log('not signed in');
+    }
+
+    /*firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             // User is signed in.
             let uid = user.uid;
@@ -8,10 +18,10 @@ function updateDay(date, data) {
         } else {
             // No user is signed in.
         }
-    });    
+    }); */  
 }
 
-function loadDay(date) {
+/*function loadDay(date) {
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             // User is signed in.
@@ -37,7 +47,10 @@ function loadDay(date) {
             // No user is signed in.
         }
     });  
-}
+}*/
+
+/*
+once(eventType, successCallback, failureCallback) 	/* Promise<DataSnapshot> *//* once(eventType) */
 
 $(document).ready(function() {    
     let date = new Date();
@@ -51,6 +64,8 @@ $(document).ready(function() {
         "water": 2,
         "sleep": 8
     }
+    /*
     updateDay(date, data);
     loadDay(date);
+    */
 });
