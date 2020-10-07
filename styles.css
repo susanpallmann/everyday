@@ -3,6 +3,7 @@
   --lighter: #26435F;
   --text: #DDDDDD;
   --accent: #09A2AA;
+  --accent-1: #18B4BC;
   --accent-2: #40C8C2;
   --border: #B4DFF1;
   --mood-1: #40C8C2;
@@ -79,9 +80,16 @@ body {
   text-decoration: none;
 }
 
+.button:nth-child(2n) {
+  background-color: var(--accent1);
+}
+
 .button:hover,
 .button:active,
-.button:focus {
+.button:focus.
+.button:nth-child(2n):hover,
+.button:nth-child(2n):active,
+.button:nth-child(2n):focus {
   background-color: var(--accent-2);
 }
 
