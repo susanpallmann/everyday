@@ -69,8 +69,22 @@ $(document).ready(function() {
 	
 });
 
+function iconLookup(type) {
+	switch(type) {
+		case "water":
+			return "local-bar";
+		break;
+		case "coffee":
+			return "local-cafe";
+		break;
+		default:
+			return "all-inclusive";
+		break;
+}
+
 function getInside(type, value) {
 	if (type === "water" || type === "coffee") {
+		var icon = iconLookup(type);
 		value = parseInt(value);
 		let types = [];
 		for (i = 0; i < value; i++) {
@@ -78,7 +92,7 @@ function getInside(type, value) {
 		}
 		let typesArray = types.map(singleType => r("span", {
 			class: type + " large-icon"
-		}, type));
+		}, icon));
 		return r('div', {class: "icon-set"}, typesArray);
 	} else {
 		return r('h1', null, 'Hello');
