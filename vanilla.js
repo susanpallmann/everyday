@@ -1,4 +1,4 @@
-function initializeDayButtons() {
+/*function initializeDayButtons() {
 	console.log("initialized");
 	$('.next-day').click(function(e) {
 		let date = $('#day-overview').attr('day');
@@ -35,7 +35,7 @@ function initializeDayButtons() {
 		}
 		e.preventDefault();
 	});
-}
+}*/
 
 $(document).ready(function() {
 	$('.nav-log-in').click(function(e) {
