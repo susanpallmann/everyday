@@ -19,14 +19,14 @@ function sendCallbackMessage(string) {
     return string;
 }
 
-function readDay(date) {
+function readDay(date, callback) {
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             // User is signed in.
             let uid = user.uid;
             var path = firebase.database().ref('users/' + uid + '/' + date);
             path.once('value', function(snapshot) {
-                console.log("complete");
+                callback();
             });
         }
     });
@@ -77,7 +77,7 @@ $(document).ready(function() {
     };
     
     console.log(updateDay(date, data, sendCallbackMessage));
-    readDay(date);
+    readDay(date, function() {console.log("this is complete");});
     /*
     loadDay(date);
     */
