@@ -3,6 +3,7 @@
   --lighter: #26435F;
   --text: #DDDDDD;
   --accent: #09A2AA;
+  --border: #B4DFF1;
   --mood-1: #40C8C2;
   --mood-2: #09A2AA;
   --mood-3: #4C98CF;
@@ -28,12 +29,13 @@ body {
 }
 
 input[type="text"], input[type="password"], input[type="number"] {
-	border: 2px solid var(--text);
-	outline: none;
-	border-radius: 3px;
-	padding: 0.2em;
-	font-size: 1em;
-	font-family: "Raleway", sans-serif;
+  background-color: var(--lighter);
+  border: 2px solid var(--border);
+  outline: none;
+  border-radius: 3px;
+  padding: 0.2em;
+  font-size: 1em;
+  font-family: "Raleway", sans-serif;
 }
 
 #calendar {
