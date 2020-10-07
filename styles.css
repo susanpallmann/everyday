@@ -92,6 +92,20 @@ footer nav#main-nav ul li a:hover {
   color: var(--accent-2);
 }
 
+footer nav#main-nav ul li:focus:after,
+footer nav#main-nav ul li:active:after,
+footer nav#main-nav ul li:hover:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  content: "";
+  border-radius: 6px 6px 0 0;
+  background-color: var(--accent-2);
+  width: 100%;
+}
+
 footer nav#main-nav ul li a i,
 footer nav#main-nav ul li a span {
   vertical-align: middle;
