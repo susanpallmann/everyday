@@ -2,6 +2,7 @@ function loadNextDay() {
 	console.log("clicked!");
 	let oldDate = $('#day-overview').find('h2').text();
 	let dateSeparated = oldDate.split("-");
+	console.log(dateSeparated);
 	let dateActual = new Date(dateSeparated[0], dateSeparated[1] + 1, dateSeparated[2]);
 	console.log(dateActual);
 	let dateNext = dateActual.setDate(dateActual.getDate() + 1 );
