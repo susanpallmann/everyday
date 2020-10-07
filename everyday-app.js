@@ -81,6 +81,7 @@ function getInside(type, value) {
 		
 		break;
 		case "water" :
+		value = parseInt(value);
 		let waters = [];
 		for (var i; i < value; i++) {
 			waters.push(r('div', {class: "water large-icon"}, "water"));
