@@ -1,24 +1,18 @@
 function updateDay(date, data) {
     var user = firebase.auth().currentUser;
 
-    if (user) {
-        // User is signed in.
-        console.log('signed in');
-    } else {
-        // No user is signed in.
-        console.log('not signed in');
-    }
-
-    /*firebase.auth().onAuthStateChanged(function(user) {
+    firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             // User is signed in.
-            let uid = user.uid;
+            console.log('signed in');
+            /*let uid = user.uid;
             var path = firebase.database().ref('users/' + uid + '/' + date);
-            path.update(data);
+            path.update(data);*/
         } else {
+            console.log('not signed in');
             // No user is signed in.
         }
-    }); */  
+    });  
 }
 
 /*function loadDay(date) {
@@ -65,7 +59,7 @@ $(document).ready(function() {
         "sleep": 8
     }
     
-    updateDay(date, data);
+    /*updateDay(date, data);*/
     
     /*
     loadDay(date);
