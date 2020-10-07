@@ -385,6 +385,8 @@ body[splash="true"] footer {
   text-align: center;
   width: 100%;
   font-size: 1.5em;
+  position: absolute;
+  top: 0;
 }
 
 #day-overview p {
