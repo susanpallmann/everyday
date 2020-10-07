@@ -15,7 +15,7 @@ function logInUser(email, password) {
     var errorCode = error.code;
     var errorMessage = error.message;
     // ...
-    console.log("This ran at all");
+    console.log(errorCode + ' ' + errorMessage);
     return errorMessage;
   });
 }
