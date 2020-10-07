@@ -28,7 +28,8 @@ function loadDay(date) {
                         // Do something with react
                         data[key] = value;
                     });
-                    $('#day-overview').attr('day', date);
+                    $('#day-overview').attr('day', date)
+                    initializeDayButtons();
                     populateDay(date, data);
                 } else {
                 }
