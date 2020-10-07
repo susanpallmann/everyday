@@ -25,8 +25,6 @@ function startListener() {
 		let dateFormatted = year + '-' + month + '-' + day;
 		readDay(dateFormatted, populateDataOverview);
 		e.preventDefault();
-		e.stopPropagation();
-  		e.nativeEvent.stopImmediatePropagation();
 	});
 }
 
@@ -57,6 +55,8 @@ function loadPreviousDay(e) {
 	let dateFormatted = year + '-' + month + '-' + day;
 	readDay(dateFormatted, populateDataOverview);
 	e.preventDefault();
+	e.stopPropagation();
+  	e.nativeEvent.stopImmediatePropagation();
 }
 
 /*function initializeDayButtons() {
