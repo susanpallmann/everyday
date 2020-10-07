@@ -73,6 +73,8 @@ footer nav#main-nav ul li a {
 footer nav#main-nav ul li.selected:after {
   position: absolute;
   bottom: 0;
+  left: 0;
+  right: 0;
   height: 6px;
   content: "";
   border-radius: 6px 0 6px 0;
