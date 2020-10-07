@@ -330,13 +330,11 @@ body[splash="true"] footer {
   position: relative;
 }
 
-
 #day-overview .arrow-previous {
   position: absolute;
   top: 0;
-  left: 0
+  left: 0;
 }
-
 
 #day-overview .arrow-next {
   position: absolute;
