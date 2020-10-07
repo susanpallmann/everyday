@@ -16,6 +16,8 @@ function initializeDayButtons() {
 			console.log("else");
 		}
 		e.preventDefault();
+		e.stopPropagation();
+		return false;
 	});
 	
 	$('.previous-day').click(function(e) {
