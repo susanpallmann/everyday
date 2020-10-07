@@ -84,7 +84,7 @@ function getInside(type, value) {
 		}));
 		return r('div', {class: "icon-set"}, watersArray);
 	} else {
-	return r('h1', null, 'Hello');
+		return r('h1', null, 'Hello');
 	}
 }
 
