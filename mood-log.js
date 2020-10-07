@@ -20,13 +20,15 @@ function loadDay(date) {
             path.once('value', function(snapshot) {
                 if (date) {
                     let data = JSON.stringify(snapshot);
+                    // Do something with this data, send it to React
+                    
+                    //TODO: remove this or save elsewhere for future reference:
                     /* snapshot.forEach((child) => {
                         let key = child.key;
                         let value = child.val();
                         // Do something with react
                         console.log(key + ': ' + value);
                     }); */
-                    return data;
                 } else {
                 }
             });
@@ -48,5 +50,5 @@ $(document).ready(function() {
         "water": 0,
         "sleep": 8
     }
-    console.log(loadDay(date));
+    loadDay(date);
 });
