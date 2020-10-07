@@ -7,21 +7,21 @@ function logOutUser() {
     });
 }
 
+// Observes to determine if user is logged in or not.
+function checkLogInStatus() {
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            // User is signed in.
+            $('body').attr('splash', 'false');
+            
+        } else {
+            // No user is signed in.
+            $('body').attr('splash', 'true');
+        }
+    });
+}
+
 $(document).ready(function() {
-    // Observes to determine if user is logged in or not.
-    function checkLogInStatus() {
-        firebase.auth().onAuthStateChanged(function(user) {
-            if (user) {
-                // User is signed in.
-                $('body').attr('splash', 'false');
-                initializeButtons();
-            } else {
-                // No user is signed in.
-                $('body').attr('splash', 'true');
-            }
-        });
-    }
-    
     $("#log-in").submit(function(e){
         clearError($('#log-in'));
         firebase.auth().signInWithEmailAndPassword($('#log-in-email').val(), $('#log-in-password').val()).catch(function(error) {
