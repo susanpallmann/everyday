@@ -295,6 +295,10 @@ body[splash="true"] footer {
 .bubble h3 {
   background-color: var(--lighter);
   border-radius: 10px 10px 0px 0px;
+  margin: 0;
+  padding: 0.5em;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 /* Icons */
