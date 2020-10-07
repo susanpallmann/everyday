@@ -27,7 +27,7 @@ function populateDataOverview(date, data) {
 		
 		render() {
 			return r("div", {
-      			id: "day-overview"
+      			id: ""
 				
     		}, r("div", {
       			class: "arrow-previous"
