@@ -72,13 +72,13 @@ $(document).ready(function() {
 function iconLookup(type) {
 	switch(type) {
 		case "water":
-			return "local-bar";
+			return "local_bar";
 		break;
 		case "coffee":
-			return "local-cafe";
+			return "local_cafe";
 		break;
 		default:
-			return "all-inclusive";
+			return "all_inclusive";
 		break;
 	}
 }
