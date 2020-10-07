@@ -19,7 +19,9 @@ $(document).ready(function() {
 		$('#splash-sign-up').addClass('hide');
 		e.preventDefault();
 	});
-	
+});
+
+function initializeButtons() {
 	$(document).on('click', '.next-day', function(e) {
 		console.log("this ran");
 		/*let date = $('#day-overview').attr('day');
@@ -37,7 +39,7 @@ $(document).ready(function() {
 		console.log("test?");
 		//return false;
 	});
-});
+}
 
 function appendError(element, message) {
 	element.append('<p class="error-message">' + message + '</p>');
