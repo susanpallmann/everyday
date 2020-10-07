@@ -84,7 +84,7 @@ function getInside(type, value) {
 		value = parseInt(value);
 		console.log(value);
 		let waters = [];
-		for (var i; i < value; i++) {
+		for (var j; j < value; j++) {
 			console.log("our loop runs");
 			waters.push("something");
 		}
