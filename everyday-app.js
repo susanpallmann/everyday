@@ -70,18 +70,8 @@ $(document).ready(function() {
 });
 
 function getInside(type, value) {
-	switch(type) {
-		case "mood" :
-			return r('h1', null, 'Hello');
-		break;
-		case "coffee" :
-			return r('h1', null, 'Hello');
-		break;
-		case "sleep" :
-			return r('h1', null, 'Hello');
-		break;
-		case "water" :
-		value = parseInt(value);
+	if (type === "water) {
+	    value = parseInt(value);
 		console.log(value);
 		let waters = [];
 		for (var j; j < value; j++) {
@@ -93,7 +83,8 @@ function getInside(type, value) {
 			class: "water large-icon"
 		}));
 		return r('div', {class: "icon-set"}, watersArray);
-		break;
+	} else {
+	return r('h1', null, 'Hello');
 	}
 }
 
