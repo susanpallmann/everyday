@@ -12,21 +12,26 @@ function updateDay(date, data) {
 }
 
 function loadDay(date) {
-    let user = firebase.auth().currentUser;
-    let uid = user.uid;
-    var path = firebase.database().ref('users/' + uid + '/' + date);
-    
-    path.once('value', function(snapshot) {
-        var date = snapshot.val();
-        if (date) {
-            snapshot.forEach((child) => {
-                let key = child.key;
-                let value = child.val();
-                // Do something with react
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            // User is signed in.
+            let uid = user.uid;
+            var path = firebase.database().ref('users/' + uid + '/' + date);
+            path.once('value', function(snapshot) {
+                if (date) {
+                } else {
+                    snapshot.forEach((child) => {
+                        let key = child.key;
+                        let value = child.val();
+                        // Do something with react
+                        console.log(key + ': ' + value);
+                    });
+                }
             });
         } else {
+            // No user is signed in.
         }
-    });
+    });  
 }
 
 $(document).ready(function() {
@@ -41,5 +46,5 @@ $(document).ready(function() {
         "water": 0,
         "sleep": 8
     }
-    updateDay(date, data);
+    loadDay(date);
 });
