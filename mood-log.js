@@ -45,7 +45,7 @@ $(document).ready(function() {
     let day = date.getDate();
     date = year + '-' + month + '-' + day;
     let data = {
-        "mood": 4,
+        "aaa-mood": 4,
         "coffee": 3,
         "water": 0,
         "sleep": 8
