@@ -28,10 +28,7 @@ function startListener() {
 	});
 }
 
-function loadNextDay(e) {
-	e.preventDefault();
-	e.stopPropagation();
-  	e.nativeEvent.stopImmediatePropagation();
+function loadNextDay() {
 	console.log("clicked!");
 	let oldDate = $('#day-overview').find('h2').text();
 	let dateSeparated = date.split("-");
@@ -43,10 +40,7 @@ function loadNextDay(e) {
 	let dateFormatted = year + '-' + month + '-' + day;
 	readDay(dateFormatted, populateDataOverview);
 }
-function loadPreviousDay(e) {
-	e.preventDefault();
-	e.stopPropagation();
-  	e.nativeEvent.stopImmediatePropagation();
+function loadPreviousDay() {
 	console.log("clicked!");
 	let oldDate = $('#day-overview').find('h2').text();
 	let dateSeparated = date.split("-");
