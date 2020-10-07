@@ -70,7 +70,7 @@ $(document).ready(function() {
 });
 
 function getInside(type, value) {
-	if (type === "water) {
+	if (type === "water") {
 	    value = parseInt(value);
 		console.log(value);
 		let waters = [];
