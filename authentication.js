@@ -40,3 +40,9 @@ function checkLogInStatus() {
   });
   checkLogInStatus();
 }
+
+$(document).ready(function() {
+  $('#log-in-submit').click(function() {
+    console.log("this ran");
+  });
+}
