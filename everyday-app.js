@@ -32,7 +32,6 @@ function populateDataOverview(date, data) {
 		
 		loadDay(value) {
 			/*stopBubbling(this.event);*/
-			this.stopBubbling(this.event);
 			console.log("clicked!");
 			let oldDate = $('#day-overview').find('h2').text();
 			let dateSeparated = oldDate.split("-");
@@ -59,7 +58,8 @@ function populateDataOverview(date, data) {
     		}, r("span", {
       			href: "",
       			class: "previous-day",
-			onClick: () => { this.loadDay(-1)}
+			onClick: () => { this.loadDay(-1);
+				       this.stopBubbling(this.event);}
 				
     		}, r("span", {
       			class: "material-icons"
@@ -73,7 +73,8 @@ function populateDataOverview(date, data) {
     		}, r("span", {
       			href: "",
       			class: "next-day",
-			onClick: () => { this.loadDay(1)}
+			onClick: () => { this.loadDay(1);
+				       this.stopBubbling(this.event);}
 				
     		}, r("span", {
       			class: "material-icons"
