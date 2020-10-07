@@ -82,7 +82,7 @@ body {
 }
 
 .button:nth-child(2n) {
-  background-color: var(--accent1);
+  background-color: var(--accent-1);
 }
 
 .button:hover,
