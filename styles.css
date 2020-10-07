@@ -292,6 +292,10 @@ body[splash="true"] footer {
   border-radius: 10px;
   padding: 1rem;
   box-sizing: border-box;
+  width: 100%;
+  max-width: 350px;
+  margin: auto;
+  margin-bottom: 1rem;
 }
 
 .bubble h3 {
