@@ -334,6 +334,7 @@ body[splash="true"] footer {
 
 #day-overview a {
   color: #fff;
+  position: relative;
   z-index: 1;
 }
 
