@@ -19,13 +19,13 @@ function loadDay(date) {
             var path = firebase.database().ref('users/' + uid + '/' + date);
             path.once('value', function(snapshot) {
                 if (date) {
-                } else {
                     snapshot.forEach((child) => {
                         let key = child.key;
                         let value = child.val();
                         // Do something with react
                         console.log(key + ': ' + value);
                     });
+                } else {
                 }
             });
         } else {
