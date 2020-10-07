@@ -69,6 +69,27 @@ $(document).ready(function() {
 	
 });
 
+function getInside(type, value) {
+	switch(type) {
+		case "mood" :
+		
+		break;
+		case "coffee" :
+		
+		break;
+		case "sleep" :
+		
+		break;
+		case "water" :
+		let waters = [];
+		for (var i; i < value; i++) {
+			waters.push(r('div', {class: "water large-icon"}, "water"));
+		}
+		return waters;
+		break;
+	}
+}
+
 function populateDay(data) {
 	class Information extends React.Component {
 		render() {
@@ -76,7 +97,7 @@ function populateDay(data) {
 				class: this.props.class + ' bubble',
 				dataValue: this.props.dataValue,
 			}, r('h3', null, this.props.class),
-			   r('p', null, "it was mood")
+			   r('p', null, getInside(this.props.class, this.props.dataValue))
 			);
 		}
 	}
