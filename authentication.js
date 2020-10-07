@@ -19,7 +19,7 @@ function logInUser(email, password) {
 }
 
 // Signs out an existing user from Firebase Authentication.
-function logOutUser {
+function logOutUser() {
   firebase.auth().signOut().then(function() {
     // Sign-out successful.
   }).catch(function(error) {
@@ -38,4 +38,5 @@ function checkLogInStatus() {
       $('body').attr('splash', 'true');
     }
   });
+  checkLogInStatus();
 }
