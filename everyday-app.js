@@ -64,8 +64,8 @@ function populateDataOverview(date, data) {
       			class: "previous-day",
 			onClick: /*() => { 
 				stopBubbling(this.handleClick);
-				this.handleClick.loadDay(-1)*/
-			}
+				this.handleClick.loadDay(-1)
+			}*/
 				
     		}, r("span", {
       			class: "material-icons"
