@@ -5,14 +5,16 @@ function updateDay(date, data) {
         if (user) {
             // User is signed in.
             console.log('signed in');
-            /*let uid = user.uid;
+            let uid = user.uid;
             var path = firebase.database().ref('users/' + uid + '/' + date);
-            path.update(data);*/
+            path.update(data, function () { return "update successful"});
         } else {
-            console.log('not signed in');
             // No user is signed in.
         }
     });  
+}
+
+function loadDay(date) {
 }
 
 /*function loadDay(date) {
@@ -59,7 +61,7 @@ $(document).ready(function() {
         "sleep": 8
     }
     
-    updateDay(date, data);
+    console.log(updateDay(date, data));
     
     /*
     loadDay(date);
