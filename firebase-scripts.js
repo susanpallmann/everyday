@@ -20,7 +20,7 @@ function sendCallbackMessage(string) {
 }
 
 function readDay(date) {
-     firebase.auth().onAuthStateChanged(function(user) {
+    firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             // User is signed in.
             let uid = user.uid;
@@ -29,6 +29,7 @@ function readDay(date) {
                 return "complete";
             });
         }
+    });
 }
 
 /*function loadDay(date) {
