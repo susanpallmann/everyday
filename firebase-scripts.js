@@ -64,8 +64,10 @@ $(document).ready(function() {
         "water": 2,
         "sleep": 8
     }
-    /*
+    
     updateDay(date, data);
+    
+    /*
     loadDay(date);
     */
 });
