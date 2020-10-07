@@ -47,7 +47,7 @@ $(document).ready(function() {
     let data = {
         "mood": 4,
         "coffee": 3,
-        "water": 0,
+        "water": 2,
         "sleep": 8
     }
     updateDay(date, data);
