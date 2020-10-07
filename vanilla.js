@@ -4,8 +4,8 @@ function loadNextDay() {
 	let dateSeparated = oldDate.split("-");
 	console.log(dateSeparated);
 	let dateActual = new Date(parseInt(dateSeparated[0]), parseInt(dateSeparated[1]) - 1, parseInt(dateSeparated[2]));
-	console.log(dateActual);
 	let dateNext = dateActual.setDate(dateActual.getDate() + 1 );
+	console.log(dateNext);
 	let year = dateNext.getFullYear();
 	let month = dateNext.getMonth() + 1;
 	let day = dateNext.getDate();
@@ -18,8 +18,8 @@ function loadPreviousDay() {
 	let dateSeparated = oldDate.split("-");
 	console.log(dateSeparated);
 	let dateActual = new Date(parseInt(dateSeparated[0]), parseInt(dateSeparated[1]) - 1, parseInt(dateSeparated[2]));
-	console.log(dateActual);
 	let dateNext = dateActual.setDate(dateActual.getDate() - 1 );
+	console.log(dateNext);
 	let year = dateNext.getFullYear();
 	let month = dateNext.getMonth() + 1;
 	let day = dateNext.getDate();
