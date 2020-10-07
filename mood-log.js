@@ -19,7 +19,7 @@ function loadDay(date) {
             var path = firebase.database().ref('users/' + uid + '/' + date);
             path.once('value', function(snapshot) {
                 if (date) {
-                    console.log(snapshot);
+                    console.log(JSON.stringify(snapshot));
                     snapshot.forEach((child) => {
                         let key = child.key;
                         let value = child.val();
