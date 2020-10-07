@@ -129,7 +129,9 @@ body[splash="false"] #splash {
   display: none;
 }
 
-body[splash="false"] main {
+body[splash="false"] main,
+body[splash="false"] header,
+body[splash="false"] footer {
   display: block;
 }
 
@@ -137,7 +139,9 @@ body[splash="true"] #splash {
   display: block;
 }
 
-body[splash="true"] main {
+body[splash="true"] main,
+body[splash="true"] header,
+body[splash="true"] footer {
   display: none;
 }
 
