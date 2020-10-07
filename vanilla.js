@@ -20,7 +20,7 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 	
-	$('.next-day').click(function(e) {
+	$(document).on('click','.next-day',function(e) {
 		console.log("this ran");
 		/*let date = $('#day-overview').attr('day');
 		console.log(date);
@@ -33,6 +33,7 @@ $(document).ready(function() {
 			console.log("else");
 		}*/
 		e.preventDefault();
+		return false;
 	});
 });
 
