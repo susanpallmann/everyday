@@ -19,6 +19,17 @@ $(document).ready(function() {
 		$('#splash-sign-up').addClass('hide');
 		e.preventDefault();
 	});
+	
+	$('#next-day').click(function(e) {
+		let date = $('#day-overview').attr('day');
+		if (date !== "default") {
+			let dateSeparated = date.split("-");
+			let dateActual = new Date(dateSeparated[0], dateSeparated[1] - 1, dateSeparated[2]);
+			console.log(dateActual);
+			loadDay(date);
+		}
+		e.preventDefault();
+	});
 });
 
 function appendError(element, message) {
