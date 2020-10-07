@@ -19,13 +19,14 @@ function loadDay(date) {
             var path = firebase.database().ref('users/' + uid + '/' + date);
             path.once('value', function(snapshot) {
                 if (date) {
-                    console.log(JSON.stringify(snapshot));
-                    snapshot.forEach((child) => {
+                    let data = JSON.stringify(snapshot);
+                    /* snapshot.forEach((child) => {
                         let key = child.key;
                         let value = child.val();
                         // Do something with react
                         console.log(key + ': ' + value);
-                    });
+                    }); */
+                    return data;
                 } else {
                 }
             });
@@ -47,5 +48,5 @@ $(document).ready(function() {
         "water": 0,
         "sleep": 8
     }
-    loadDay(date);
+    console.log(loadDay(date));
 });
