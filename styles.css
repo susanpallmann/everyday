@@ -22,6 +22,10 @@ body {
   color: var(--text);
 }
 
+.hide {
+  display: none;
+}
+
 .has-buttons .column.span12 {
   height: 100vh;
   position: relative;
