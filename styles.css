@@ -106,7 +106,7 @@ input[type="text"], input[type="password"], input[type="number"] {
 #splash-start .button:nth-child(2n):hover,
 #splash-start .button:nth-child(2n):focus,
 #splash-start .button:nth-child(2n):active {
-  background-color: var(--border);
+  background-color: #4C98CF;
 }
 
 #calendar {
