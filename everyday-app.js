@@ -72,13 +72,13 @@ $(document).ready(function() {
 function getInside(type, value) {
 	switch(type) {
 		case "mood" :
-		
+			return r('h1', null, 'Hello');
 		break;
 		case "coffee" :
-		
+			return r('h1', null, 'Hello');
 		break;
 		case "sleep" :
-		
+			return r('h1', null, 'Hello');
 		break;
 		case "water" :
 		value = parseInt(value);
