@@ -328,6 +328,7 @@ body[splash="true"] footer {
 
 #day-overview .column.span12 {
   position: relative;
+  padding-top: calc(1em + 1.5em);
 }
 
 #day-overview .arrow-previous {
@@ -340,6 +341,15 @@ body[splash="true"] footer {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+#date {
+  position: absolute;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 1.25em;
+  padding-top: 0.25em;
 }
 
 /* Icons */
