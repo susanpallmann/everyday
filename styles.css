@@ -57,7 +57,7 @@ footer nav#main-nav ul li a {
 footer nav#main-nav ul li a:focus,
 footer nav#main-nav ul li a:active,
 footer nav#main-nav ul li a:hover {
-  color: var(--accent);
+  color: var(--accent-2);
 }
 
 footer nav#main-nav ul li a i,
