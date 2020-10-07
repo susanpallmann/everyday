@@ -22,7 +22,7 @@ $(document).ready(function() {
 	
 	$('.next-day').click(function(e) {
 		console.log("this ran");
-		let date = $('#day-overview').attr('day');
+		/*let date = $('#day-overview').attr('day');
 		console.log(date);
 		if (date !== "default") {
 			let dateSeparated = date.split("-");
@@ -31,7 +31,7 @@ $(document).ready(function() {
 			loadDay(date);
 		} else {
 			console.log("else");
-		}
+		}*/
 		e.preventDefault();
 	});
 });
