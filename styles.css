@@ -1,15 +1,18 @@
-body {
-  font-family: "Raleway", sans-serif;
-}
-
 :root {
   --background: #102438;
   --lighter: #26435F;
+  --text: #DDDDDD;
   --mood-1: #40C8C2;
   --mood-2: #09A2AA;
   --mood-3: #4C98CF;
   --mood-4: #316DB3;
   --mood-5: #506498;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: var(--background);
+  color: var(--text);
 }
 
 #calendar {
