@@ -45,10 +45,11 @@ $(document).ready(function() {
     let day = date.getDate();
     date = year + '-' + month + '-' + day;
     let data = {
-        "aaa-mood": 4,
+        "mood": 4,
         "coffee": 3,
         "water": 0,
         "sleep": 8
     }
+    updateDay(date, data);
     loadDay(date);
 });
