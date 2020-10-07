@@ -27,6 +27,8 @@ $(document).ready(function() {
 			let dateActual = new Date(dateSeparated[0], dateSeparated[1] - 1, dateSeparated[2]);
 			console.log(dateActual);
 			loadDay(date);
+		} else {
+			console.log("else");
 		}
 		e.preventDefault();
 	});
