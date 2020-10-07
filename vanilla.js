@@ -11,7 +11,7 @@ function startListener() {
 		let dateFormatted = year + '-' + month + '-' + day;
 		readDay(dateFormatted, populateDataOverview);
 		e.preventDefault();
-	}
+	});
 			     
 	$('.previous-day').click(function(e) {
 		console.log("clicked!");
@@ -25,7 +25,7 @@ function startListener() {
 		let dateFormatted = year + '-' + month + '-' + day;
 		readDay(dateFormatted, populateDataOverview);
 		e.preventDefault();
-	}
+	});
 });
 
 function loadNextDay(e) {
