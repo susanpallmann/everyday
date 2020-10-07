@@ -29,6 +29,10 @@ function populateDataOverview(date, data) {
 	}
 	
 	class DayOverview extends React.Component {
+		constructor(props) {
+			super(props);
+			this.handleClick = this.handleClick.bind(this);
+		}
 		
 		loadDay(value) {
 			/*stopBubbling(this.event);*/
@@ -59,8 +63,8 @@ function populateDataOverview(date, data) {
       			href: "",
       			class: "previous-day",
 			onClick: () => { 
-				stopBubbling(this.event);
-				this.loadDay(-1)
+				stopBubbling(this.handleClick);
+				this.handleClick.loadDay(-1)
 			}
 				
     		}, r("span", {
@@ -76,8 +80,8 @@ function populateDataOverview(date, data) {
       			href: "",
       			class: "next-day",
 			onClick: () => { 
-				stopBubbling(this.event);
-				this.loadDay(1)
+				stopBubbling(this.handleClick);
+				this.handleClick.loadDay(1)
 			}
 				
     		}, r("span", {
