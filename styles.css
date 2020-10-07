@@ -23,6 +23,22 @@ body {
   color: var(--text);
 }
 
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
 .hide {
   display: none;
 }
