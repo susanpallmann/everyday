@@ -41,7 +41,7 @@ function loadDay(date) {
 $(document).ready(function() {
     let date = new Date();
     let year = date.getFullYear();
-    let month = date.getMonth();
+    let month = date.getMonth() + 1;
     let day = date.getDate();
     date = year + '-' + month + '-' + day;
     let data = {
