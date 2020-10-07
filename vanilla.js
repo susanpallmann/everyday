@@ -1,37 +1,7 @@
-function startListener() {
-	$('.next-day').click(function(e) {
-		console.log("clicked!");
-		let oldDate = $('#day-overview').find('h2').text();
-		let dateSeparated = date.split("-");
-		let dateActual = new Date(dateSeparated[0], dateSeparated[1] + 1, dateSeparated[2]);
-		let dateNext = dateActual.setDate(dateActual.getDate() + 1 );
-		let year = dateNext.getFullYear();
-		let month = dateNext.getMonth() + 1;
-		let day = dateNext.getDate();
-		let dateFormatted = year + '-' + month + '-' + day;
-		readDay(dateFormatted, populateDataOverview);
-		e.preventDefault();
-	});
-			     
-	$('.previous-day').click(function(e) {
-		console.log("clicked!");
-		let oldDate = $('#day-overview').find('h2').text();
-		let dateSeparated = date.split("-");
-		let dateActual = new Date(dateSeparated[0], dateSeparated[1] - 1, dateSeparated[2]);
-		let dateNext = dateActual.setDate(dateActual.getDate() + 1 );
-		let year = dateNext.getFullYear();
-		let month = dateNext.getMonth() + 1;
-		let day = dateNext.getDate();
-		let dateFormatted = year + '-' + month + '-' + day;
-		readDay(dateFormatted, populateDataOverview);
-		e.preventDefault();
-	});
-}
-
 function loadNextDay() {
 	console.log("clicked!");
 	let oldDate = $('#day-overview').find('h2').text();
-	let dateSeparated = date.split("-");
+	let dateSeparated = oldDate.split("-");
 	let dateActual = new Date(dateSeparated[0], dateSeparated[1] + 1, dateSeparated[2]);
 	let dateNext = dateActual.setDate(dateActual.getDate() + 1 );
 	let year = dateNext.getFullYear();
@@ -43,7 +13,7 @@ function loadNextDay() {
 function loadPreviousDay() {
 	console.log("clicked!");
 	let oldDate = $('#day-overview').find('h2').text();
-	let dateSeparated = date.split("-");
+	let dateSeparated = oldDate.split("-");
 	let dateActual = new Date(dateSeparated[0], dateSeparated[1] - 1, dateSeparated[2]);
 	let dateNext = dateActual.setDate(dateActual.getDate() + 1 );
 	let year = dateNext.getFullYear();
