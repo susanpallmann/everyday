@@ -32,7 +32,8 @@ $(document).ready(function() {
 		} else {
 			console.log("else");
 		}*/
-		//e.preventDefault();
+		e.preventDefault();
+		console.log("test?");
 		//return false;
 	});
 });
