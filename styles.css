@@ -334,6 +334,7 @@ body[splash="true"] footer {
 
 #day-overview a {
   color: #fff;
+  z-index: 1;
 }
 
 #day-overview .arrow-previous {
