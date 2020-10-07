@@ -1,4 +1,4 @@
-function loadDay(value) {
+/*function loadDay(value) {
 	console.log("clicked!");
 	let oldDate = $('#day-overview').find('h2').text();
 	let dateSeparated = oldDate.split("-");
@@ -12,7 +12,7 @@ function loadDay(value) {
 	let day = dateIntermediate.getDate();
 	let dateFormatted = year + '-' + month + '-' + day;
 	readDay(dateFormatted, populateDataOverview);
-}
+}*/
 
 function loadNextDay() {
 	console.log("clicked!");
