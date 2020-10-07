@@ -73,7 +73,7 @@ $(document).ready(function() {
         "coffee": 3,
         "water": 2,
         "sleep": 8
-    }
+    };
     
     console.log(updateDay(date, data, sendCallbackMessage));
     readDay(date);
