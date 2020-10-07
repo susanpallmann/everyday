@@ -96,7 +96,7 @@ function getInside(type, value) {
 		}, icon));
 		return r('div', {class: "icon-set"}, typesArray);
 	} else {
-		return r('div', null, 'You logged ' + value + ' for ' + type + 'this day.');
+		return r('div', null, 'You logged "' + value + '" for ' + type + ' this day.');
 	}
 }
 
