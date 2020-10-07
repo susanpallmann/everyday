@@ -135,6 +135,27 @@ footer nav#main-nav ul li a span {
   display: none;
 }
 
+.center-both-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.center-both {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#splash .center-both-container {
+  height: calc(100% - 4em);
+}
+
 .has-buttons .column.span12 {
   height: 100vh;
   position: relative;
