@@ -70,7 +70,6 @@ function populateDataOverview(date, data) {
 		r(DayOverview, null),
 		document.getElementById('day-overview')
 	);
-	initializeDayOverviewButtons();
 }
 
 function iconLookup(type) {
