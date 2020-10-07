@@ -8,8 +8,26 @@ function initializeDayButtons() {
 			console.log(dateActual);
 			let dateNext = dateActual.setDate(dateActual.getDate() + 1 );
 			let year = dateNext.getFullYear();
-			let month = date.getMonth() + 1;
-    			let day = date.getDate();
+			let month = dateNext.getMonth() + 1;
+    			let day = dateNext.getDate();
+			let dateFormatted = year + '-' + month + '-' + day;
+			loadDay(dateFormatted);
+		} else {
+			console.log("else");
+		}
+		e.preventDefault();
+	});
+	
+	$('.previous-day').click(function(e) {
+		let date = $('#day-overview').attr('day');
+		if (date !== "default") {
+			let dateSeparated = date.split("-");
+			let dateActual = new Date(dateSeparated[0], dateSeparated[1] - 1, dateSeparated[2]);
+			console.log(dateActual);
+			let dateNext = dateActual.setDate(dateActual.getDate() - 1 );
+			let year = dateNext.getFullYear();
+			let month = dateNext.getMonth() + 1;
+    			let day = dateNext.getDate();
 			let dateFormatted = year + '-' + month + '-' + day;
 			loadDay(dateFormatted);
 		} else {
