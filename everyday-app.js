@@ -25,7 +25,13 @@ function populateDataOverview(date, data) {
 	
 	class DayOverview extends React.Component {
 		
+		stopBubbling(evt) {
+			evt.stopPropagation();
+    			evt.cancelBubble = true;
+		}
+		
 		loadDay(value) {
+			stopBubbling(this.event);
 			console.log("clicked!");
 			let oldDate = $('#day-overview').find('h2').text();
 			let dateSeparated = oldDate.split("-");
@@ -41,6 +47,7 @@ function populateDataOverview(date, data) {
 			readDay(dateFormatted, populateDataOverview);
 		}
 		
+		
 		render() {
 			return r("div", {
       			id: ""
@@ -51,7 +58,7 @@ function populateDataOverview(date, data) {
     		}, r("span", {
       			href: "",
       			class: "previous-day",
-			onClick: this.loadDay(-1)
+			onClick: () => { this.loadDay(-1)}
 				
     		}, r("span", {
       			class: "material-icons"
@@ -65,7 +72,7 @@ function populateDataOverview(date, data) {
     		}, r("span", {
       			href: "",
       			class: "next-day",
-			onClick: this.loadDay(1)
+			onClick: () => { this.loadDay(1)}
 				
     		}, r("span", {
       			class: "material-icons"
