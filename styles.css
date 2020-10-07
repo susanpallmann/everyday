@@ -398,6 +398,7 @@ body[splash="true"] footer {
 
 #day-overview .bubble p {
   margin: 1em auto 0;
+  text-align: left;
 }
 
 /* Icons */
