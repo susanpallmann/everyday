@@ -59,7 +59,7 @@ $(document).ready(function() {
         "sleep": 8
     }
     
-    /*updateDay(date, data);*/
+    updateDay(date, data);
     
     /*
     loadDay(date);
