@@ -95,6 +95,14 @@ input[type="text"], input[type="password"], input[type="number"] {
 }
 
 /* Splash */
+body[splash="false"] #splash {
+  display: none;
+}
+
+body[splash="true"] #splash {
+  display: block;
+}
+
 #splash-start {
   background-color: var(--accent);
   color: #fff;
