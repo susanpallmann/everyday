@@ -2,19 +2,6 @@ function Welcome(props) {
 	return <h1>Hello, {props.name}</h1>;
 }
 
-function determinePhase() {
-	firebase.auth().onAuthStateChanged(function(user) {
-		if (user) {
-			// User is signed in.
-			return {phase: '1'};
-
-		} else {
-			// No user is signed in.
-			return {phase: '3'};
-		}
-	});
-}
-
 // Creates Splash component
 class Splash extends React.Component {
 	constructor(props) {
@@ -23,7 +10,23 @@ class Splash extends React.Component {
 	}
 	
 	componentDidMount() {
-		this.setState(function () { return determinePhase()});
+		function determinePhase() {
+			firebase.auth().onAuthStateChanged(function(user) {
+				if (user) {
+					// User is signed in.
+					return true;
+
+				} else {
+					// No user is signed in.
+					return false;
+				}
+			});
+		}
+		if ( determinePhase() ) {
+			this.setState({phase : "3"});
+		} else {
+			this.setState({phase : "1"});
+		}
 	}
 	
 	componentWillUnmount() {
