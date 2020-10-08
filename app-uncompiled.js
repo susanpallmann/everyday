@@ -22,6 +22,7 @@ class Splash extends React.Component {
 					return false;
 				}
 			});
+			console.log(test);
 			return test;
 		}
 		if ( determinePhase() ) {
