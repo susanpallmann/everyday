@@ -1,5 +1,5 @@
 function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
+	return <h1>Hello, {props.name}</h1>;
 }
 
 function determinePhase() {
@@ -9,9 +9,9 @@ function determinePhase() {
 
 // Creates Splash component
 class Splash extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {phase: determinePhase()};
+	constructor(props) {
+		super(props);
+		this.state = {phase: determinePhase()};
 	}
 	
 	componentDidMount() {
@@ -20,29 +20,29 @@ class Splash extends React.Component {
 	componentWillUnmount() {
 	}
     
-  render() {
-    return (
-      <div id="splash">
-        <h1>{this.state.phase}</h1>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div id="splash">
+				<h1>{this.state.phase}</h1>
+			</div>
+		);
+	}
 }
 
 function App() {
-  return (
-		<Splash />,
-    <div>
-      <Welcome name="Sara" />
-      <Welcome name="Cahal" />
-      <Welcome name="Edite" />
-    </div>
-  );
+	return (
+		<Splash />
+		<div>
+			<Welcome name="Sara" />
+			<Welcome name="Cahal" />
+			<Welcome name="Edite" />
+		</div>
+	);
 }
 
 $(document).ready(function() {
 	ReactDOM.render(
-	  <App />,
-	  document.getElementById('root')
+		<App />,
+		document.getElementById('root')
 	);
 });
