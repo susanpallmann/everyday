@@ -11,7 +11,7 @@ function determinePhase() {
 class Splash extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {phase: determinePhase()};
+		this.setState({phase: determinePhase()});
 	}
 	
 	componentDidMount() {
