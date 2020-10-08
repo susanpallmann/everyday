@@ -5,11 +5,11 @@ function Welcome(props) {
 }
 
 function App() {
-	return create("div", null, /*#__PURE__*/React.createElement(Welcome, {
+	return create("div", null, create(Welcome, {
 		name: "Sara"
-	}), React.createElement(Welcome, {
+	}), create(Welcome, {
 		name: "Cahal"
-	}), React.createElement(Welcome, {
+	}), create(Welcome, {
 		name: "Edite"
 	}));
 }
