@@ -35,7 +35,9 @@ function App() {
   );
 }
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+$(document).ready(function() {
+	ReactDOM.render(
+	  <App />,
+	  document.getElementById('root')
+	);
+});
