@@ -23,7 +23,7 @@ class Splash extends React.Component {
 	}
 	
 	componentDidMount() {
-		this.setState(determinePhase());
+		this.setState(function () { return determinePhase()});
 	}
 	
 	componentWillUnmount() {
