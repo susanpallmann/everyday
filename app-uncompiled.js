@@ -16,6 +16,9 @@ class Splash extends React.Component {
 	}
 	
 	componentDidMount() {
+		this.setState({
+			phase : '3'
+		});
 	}
 	
 	componentWillUnmount() {
