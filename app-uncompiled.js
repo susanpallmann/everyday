@@ -11,15 +11,16 @@ class Splash extends React.Component {
 	
 	componentDidMount() {
 		function determinePhase() {
-			var test = firebase.auth().onAuthStateChanged(function(user) {
+			var test;
+			firebase.auth().onAuthStateChanged(function(user) {
 				console.log(user);
 				if (user) {
 					// User is signed in.
-					return true;
+					test = true;
 
 				} else {
 					// No user is signed in.
-					return false;
+					test = false;
 				}
 			});
 			console.log(test);
