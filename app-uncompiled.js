@@ -12,7 +12,7 @@ function determinePhase() {
 class Splash extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {phase : 'test'};
+		this.state = {phase : '2'};
 	}
 	
 	componentDidMount() {
@@ -22,11 +22,31 @@ class Splash extends React.Component {
 	}
     
 	render() {
-		return (
-			<div id="splash">
-				<h1>{this.state.phase}</h1>
-			</div>
-		);
+		if (this.state.phase === '1') {
+			return (
+				<div id="splash">
+					<div id="splash-1">
+						<h1>{this.state.phase}</h1>
+					</div>
+				</div>
+			);
+		} else if (this.state.phase === '2') {
+			return (
+				<div id="splash">
+					<div id="splash-2">
+						<h1>{this.state.phase}</h1>
+					</div>
+				</div>
+			);
+		} else if (this.state.phase === '3') {
+			return (
+				<div id="splash">
+					<div id="splash-3">
+						<h1>{this.state.phase}</h1>
+					</div>
+				</div>
+			);
+		}
 	}
 }
 
