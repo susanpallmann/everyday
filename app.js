@@ -31,4 +31,6 @@ function App() {
   }));
 }
 
-ReactDOM.render( /*#__PURE__*/React.createElement(App, null), document.getElementById('root'));
+$(document).ready(function () {
+  ReactDOM.render( /*#__PURE__*/React.createElement(App, null), document.getElementById('root'));
+});
