@@ -3,9 +3,16 @@ function Welcome(props) {
 }
 
 function determinePhase() {
-	let logged = true;
-	console.log(logged);
-	return logged;
+	firebase.auth().onAuthStateChanged(function(user) {
+		if (user) {
+			// User is signed in.
+			return '1';
+
+		} else {
+			// No user is signed in.
+			return '2';
+		}
+	});
 }
 
 // Creates Splash component
@@ -17,7 +24,7 @@ class Splash extends React.Component {
 	
 	componentDidMount() {
 		this.setState({
-			phase : '3'
+			phase : determinePhase()
 		});
 	}
 	
