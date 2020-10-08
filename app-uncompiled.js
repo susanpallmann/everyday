@@ -2,11 +2,16 @@ function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
 
+function determinePhase() {
+	let logged = true;
+	return logged;
+}
+
 // Creates Splash component
 class Splash extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {date: new Date()};
+    this.state = {phase: determinePhase()};
 	}
 	
 	componentDidMount() {
@@ -17,7 +22,7 @@ class Splash extends React.Component {
     
   render() {
     return (
-      <div>
+      <div id="splash">
         <h1>Hello, world!</h1>
         <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
       </div>
