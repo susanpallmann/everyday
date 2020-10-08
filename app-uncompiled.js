@@ -10,7 +10,7 @@ function determinePhase() {
 
 		} else {
 			// No user is signed in.
-			return {phase: '2'};
+			return {phase: '3'};
 		}
 	});
 }
