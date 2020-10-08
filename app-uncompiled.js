@@ -6,11 +6,11 @@ function determinePhase() {
 	firebase.auth().onAuthStateChanged(function(user) {
 		if (user) {
 			// User is signed in.
-			return '1';
+			return {phase: '1'};
 
 		} else {
 			// No user is signed in.
-			return '2';
+			return {phase: '2'};
 		}
 	});
 }
@@ -23,9 +23,7 @@ class Splash extends React.Component {
 	}
 	
 	componentDidMount() {
-		this.setState({
-			phase : determinePhase()
-		});
+		this.setState(determinePhase());
 	}
 	
 	componentWillUnmount() {
