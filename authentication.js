@@ -50,6 +50,9 @@ $(document).ready(function() {
   
     $("#log-out").submit(function(e){
         firebase.auth().signOut().then(function() {
+            $('#splash-log-in').addClass('hide');
+            $('#splash-start').removeClass('hide');
+            $('#splash-sign-up').addClass('hide');
             // Sign-out successful.
         }).catch(function(error) {
             // An error happened.
