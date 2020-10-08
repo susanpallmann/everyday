@@ -31,12 +31,13 @@ class Splash extends React.Component {
 
 function App() {
 	return (
-		<Splash />
-		<div>
-			<Welcome name="Sara" />
-			<Welcome name="Cahal" />
-			<Welcome name="Edite" />
-		</div>
+		<Splash>
+			<div>
+				<Welcome name="Sara" />
+				<Welcome name="Cahal" />
+				<Welcome name="Edite" />
+			</div>
+		</Splash>
 	);
 }
 
