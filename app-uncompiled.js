@@ -25,7 +25,7 @@ class Splash extends React.Component {
 		let phase = this.state.phase;
 		return (
 			<div id="splash">
-				<h1>{phase}</h1>
+				<h1>phase</h1>
 			</div>
 		);
 	}
