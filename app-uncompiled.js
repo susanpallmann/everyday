@@ -4,7 +4,7 @@ function Welcome(props) {
 
 function determinePhase() {
 	let logged = true;
-	console.logged(true);
+	console.log(logged);
 	return logged;
 }
 
