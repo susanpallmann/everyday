@@ -23,8 +23,7 @@ class Splash extends React.Component {
   render() {
     return (
       <div id="splash">
-        <h1>Hello, world!</h1>
-        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+        <h1>{this.state.phase}</h1>
       </div>
     );
   }
@@ -32,6 +31,7 @@ class Splash extends React.Component {
 
 function App() {
   return (
+		<Splash />,
     <div>
       <Welcome name="Sara" />
       <Welcome name="Cahal" />
