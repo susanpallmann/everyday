@@ -90,7 +90,7 @@ $(document).ready(function() {
     
     console.log(updateDay(date, data, sendCallbackMessage));
     readDay(date, populateDataOverview);
-    readDay(2020-9-8, populateDataOverview);
+    readDay('2020-9-8', populateDataOverview);
     /*
     loadDay(date);
     */
