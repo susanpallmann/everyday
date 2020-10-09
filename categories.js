@@ -1,3 +1,4 @@
+$(document).ready(function() {
 var caffeine = {
 	key: "caffeine",
 	title: "Caffeine",
@@ -52,3 +53,4 @@ var categories = [
 	water,
 	aaaMood
 ];
+});
