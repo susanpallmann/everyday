@@ -45,3 +45,10 @@ var aaaMood = {
 		"great"
 	]
 }
+
+var categories = [
+	caffeine,
+	sleep,
+	water,
+	aaaMood
+];
