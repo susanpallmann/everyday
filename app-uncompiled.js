@@ -41,4 +41,4 @@ $(document).ready(function() {
       document.getElementById('day-info')
     );
   }
-}
+});
