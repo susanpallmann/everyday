@@ -29,10 +29,10 @@ function populateDayOverview(date, data) {
     let keyword = key;
     let object = searchArray(keyword, categories);
     let bubble = <Bubble 
-      propKey={keyword}
-      title={object.title}
-      quant={object.quant}
-      propValue = {value}
+      propKey=keyword
+      title=object.title
+      quant=object.quant
+      propValue = value
     />;
     dataElements.push(bubble);
   }
