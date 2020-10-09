@@ -78,7 +78,7 @@ once(eventType, successCallback, failureCallback) 	/* Promise<DataSnapshot> *//*
 $(document).ready(function() {
     
     var caffeine = {
-	key: "caffeine",
+	keyword: "caffeine",
 	title: "Caffeine",
 	categIcon: "local_cafe",
 	icon: "local_cafe",
@@ -86,7 +86,7 @@ $(document).ready(function() {
 	quant: "beverages"
 };
 var sleep = {
-	key: "sleep",
+	keyword: "sleep",
 	title: "Sleep",
 	categIcon: "bedtime",
 	icon: null,
@@ -95,7 +95,7 @@ var sleep = {
 };
 
 var water = {
-	key: "water",
+	keyword: "water",
 	title: "Water",
 	categIcon: "local_drink",
 	icon: "local_drink",
@@ -104,7 +104,7 @@ var water = {
 };
 
 var aaaMood = {
-	key: "aaaMood",
+	keyword: "aaaMood",
 	title: "Mood",
 	categIcon: "mood",
 	icon: "null",
@@ -148,7 +148,7 @@ var categories = [
 	  console.log(keyword);
     for (var i=0; i < array.length; i++) {
       // If the value under key "key" is equal to var keyword
-      if (array[i].key === keyword) {
+      if (array[i][keyword] === keyword) {
         // Returns the object
 	      console.log(array[i]);
         return array[i];
