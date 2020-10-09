@@ -88,7 +88,7 @@ $(document).ready(function() {
         "sleep": 6
     };
     
-    console.log(updateDay(date, data, sendCallbackMessage));*/
+    console.log(updateDay(date, data, sendCallbackMessage));
     readDay(date, populateDataOverview);
     /*
     loadDay(date);
