@@ -147,6 +147,7 @@ var categories = [
 	  console.log(array);
 	  console.log(keyword);
     for (var i=0; i < array.length; i++) {
+	    console.log(array[i]);
       // If the value under key "key" is equal to var keyword
       if (array[i][keyword] === keyword) {
         // Returns the object
