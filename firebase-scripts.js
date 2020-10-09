@@ -149,7 +149,7 @@ var categories = [
     for (var i=0; i < array.length; i++) {
 	    console.log(array[i]);
       // If the value under key "key" is equal to var keyword
-      if (array[i].keyword. === word) {
+      if (array[i].keyword === word) {
         // Returns the object
 	      console.log(array[i]);
         return array[i];
