@@ -142,14 +142,14 @@ var categories = [
   }
 
   // Searches to see if an object in the array specified has the value provided set as the "key"
-  function searchArray(keyword, array){
+  function searchArray(word, array){
     // For each item in the array
 	  console.log(array);
-	  console.log(keyword);
+	  console.log(word);
     for (var i=0; i < array.length; i++) {
 	    console.log(array[i]);
       // If the value under key "key" is equal to var keyword
-      if (array[i][keyword] === keyword) {
+      if (array[i].keyword. === word) {
         // Returns the object
 	      console.log(array[i]);
         return array[i];
