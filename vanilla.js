@@ -69,6 +69,7 @@ function loadNextDay() {
 }*/
 
 $(document).ready(function() {
+	readDay(date, populateDayOverview);
 	$('.nav-log-in').click(function(e) {
 		$('#splash-start').addClass('hide');
 		$('#splash-log-in').removeClass('hide');
