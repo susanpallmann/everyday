@@ -1,5 +1,5 @@
 // Empty
-
+$(document).ready(function() {
 class Bubble extends React.Component {
   render () {
     <div class="bubble">
@@ -38,6 +38,7 @@ function populateDayOverview(date, data) {
   }
   ReactDOM.render(
     <div>{dataElements}</div>,
-    document.getElementById('day-overview')
+    document.getElementById('day-info')
   );
+}
 }
