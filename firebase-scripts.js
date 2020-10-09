@@ -89,7 +89,7 @@ $(document).ready(function() {
     };
     
     console.log(updateDay(date, data, sendCallbackMessage));
-    readDay(date, populateDataOverview);
+    readDay(date, populateDayOverview);
     /*
     loadDay(date);
     */
