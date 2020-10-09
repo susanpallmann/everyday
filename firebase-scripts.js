@@ -82,13 +82,13 @@ $(document).ready(function() {
     let day = date.getDate();
     date = year + '-' + month + '-' + day;
     let data = {
-        "mood": 4,
-        "coffee": 3,
-        "water": 2,
-        "sleep": 8
+        "mood": 3,
+        "coffee": 4,
+        "water": 5,
+        "sleep": 6
     };
     
-    /*console.log(updateDay(date, data, sendCallbackMessage));*/
+    console.log(updateDay(date, data, sendCallbackMessage));*/
     readDay(date, populateDataOverview);
     /*
     loadDay(date);
