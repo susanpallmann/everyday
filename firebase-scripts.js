@@ -101,7 +101,7 @@ var water = {
 	icon: "local_drink",
 	type: "number",
 	quant: "cups"
-}
+};
 
 var aaaMood = {
 	key: "aaaMood",
@@ -123,7 +123,7 @@ var aaaMood = {
 		"good",
 		"great"
 	]
-}
+};
 
 var categories = [
 	caffeine,
