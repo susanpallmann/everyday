@@ -136,7 +136,7 @@ var categories = [
     render () {
       return (
         <div className="bubble">
-          <h3 className={this.props.propKey + " bubble"}>{this.props.title}</h3>
+          <h3 className={this.props.propKey}>{this.props.title}</h3>
           <p>You logged {this.props.propValue} {this.props.quant} for {this.props.title.toLowerCase()}.</p>
         </div>
       );
