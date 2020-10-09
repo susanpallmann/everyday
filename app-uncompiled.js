@@ -3,7 +3,7 @@
 class Bubble extends React.Component {
   render () {
     <div class="bubble">
-      <h3 class=this.props.propKey + 'bubble'>this.props.title</h3>
+      <h3 class={this.props.propKey + " bubble"}>{this.props.title}</h3>
       <p>You logged {this.props.propValue} {this.props.quant} for {this.props.title.toLowerCase()}.</p>
     </div>
   }
@@ -29,15 +29,15 @@ function populateDayOverview(date, data) {
     let keyword = key;
     let object = searchArray(keyword, categories);
     let bubble = <Bubble 
-      propKey=keyword
-      title=object.title
-      quant=object.quant
-      propValue = value
+      propKey={keyword}
+      title={object.title}
+      quant={object.quant}
+      propValue = {value}
     />;
     dataElements.push(bubble);
   }
   ReactDOM.render(
     <div>{dataElements}</div>,
-    document.getElementById('day-overview');
+    document.getElementById('day-overview')
   );
 }
