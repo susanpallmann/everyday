@@ -27,11 +27,11 @@ $(document).ready(function() {
     let dataElements = [];
     for (const [key, value] of Object.entries(data)) {
       let keyword = key;
-      let object = searchArray(keyword, categories);
+      let thisObject = searchArray(keyword, categories);
       let bubble = <Bubble 
         propKey={keyword}
-        title={object.title}
-        quant={object.quant}
+        title={thisObject.title}
+        quant={thisObject.quant}
         propValue = {value}
       />;
       dataElements.push(bubble);
