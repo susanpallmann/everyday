@@ -1,12 +1,12 @@
 // Empty
 
 class Bubble extends React.Component {
-  render (
+  render () {
     <div class="bubble">
       <h3 class=this.props.propKey + 'bubble'>this.props.title</h3>
       <p>You logged {this.props.propValue} {this.props.quant} for {this.props.title.toLowerCase()}.</p>
     </div>
-  );
+  }
 }
 
 // Searches to see if an object in the array specified has the value provided set as the "key"
