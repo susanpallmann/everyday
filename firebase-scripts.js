@@ -104,6 +104,7 @@ $(document).ready(function() {
     let dataElements = [];
     for (const [key, value] of Object.entries(data)) {
       let keyword = key;
+        console.log(keyword);
       let thisObject = searchArray(keyword, categories);
         console.log(thisObject);
         console.log(thisObject.title);
