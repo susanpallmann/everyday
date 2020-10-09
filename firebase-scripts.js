@@ -133,7 +133,7 @@ var categories = [
 ];
     
     class Bubble extends React.Component {
-    return render () {
+    render () {
       <div class="bubble">
         <h3 class={this.props.propKey + " bubble"}>{this.props.title}</h3>
         <p>You logged {this.props.propValue} {this.props.quant} for {this.props.title.toLowerCase()}.</p>
