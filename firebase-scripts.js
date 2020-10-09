@@ -188,8 +188,8 @@ var categories = [
     let day = date.getDate();
     date = year + '-' + month + '-' + day;
     let data = {
-        "mood": 3,
-        "coffee": 4,
+        "aaaMood": 3,
+        "caffeine": 4,
         "water": 5,
         "sleep": 6
     };
