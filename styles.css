@@ -234,6 +234,7 @@ footer nav#main-nav ul li a span {
 .button:nth-child(2n):active,
 .button:nth-child(2n):focus {
   background-color: var(--accent-2);
+  color: var(--white);
 }
 
 .button.button-switch {
@@ -244,6 +245,7 @@ footer nav#main-nav ul li a span {
 .button.button-switch:active,
 .button.button-switch:focus {
   background-color: var(--dark-button-hover);
+  color: var(--white);
 }
 
 input[type="text"], input[type="password"], input[type="number"] {
