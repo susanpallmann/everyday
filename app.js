@@ -9,10 +9,17 @@ console.log("App file ready!"); // Creates our bubble elements used in the day o
 class Custom extends React.Component {
   render() {
     if (this.props.type === "number") {
+      let iconArray = [];
+
       for (var i; i < parseInt(this.props.value); i++) {
-        console.log("This ran! Our value is " + this.props.value);
-        return r("p", null, "This is type number");
+        console.log("This ran!");
+        let icon = r("p", null, "This is type number");
+        iconArray.push(bubble);
       }
+
+      return {
+        iconArray
+      };
     } else if (this.props.type === "select") {
       return r("p", null, "This is type select");
     } else {
