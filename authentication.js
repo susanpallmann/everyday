@@ -12,13 +12,13 @@ function checkLogInStatus() {
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             // User is signed in.
-            $('main').removeClass('hide');
             $('#splash').fadeOut(200);
             setTimeout(function(){
                 $('main').fadeIn(200);
                 $('header').fadeIn(200);
                 $('footer').fadeIn(200);
-            }, 200);            
+            }, 200);
+            $('main').removeClass('hide');
         } else {
             // No user is signed in.
             if ($('main').hasClass('hide')) {
