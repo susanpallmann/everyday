@@ -75,7 +75,8 @@ function readDay(date, callback) {
 /*
 once(eventType, successCallback, failureCallback) 	/* Promise<DataSnapshot> *//* once(eventType) */
 
-$(document).ready(function() { 
+$(document).ready(function() {
+    console.log("Firebase JS file ready!");
     let date = new Date();
     let year = date.getFullYear();
     let month = date.getMonth() + 1;
