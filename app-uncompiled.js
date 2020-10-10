@@ -65,6 +65,7 @@ function populateDayOverview(date, data) {
 			quant={thisObject.quant}
 			propValue = {value}
 			type = {thisObject.type}
+			icon = {thisObject.icon}
 		/>;
 	// Pushes created bubble elements into our array dataElements
 	dataElements.push(bubble);
