@@ -13,16 +13,19 @@ function checkLogInStatus() {
         if (user) {
             // User is signed in.
             $('#splash').fadeOut(200);
-            $('main').fadeIn(200);
-            $('header').fadeIn(200);
-            $('footer').fadeIn(200);
-            
+            setTimeout(function(){
+                $('main').fadeIn(200);
+                $('header').fadeIn(200);
+                $('footer').fadeIn(200);
+            }, 200);            
         } else {
             // No user is signed in.
-            $('#splash').fadeIn(200);
             $('main').fadeOut(200);
             $('header').fadeOut(200);
             $('footer').fadeOut(200);
+            setTimeout(function(){
+                $('#splash').fadeIn(200);
+            }, 200);
         }
     });
 }
