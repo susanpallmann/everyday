@@ -34,15 +34,17 @@ function populateDayOverview(date, data) {
 	for (const [key, value] of Object.entries(data)) {
 		let keyword = key;
 		let thisObject = searchArray(keyword, categories);
-		// Creates bubble from our class Bubble, sending in some object properties as props
-		let bubble = <Bubble 
-			propKey={keyword}
-			title={thisObject.title}
-			quant={thisObject.quant}
-			propValue = {value}
-		/>;
-	// Pushes created bubble elements into our array dataElements
-	dataElements.push(bubble);
+		if (thisObject) {
+			// Creates bubble from our class Bubble, sending in some object properties as props
+			let bubble = <Bubble 
+				propKey={keyword}
+				title={thisObject.title}
+				quant={thisObject.quant}
+				propValue = {value}
+			/>;
+			// Pushes created bubble elements into our array dataElements
+			dataElements.push(bubble);
+		}
 	}
 	// Renders the array of bubbles to the designated class
 	ReactDOM.render(
