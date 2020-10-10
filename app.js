@@ -12,10 +12,10 @@ class Custom extends React.Component {
       console.log(this.props.value);
 
       for (var i; i < this.props.value; i++) {
-        let icon = r("span", {
+        let iconItem = r("span", {
           className: "large-icon"
         }, this.props.icon);
-        iconArray.push(icon);
+        iconArray.push(iconItem);
       }
 
       return r("div", {
