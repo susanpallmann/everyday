@@ -9,11 +9,12 @@ class Custom extends React.Component {
   render() {
     if (this.props.type === "number") {
       let iconArray = [];
-      console.log(this.props.propIcon);
+      console.log(this.props.value);
 
       for (var i; i < this.props.value; i++) {
-        //let icon = <span className="large-icon">{this.props.propIcon}</span>;
-        let icon = /*#__PURE__*/React.createElement("span", null, this.props.propIcon);
+        let icon = /*#__PURE__*/React.createElement("span", {
+          className: "large-icon"
+        }, "test");
         console.log("this ran");
         iconArray.push(icon);
       }
