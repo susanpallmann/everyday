@@ -19,6 +19,7 @@ function checkLogInStatus() {
                 $('footer').fadeIn(200);
             }, 200);
             $('main').removeClass('hide');
+            initializeButtons();
         } else {
             // No user is signed in.
             if ($('main').hasClass('hide')) {
