@@ -1,9 +1,12 @@
 $(document).ready(function() {
 	// Changes splash view mode to display log in screen
 	$('.nav-log-in').click(function(e) {
-		$('#splash-start').addClass('hide');
+		/*$('#splash-start').addClass('hide');
 		$('#splash-log-in').removeClass('hide');
-		$('#splash-sign-up').addClass('hide');
+		$('#splash-sign-up').addClass('hide');*/
+		$('#splash-start').fadeOut();
+		$('#splash-log-in').fadeIn();
+		$('#splash-sign-up').fadeOut();
 		e.preventDefault();
 	});
 	
