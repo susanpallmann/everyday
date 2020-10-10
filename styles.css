@@ -783,7 +783,7 @@ input[type="text"], input[type="password"], input[type="number"] {
   width: 81%;
 }
 
-.loading-bar .progress[amount="2"] {
+.loading-bar .progress[amount="82"] {
   width: 82%;
 }
 
