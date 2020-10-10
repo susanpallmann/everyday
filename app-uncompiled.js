@@ -7,12 +7,11 @@ class Custom extends React.Component {
 			let iconArray = [];
 			console.log(this.props.value);
 			for (var i; i < this.props.value; i++) {
-				console.log("This ran!");
-				let icon = <p>This is type number</p>;
+				let icon = <span className="large-icon">this.props.icon</p>;
 				iconArray.push(icon);
 			}
 			return (
-				<div>{iconArray}</div>
+				<div className="icon-set">{iconArray}</div>
 			);
 		} else if (this.props.type === "select") {
 			return (
@@ -33,7 +32,7 @@ class Bubble extends React.Component {
 			<div className="bubble">
 				<h3 className={this.props.propKey}>{this.props.title}</h3>
 				<p>You logged {this.props.propValue} {this.props.quant} for {this.props.title.toLowerCase()}.</p>
-				<Custom type={this.props.type} value={this.props.propValue} />
+				<Custom type={this.props.type} value={this.props.propValue} icon={this.props.icon} />
 			</div>
 		);
 	}
