@@ -19,6 +19,17 @@
   --white: #fff; /* This looks stupid, but if I add "light mode" later I'll want an easy way to change this. */
 }
 
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: var(--accent-2);
+}
+
 body {
   margin: 0;
   padding: 0;
