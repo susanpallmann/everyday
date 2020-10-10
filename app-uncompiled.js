@@ -4,9 +4,12 @@ console.log("App file ready!");
 class Custom extends React.Component {
 	render () {
 		if (this.props.type === "number") {
-			return (
-				<p>This is type number</p>
-			);  
+			for (var i; i < parseInt(this.props.value); i++) {
+				return (
+					<p>This is type number</p>
+				);
+				console.log("This ran!");
+			}
 		} else if (this.props.type === "select") {
 			return (
 				<p>This is type select</p>
