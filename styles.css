@@ -134,6 +134,7 @@ footer nav#main-nav ul li a span {
 
 .hide {
   display: none;
+  opacity: 0;
 }
 
 .center-both-container {
@@ -151,6 +152,11 @@ footer nav#main-nav ul li a span {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+}
+
+#splash div {
+  opacity: 1;
+  transition: opacity 0.2s;
 }
 
 #splash .center-both-container {
