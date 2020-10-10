@@ -283,6 +283,7 @@ input[type="text"], input[type="password"], input[type="number"] {
 #splash-start .button:nth-child(2n):focus,
 #splash-start .button:nth-child(2n):active {
   background-color: var(--dark-button-hover);
+  color: var(--white);
 }
 
 #calendar {
