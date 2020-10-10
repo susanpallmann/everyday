@@ -6,28 +6,26 @@ const r = React.createElement;
 // Verifying load order for testing (TODO: remove this)
 console.log("App file ready!"); // Creates our bubble elements used in the day overview screen
 class Custom extends React.Component {
-	render () {
-		if (this.props.type === "number") {
-			let iconArray = [];
-			console.log(this.props.value);
-			for (var i; i < this.props.value; i++) {
-				let icon = r(<p>test</p>);
-				console.log("this ran");
-				iconArray.push(icon);
-			}
-			return (
-				<div className="icon-set">{iconArray}</div>
-			);
-		} else if (this.props.type === "select") {
-			return (
-				<p>This is type select</p>
-			);
-		} else {
-			return (
-				<p>This is type unknown</p>
-			);
-		}
-	}
+  render() {
+    if (this.props.type === "number") {
+      let iconArray = [];
+      console.log(this.props.value);
+      /*for (var i; i < this.props.value; i++) {
+      	let icon = <span className="large-icon">test</span>;
+      	console.log("this ran");
+      	iconArray.push(icon);
+      }*/
+
+      return /*#__PURE__*/React.createElement("div", {
+        className: "icon-set"
+      }, iconArray);
+    } else if (this.props.type === "select") {
+      return /*#__PURE__*/React.createElement("p", null, "This is type select");
+    } else {
+      return /*#__PURE__*/React.createElement("p", null, "This is type unknown");
+    }
+  }
+
 } // Creates our bubble elements used in the day overview screen
 
 
