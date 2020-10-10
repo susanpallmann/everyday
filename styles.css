@@ -224,6 +224,16 @@ footer nav#main-nav ul li a span {
   background-color: var(--accent-2);
 }
 
+.button.button-switch {
+  background-color: var(--background);
+}
+
+.button.button-switch:hover,
+.button.button-switch:active,
+.button.button-switch:focus {
+  background-color: var(--dark-button-hover);
+}
+
 input[type="text"], input[type="password"], input[type="number"] {
   background-color: var(--lighter);
   border: 2px solid var(--border);
