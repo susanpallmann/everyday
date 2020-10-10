@@ -25,7 +25,7 @@ function checkLogInStatus() {
             $('footer').fadeOut(0);
             setTimeout(function(){
                 $('#splash').fadeIn(200);
-            }, 200);
+            }, 0);
         }
     });
 }
