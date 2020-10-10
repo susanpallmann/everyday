@@ -5,7 +5,10 @@ function initializeButtons() {
 		console.log(dateSplit);
 		let currentDateObject = new Date(dateSplit[0], dateSplit[1] - 1, dateSplit[2]);
 		console.log(currentDateObject);
-		console.log(currentDateObject.getDate() + 1);
+		let newDate = currentDateObject;
+		newDate.setDate(currentDateObject.getDate() + 1);
+		console.log(newDate);
+		console.log(newDate.getDate() + '-' + (newdate.getMonth()+1) + '-' + newdate.getFullYear());
 		//readDay(date, populateDayOverview);
 		e.preventDefault();
 	});
