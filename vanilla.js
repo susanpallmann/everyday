@@ -56,6 +56,12 @@ $(document).ready(function() {
 		}, 200);
 		e.preventDefault();
 	});
+	
+	// Changes splash view mode to display main splash screen
+	$('#edit-day').click(function(e) {
+		let currentDate = $('#written-date').text();
+		e.preventDefault();
+	});
 });
 
 // Appends error message (parameter message) to a specific element (parameter element)
