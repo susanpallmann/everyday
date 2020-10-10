@@ -8,7 +8,7 @@ class Custom extends React.Component {
 			for (var i; i < parseInt(this.props.value); i++) {
 				console.log("This ran!");
 				let icon = <p>This is type number</p>;
-				iconArray.push(bubble);
+				iconArray.push(icon);
 			}
 			return (
 				{iconArray}
