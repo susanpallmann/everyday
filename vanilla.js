@@ -4,13 +4,13 @@ function initializeButtons() {
 		let dateSplit = currentDate.split('-');
 		let dateActual = new Date(parseInt(dateSeparated[0]), parseInt(dateSeparated[1]) - 1, parseInt(dateSeparated[2]));
 		let dateNext = dateActual.setDate(dateActual.getDate() + 1 );
-		let dateIntermediate = new Date(dateNext);
+		/*let dateIntermediate = new Date(dateNext);
 		console.log(dateIntermediate);
 		let year = dateIntermediate.getFullYear();
 		let month = dateIntermediate.getMonth() + 1;
 		let day = dateIntermediate.getDate();
 		let dateFormatted = year + '-' + month + '-' + day;
-		console.log(dateFormatted);
+		console.log(dateFormatted);*/
 		//readDay(date, populateDayOverview);
 		e.preventDefault();
 	});
