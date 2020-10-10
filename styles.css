@@ -418,10 +418,17 @@ input[type="text"], input[type="password"], input[type="number"] {
 }
 
 #edit-day {
-  display: inline-block;
+  display: block;
+  width: 100%;
   max-width: 350px;
   margin: auto;
   text-decoration: none;
+}
+
+#edit-day:hover,
+#edit-day:active,
+#edit-day:focus {
+  color: var(--accent-2);
 }
 
 /* Icons */
