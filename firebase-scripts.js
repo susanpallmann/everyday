@@ -69,7 +69,7 @@ $(document).ready(function() {
         "sleep": 6
     };
     updateDay(date, data);
-    updateDay("2020-10-10", data);
+    updateDay("2020-10-11", data);
     updateDay("2020-10-8", data);
     readDay(date, populateDayOverview);
 });
