@@ -5,7 +5,7 @@ class Custom extends React.Component {
 	render () {
 		if (this.props.type === "number") {
 			let iconArray = [];
-			for (var i; i < parseInt(this.props.value); i++) {
+			for (var i; i < this.props.value; i++) {
 				console.log("This ran!");
 				let icon = <p>This is type number</p>;
 				iconArray.push(icon);
