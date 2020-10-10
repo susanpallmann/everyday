@@ -11,7 +11,7 @@ class Custom extends React.Component {
 			let iconArray = [];
 			console.log(this.props.value);
 			for (var i; i < this.props.value; i++) {
-				let icon = <p>test</p>;
+				let icon = r(<p>test</p>);
 				console.log("this ran");
 				iconArray.push(icon);
 			}
