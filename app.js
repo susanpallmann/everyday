@@ -12,7 +12,7 @@ class Custom extends React.Component {
       let iconArray = [];
       console.log(this.props.value);
 
-      for (var i; i < this.props.value; i++) {
+      for (var i = 0; i < this.props.value; i++) {
         console.log("This ran!");
         let icon = /*#__PURE__*/React.createElement("p", null, "This is type number");
         iconArray.push(icon);
