@@ -1,13 +1,18 @@
+// Default function for optional callbacks
 function nocallback() {
 }
 
+// Sends information (parameter data, expected to be an object) about a specific date (parameter date) to the database
 function updateDay(date, data, callback = nocallback) {
-    var user = firebase.auth().currentUser;
 
+    // First checks authentication to prevent the user from writing to any directory other than
+    // the one associated with their user ID.
+    var user = firebase.auth().currentUser;
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             // User is signed in.
             let uid = user.uid;
+            // Update info at specific path
             var path = firebase.database().ref('users/' + uid + '/' + date);
             path.update(data, function () {callback(true)});
         } else {
@@ -17,27 +22,27 @@ function updateDay(date, data, callback = nocallback) {
     });
 }
 
-function sendCallbackMessage(string) {
-    /*console.log(string);*/
-    return string;
-}
-
+// Retrieves information from database about a specific date (parameter date), calls React script to load page (app.js)
 function readDay(date, callback) {
+    
+    // First checks authentication to prevent the user from reading any directory other than
+    // the one associated with their user ID.
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             // User is signed in.
             let uid = user.uid;
             var path = firebase.database().ref('users/' + uid + '/' + date);
+            // Takes snapshot of data at this particular path
             path.once('value', function(snapshot) {
                 if (date) {
+                    // Creating object "data" from each pair of key/values
                     let data = {};
-                    // Do something with this data, send it to React
                     snapshot.forEach((child) => {
                         let key = child.key;
                         let value = child.val();
-                        // Do something with react
                         data[key] = value;
                     });
+                    // Pass in function to call React script here (populateDayOverview)
                     callback(date, data);
                 } else {
                     callback(null, null);
@@ -48,7 +53,10 @@ function readDay(date, callback) {
 }
 
 $(document).ready(function() {
+    // Verifying load order for testing (TODO: remove this)
     console.log("Firebase JS file ready!");
+    
+    // Entering some info so that I am guaranteed to have data for the day I'm looking up for testing (TODO: remove this)
     let date = new Date();
     let year = date.getFullYear();
     let month = date.getMonth() + 1;
