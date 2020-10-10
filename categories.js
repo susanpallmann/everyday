@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	console.log("Categories file ready!");
 	var caffeine = {
 		keyword: "caffeine",
 		title: "Caffeine",
