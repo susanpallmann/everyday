@@ -20,9 +20,9 @@ function checkLogInStatus() {
             }, 200);            
         } else {
             // No user is signed in.
-            $('main').fadeOut(200);
-            $('header').fadeOut(200);
-            $('footer').fadeOut(200);
+            $('main').fadeOut(0);
+            $('header').fadeOut(0);
+            $('footer').fadeOut(0);
             setTimeout(function(){
                 $('#splash').fadeIn(200);
             }, 200);
