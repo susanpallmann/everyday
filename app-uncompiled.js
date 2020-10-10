@@ -20,7 +20,8 @@ function searchArray(word, array){
 		if (array[i].keyword === word) {
 			// Returns the object
 			return array[i];
-		}
+		} else {
+			return false;
 	}
 }
 
