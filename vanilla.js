@@ -1,5 +1,10 @@
 function initializeButtons() {
 	$('.next-day').click(function (e) {
+		let currentDate = $('#written-date').text();
+		let dateSplit = currentDate.split('-');
+		console.log(dateSplit);
+		let currentDateObject = new Date(dateSplit[0], dateSplit[1] - 1, dateSplit[2]);
+		console.log(currentDateObject);
 		//readDay(date, populateDayOverview);
 		e.preventDefault();
 	});
