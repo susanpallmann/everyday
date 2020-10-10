@@ -1,4 +1,27 @@
 function initializeButtons() {
+}
+
+$(document).ready(function() {
+	// Changes splash view mode to display log in screen
+	$('.nav-log-in').click(function(e) {
+		$('#splash-start').fadeOut(200);
+		$('#splash-sign-up').fadeOut(200);
+		setTimeout(function(){
+			$('#splash-log-in').fadeIn(200);
+		}, 200);
+		e.preventDefault();
+	});
+	
+	// Changes splash view mode to display sign up screen
+	$('.nav-sign-up').click(function(e) {
+		$('#splash-start').fadeOut(200);
+		$('#splash-log-in').fadeOut(200);
+		setTimeout(function(){
+			$('#splash-sign-up').fadeIn(200);
+		}, 200);
+		e.preventDefault();
+	});
+	
 	$('.next-day').click(function (e) {
 		let currentDate = $('#written-date').text();
 		let dateSplit = currentDate.split('-');
@@ -24,28 +47,6 @@ function initializeButtons() {
 		let day = dateIntermediate.getDate();
 		let dateFormatted = year + '-' + month + '-' + day;
 		readDay(dateFormatted, populateDayOverview);
-		e.preventDefault();
-	});
-}
-
-$(document).ready(function() {
-	// Changes splash view mode to display log in screen
-	$('.nav-log-in').click(function(e) {
-		$('#splash-start').fadeOut(200);
-		$('#splash-sign-up').fadeOut(200);
-		setTimeout(function(){
-			$('#splash-log-in').fadeIn(200);
-		}, 200);
-		e.preventDefault();
-	});
-	
-	// Changes splash view mode to display sign up screen
-	$('.nav-sign-up').click(function(e) {
-		$('#splash-start').fadeOut(200);
-		$('#splash-log-in').fadeOut(200);
-		setTimeout(function(){
-			$('#splash-sign-up').fadeIn(200);
-		}, 200);
 		e.preventDefault();
 	});
 	
