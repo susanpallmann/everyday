@@ -12,11 +12,17 @@ function checkLogInStatus() {
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             // User is signed in.
-            $('body').attr('splash', 'false');
+            $('#splash').fadeOut(200);
+            $('main').fadeIn(200);
+            $('header').fadeIn(200);
+            $('footer').fadeIn(200);
             
         } else {
             // No user is signed in.
-            $('body').attr('splash', 'true');
+            $('#splash').fadeIn(200);
+            $('main').fadeOut(200);
+            $('header').fadeOut(200);
+            $('footer').fadeOut(200);
         }
     });
 }
