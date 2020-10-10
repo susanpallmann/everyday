@@ -1,3 +1,20 @@
+function initializeButtons() {
+	$('next-day').click(function (e) {
+		//readDay(date, populateDayOverview);
+		e.preventDefault();
+	});
+	
+	$('previous-day').click(function (e) {
+		let currentDate = $('#written-date').text();
+		let dateSplit = currentDate.split('-');
+		console.log(dateSplit);
+		let currentDateObject = new Date(dateSplit[0], dateSplit[1] - 1, dateSplit[2]);
+		console.log(currentDateObject);
+		//readDay(date, populateDayOverview);
+		e.preventDefault();
+	});
+}
+
 $(document).ready(function() {
 	// Changes splash view mode to display log in screen
 	$('.nav-log-in').click(function(e) {
@@ -26,21 +43,6 @@ $(document).ready(function() {
 		setTimeout(function(){
 			$('#splash-start').fadeIn(200);
 		}, 200);
-		e.preventDefault();
-	});
-	
-	$('next-day').click(function (e) {
-		//readDay(date, populateDayOverview);
-		e.preventDefault();
-	});
-	
-	$('previous-day').click(function (e) {
-		let currentDate = $('#written-date').text();
-		let dateSplit = currentDate.split('-');
-		console.log(dateSplit);
-		let currentDateObject = new Date(dateSplit[0], dateSplit[1] - 1, dateSplit[2]);
-		console.log(currentDateObject);
-		//readDay(date, populateDayOverview);
 		e.preventDefault();
 	});
 });
