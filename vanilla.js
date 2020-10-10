@@ -29,17 +29,19 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 	
-	$('next-day').click(function () {
+	$('next-day').click(function (e) {
 		//readDay(date, populateDayOverview);
+		e.preventDefault();
 	});
 	
-	$('previous-day').click(function () {
+	$('previous-day').click(function (e) {
 		let currentDate = $('#written-date').text();
 		let dateSplit = currentDate.split('-');
 		console.log(dateSplit);
 		let currentDateObject = new Date(dateSplit[0], dateSplit[1] - 1, dateSplit[2]);
 		console.log(currentDateObject);
 		//readDay(date, populateDayOverview);
+		e.preventDefault();
 	});
 });
 
