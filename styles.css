@@ -343,6 +343,8 @@ input[type="text"], input[type="password"], input[type="number"] {
   font-family: 'Material Icons';
   -webkit-font-feature-settings: 'liga';
   font-size: 18px;
+  text-transform: none;
+  vertical-align: middle;
 }
 
 .bubble h3.aaaMood:before {
