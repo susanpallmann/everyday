@@ -2,6 +2,9 @@ function initializeButtons() {
 	$('.next-day').click(function (e) {
 		let currentDate = $('#written-date').text();
 		let dateSplit = currentDate.split('-');
+		console.log(dateSplit);
+		let currentDateObject = new Date(dateSplit[0], dateSplit[1] - 1, dateSplit[2]);
+		console.log(currentDateObject);
 		/*let dateActual = new Date(parseInt(dateSeparated[0]), parseInt(dateSeparated[1]) - 1, parseInt(dateSeparated[2]));
 		let dateNext = dateActual.setDate(dateActual.getDate() + 1 );
 		/*let dateIntermediate = new Date(dateNext);
