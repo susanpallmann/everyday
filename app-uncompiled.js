@@ -5,10 +5,10 @@ class Custom extends React.Component {
 	render () {
 		if (this.props.type === "number") {
 			for (var i; i < parseInt(this.props.value); i++) {
+				console.log("This ran!");
 				return (
 					<p>This is type number</p>
 				);
-				console.log("This ran!");
 			}
 		} else if (this.props.type === "select") {
 			return (
