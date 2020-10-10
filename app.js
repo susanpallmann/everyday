@@ -13,15 +13,15 @@ class Custom extends React.Component {
 
       for (var i; i < this.props.value; i++) {
         console.log("This ran!");
-        let icon = r("p", null, "This is type number");
+        let icon = /*#__PURE__*/React.createElement("p", null, "This is type number");
         iconArray.push(icon);
       }
 
-      return r("div", null, iconArray);
+      return /*#__PURE__*/React.createElement("div", null, "iconArray");
     } else if (this.props.type === "select") {
-      return r("p", null, "This is type select");
+      return /*#__PURE__*/React.createElement("p", null, "This is type select");
     } else {
-      return r("p", null, "This is type unknown");
+      return /*#__PURE__*/React.createElement("p", null, "This is type unknown");
     }
   }
 
