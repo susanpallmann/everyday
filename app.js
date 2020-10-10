@@ -11,7 +11,7 @@ class Custom extends React.Component {
     if (this.props.type === "number") {
       for (var i; i < parseInt(this.props.value); i++) {
         return r("p", null, "This is type number");
-        console.log("This ran!");
+        console.log("This ran! Our value is " + this.props.value);
       }
     } else if (this.props.type === "select") {
       return r("p", null, "This is type select");
