@@ -225,7 +225,7 @@ footer nav#main-nav ul li a span {
 }
 
 .button.button-switch {
-  background-color: var(--background);
+  background-color: var(----lighter);
 }
 
 .button.button-switch:hover,
