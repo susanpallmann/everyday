@@ -12,6 +12,7 @@ function checkLogInStatus() {
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             // User is signed in.
+            $('main').removeClass('hide');
             $('#splash').fadeOut(200);
             setTimeout(function(){
                 $('main').fadeIn(200);
