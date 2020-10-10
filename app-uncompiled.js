@@ -22,6 +22,7 @@ function searchArray(word, array){
 			return array[i];
 		} else {
 			return false;
+		}
 	}
 }
 
