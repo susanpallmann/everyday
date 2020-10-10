@@ -5,6 +5,7 @@ function initializeButtons() {
 		console.log(dateSplit);
 		let currentDateObject = new Date(dateSplit[0], dateSplit[1] - 1, dateSplit[2]);
 		console.log(currentDateObject);
+		console.log(currentDateObject.getDate() + 1);
 		//readDay(date, populateDayOverview);
 		e.preventDefault();
 	});
