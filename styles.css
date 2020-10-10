@@ -417,6 +417,13 @@ input[type="text"], input[type="password"], input[type="number"] {
   text-align: left;
 }
 
+#edit-day {
+  display: inline-block;
+  max-width: 350px;
+  margin: auto;
+  text-decoration: none;
+}
+
 /* Icons */
 .icon-set .large-icon {
   font-family: 'Material Icons';
