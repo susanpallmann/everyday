@@ -442,6 +442,15 @@ input[type="text"], input[type="password"], input[type="number"] {
   color: var(--accent);
 }
 
+.material-icons {
+  vertical-align: middle;
+}
+
+.enter-previous {
+  color: #fff;
+  text-decoration: none;
+}
+
 .loading-bar {
   height: 1rem;
   background-color: var(--lighter);
