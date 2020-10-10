@@ -8,12 +8,12 @@ console.log("App file ready!"); // Creates our bubble elements used in the day o
 
 class Custom extends React.Component {
   render() {
-    if (this.props.type === "aaaMood") {
-      return r("p", null, "This is type aaaMood");
-    } else if (this.props.type === "caffeine") {
-      return r("p", null, "This is type caffeine");
+    if (this.props.type === "number") {
+      return r("p", null, "This is type number");
+    } else if (this.props.type === "select") {
+      return r("p", null, "This is type select");
     } else {
-      return r("p", null, "This is type neither");
+      return r("p", null, "This is type unknown");
     }
   }
 
@@ -27,7 +27,8 @@ class Bubble extends React.Component {
     }, r("h3", {
       className: this.props.propKey
     }, this.props.title), r("p", null, "You logged ", this.props.propValue, " ", this.props.quant, " for ", this.props.title.toLowerCase(), "."), r(Custom, {
-      type: this.props.propKey
+      type: this.props.type,
+      value: this.props.propValue
     }));
   }
 
@@ -58,7 +59,8 @@ function populateDayOverview(date, data) {
       propKey: keyword,
       title: thisObject.title,
       quant: thisObject.quant,
-      propValue: value
+      propValue: value,
+      type: thisObject.type
     }); // Pushes created bubble elements into our array dataElements
 
     dataElements.push(bubble);
