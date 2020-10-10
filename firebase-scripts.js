@@ -52,7 +52,7 @@ function readDay(date, callback) {
     });
 }
 
-$(document).ready(function() {
+/*$(document).ready(function() {*/
     // Verifying load order for testing (TODO: remove this)
     console.log("Firebase JS file ready!");
     
@@ -70,4 +70,4 @@ $(document).ready(function() {
     };
     updateDay(date, data);
     readDay(date, populateDayOverview);
-});
+/*});*/
