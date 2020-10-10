@@ -3,17 +3,17 @@ console.log("App file ready!");
 
 class Custom extends React.Component {
 	render () {
-		if (this.props.type === "aaaMood") {
+		if (this.props.type === "number") {
 			return (
-				<p>This is type aaaMood</p>
+				<p>This is type number</p>
 			);  
-		} else if (this.props.type === "caffeine") {
+		} else if (this.props.type === "select") {
 			return (
-				<p>This is type caffeine</p>
+				<p>This is type select</p>
 			);
 		} else {
 			return (
-				<p>This is type neither</p>
+				<p>This is type unknown</p>
 			);
 		}
 	}
@@ -26,7 +26,7 @@ class Bubble extends React.Component {
 			<div className="bubble">
 				<h3 className={this.props.propKey}>{this.props.title}</h3>
 				<p>You logged {this.props.propValue} {this.props.quant} for {this.props.title.toLowerCase()}.</p>
-				<Custom type={this.props.propKey} />
+				<Custom type={this.props.type} value={this.props.propValue} />
 			</div>
 		);
 	}
@@ -58,6 +58,7 @@ function populateDayOverview(date, data) {
 			title={thisObject.title}
 			quant={thisObject.quant}
 			propValue = {value}
+			type = {thisObject.type}
 		/>;
 	// Pushes created bubble elements into our array dataElements
 	dataElements.push(bubble);
