@@ -4,9 +4,9 @@ $(document).ready(function() {
 		/*$('#splash-start').addClass('hide');
 		$('#splash-log-in').removeClass('hide');
 		$('#splash-sign-up').addClass('hide');*/
-		$('#splash-start').fadeOut();
-		$('#splash-log-in').fadeIn();
-		$('#splash-sign-up').fadeOut();
+		$('#splash-start').fadeOut(200);
+		$('#splash-log-in').fadeIn(200);
+		$('#splash-sign-up').fadeOut(200);
 		e.preventDefault();
 	});
 	
