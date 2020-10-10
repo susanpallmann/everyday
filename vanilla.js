@@ -28,6 +28,19 @@ $(document).ready(function() {
 		}, 200);
 		e.preventDefault();
 	});
+	
+	$('next-day').click(function () {
+		//readDay(date, populateDayOverview);
+	});
+	
+	$('previous-day').click(function () {
+		let currentDate = $('#written-date').text();
+		let dateSplit = currentDate.split('-');
+		console.log(dateSplit);
+		let currentDateObject = new Date(dateSplit[0], dateSplit[1] - 1, dateSplit[2]);
+		console.log(currentDateObject);
+		//readDay(date, populateDayOverview);
+	});
 });
 
 // Appends error message (parameter message) to a specific element (parameter element)
