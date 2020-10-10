@@ -18,7 +18,7 @@ class Custom extends React.Component {
       }
 
       return {
-        iconArray
+        {iconArray}
       };
     } else if (this.props.type === "select") {
       return r("p", null, "This is type select");
