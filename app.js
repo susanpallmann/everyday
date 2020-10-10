@@ -14,7 +14,7 @@ class Custom extends React.Component {
       for (var i; i < parseInt(this.props.value); i++) {
         console.log("This ran!");
         let icon = r("p", null, "This is type number");
-        iconArray.push(bubble);
+        iconArray.push(icon);
       }
 
       return {
