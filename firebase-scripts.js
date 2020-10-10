@@ -68,8 +68,22 @@ $(document).ready(function() {
         "water": 5,
         "sleep": 6
     };
+    
+    let data2 = {
+        "aaaMood": 1,
+        "caffeine": 2,
+        "water": 3,
+        "sleep": 4
+    };
+    
+    let data3 = {
+        "aaaMood": 8,
+        "caffeine": 8,
+        "water": 8,
+        "sleep": 8
+    };
     updateDay(date, data);
-    updateDay("2020-10-11", data);
-    updateDay("2020-10-8", data);
+    updateDay("2020-10-11", data2);
+    updateDay("2020-10-9", data3);
     readDay(date, populateDayOverview);
 });
