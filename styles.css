@@ -368,6 +368,8 @@ input[type="text"], input[type="password"], input[type="number"] {
 #day-overview {
   position: relative;
   padding-top: calc(1em + 1.5em);
+  margin: auto;
+  max-width: 500px;
 }
 
 #day-overview a {
