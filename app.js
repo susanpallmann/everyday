@@ -5,24 +5,26 @@ const r = React.createElement;
 
 // Verifying load order for testing (TODO: remove this)
 console.log("App file ready!"); // Creates our bubble elements used in the day overview screen
-
 class Custom extends React.Component {
   render() {
     if (this.props.type === "number") {
       let iconArray = [];
       console.log(this.props.value);
 
-      for (var i = 0; i < this.props.value; i++) {
-        console.log("This ran!");
-        let icon = /*#__PURE__*/React.createElement("p", null, "This is type number");
+      for (var i; i < this.props.value; i++) {
+        let icon = r("span", {
+          className: "large-icon"
+        }, "this.props.icon");
         iconArray.push(icon);
       }
 
-      return /*#__PURE__*/React.createElement("div", null, iconArray);
+      return r("div", {
+        className: "icon-set"
+      }, iconArray);
     } else if (this.props.type === "select") {
-      return /*#__PURE__*/React.createElement("p", null, "This is type select");
+      return r("p", null, "This is type select");
     } else {
-      return /*#__PURE__*/React.createElement("p", null, "This is type unknown");
+      return r("p", null, "This is type unknown");
     }
   }
 
@@ -37,7 +39,8 @@ class Bubble extends React.Component {
       className: this.props.propKey
     }, this.props.title), r("p", null, "You logged ", this.props.propValue, " ", this.props.quant, " for ", this.props.title.toLowerCase(), "."), r(Custom, {
       type: this.props.type,
-      value: this.props.propValue
+      value: this.props.propValue,
+      icon: this.props.icon
     }));
   }
 
