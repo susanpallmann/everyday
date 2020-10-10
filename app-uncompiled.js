@@ -3,11 +3,11 @@ console.log("App file ready!");
 
 class Custom extends React.Component {
 	render () {
-		if (this.props.propKey === "aaaMood") {
+		if (this.props.type === "aaaMood") {
 			return (
 				<p>This is type aaaMood</p>
 			);  
-		} else if (this.props.propKey === "caffeine") {
+		} else if (this.props.type === "caffeine") {
 			return (
 				<p>This is type caffeine</p>
 			);
