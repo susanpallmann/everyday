@@ -10,6 +10,7 @@ class Custom extends React.Component {
   render() {
     if (this.props.type === "number") {
       let iconArray = [];
+      console.log(this.props.value);
 
       for (var i; i < this.props.value; i++) {
         console.log("This ran!");
@@ -17,7 +18,7 @@ class Custom extends React.Component {
         iconArray.push(icon);
       }
 
-      return /*#__PURE__*/React.createElement("div", null, "iconArray");
+      return /*#__PURE__*/React.createElement("div", null, iconArray);
     } else if (this.props.type === "select") {
       return /*#__PURE__*/React.createElement("p", null, "This is type select");
     } else {
