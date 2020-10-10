@@ -4,12 +4,15 @@ console.log("App file ready!");
 class Custom extends React.Component {
 	render () {
 		if (this.props.type === "number") {
+			let iconArray = [];
 			for (var i; i < parseInt(this.props.value); i++) {
 				console.log("This ran!");
-				return (
-					<p>This is type number</p>
-				);
+				let icon = <p>This is type number</p>;
+				iconArray.push(bubble);
 			}
+			return (
+				{iconArray}
+			);
 		} else if (this.props.type === "select") {
 			return (
 				<p>This is type select</p>
