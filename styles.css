@@ -451,8 +451,409 @@ input[type="text"], input[type="password"], input[type="number"] {
   margin-bottom: 3rem;
 }
 
+.loading-bar .progress {
+  width: 0%;
+  background-color: var(--selected);
+  height: 100%;
+  border-radius: 0.5rem;
+}
+
+.loading-bar .progress[amount="1"] {
+  width: 1%;
+}
+
+.loading-bar .progress[amount="2"] {
+  width: 2%;
+}
+
+.loading-bar .progress[amount="3"] {
+  width: 3%;
+}
+
+.loading-bar .progress[amount="4"] {
+  width: 4%;
+}
+
+.loading-bar .progress[amount="5"] {
+  width: 5%;
+}
+
+.loading-bar .progress[amount="6"] {
+  width: 6%;
+}
+
+.loading-bar .progress[amount="7"] {
+  width: 7%;
+}
+
+.loading-bar .progress[amount="8"] {
+  width: 8%;
+}
+
+.loading-bar .progress[amount="9"] {
+  width: 9%;
+}
+
 .loading-bar .progress[amount="10"] {
   width: 10%;
-  color: var(--selected);
-  height: 100%;
+}
+
+.loading-bar .progress[amount="11"] {
+  width: 11%;
+}
+
+.loading-bar .progress[amount="12"] {
+  width: 12%;
+}
+
+.loading-bar .progress[amount="13"] {
+  width: 13%;
+}
+
+.loading-bar .progress[amount="14"] {
+  width: 14%;
+}
+
+.loading-bar .progress[amount="15"] {
+  width: 15%;
+}
+
+.loading-bar .progress[amount="16"] {
+  width: 16%;
+}
+
+.loading-bar .progress[amount="17"] {
+  width: 17%;
+}
+
+.loading-bar .progress[amount="18"] {
+  width: 18%;
+}
+
+.loading-bar .progress[amount="19"] {
+  width: 19%;
+}
+
+.loading-bar .progress[amount="20"] {
+  width: 20%;
+}
+
+.loading-bar .progress[amount="21"] {
+  width: 21%;
+}
+
+.loading-bar .progress[amount="22"] {
+  width: 22%;
+}
+
+.loading-bar .progress[amount="23"] {
+  width: 23%;
+}
+
+.loading-bar .progress[amount="24"] {
+  width: 24%;
+}
+
+.loading-bar .progress[amount="25"] {
+  width: 25%;
+}
+
+.loading-bar .progress[amount="26"] {
+  width: 26%;
+}
+
+.loading-bar .progress[amount="27"] {
+  width: 27%;
+}
+
+.loading-bar .progress[amount="28"] {
+  width: 28%;
+}
+
+.loading-bar .progress[amount="29"] {
+  width: 29%;
+}
+
+.loading-bar .progress[amount="30"] {
+  width: 30%;
+}
+
+.loading-bar .progress[amount="31"] {
+  width: 31%;
+}
+
+.loading-bar .progress[amount="32"] {
+  width: 32%;
+}
+
+.loading-bar .progress[amount="33"] {
+  width: 33%;
+}
+
+.loading-bar .progress[amount="34"] {
+  width: 34%;
+}
+
+.loading-bar .progress[amount="35"] {
+  width: 35%;
+}
+
+.loading-bar .progress[amount="36"] {
+  width: 36%;
+}
+
+.loading-bar .progress[amount="37"] {
+  width: 37%;
+}
+
+.loading-bar .progress[amount="38"] {
+  width: 38%;
+}
+
+.loading-bar .progress[amount="39"] {
+  width: 39%;
+}
+
+.loading-bar .progress[amount="40"] {
+  width: 40%;
+}
+
+.loading-bar .progress[amount="41"] {
+  width: 41%;
+}
+
+.loading-bar .progress[amount="42"] {
+  width: 42%;
+}
+
+.loading-bar .progress[amount="43"] {
+  width: 43%;
+}
+
+.loading-bar .progress[amount="44"] {
+  width: 44%;
+}
+
+.loading-bar .progress[amount="45"] {
+  width: 45%;
+}
+
+.loading-bar .progress[amount="46"] {
+  width: 46%;
+}
+
+.loading-bar .progress[amount="47"] {
+  width: 47%;
+}
+
+.loading-bar .progress[amount="48"] {
+  width: 48%;
+}
+
+.loading-bar .progress[amount="49"] {
+  width: 49%;
+}
+
+.loading-bar .progress[amount="50"] {
+  width: 50%;
+}
+
+.loading-bar .progress[amount="51"] {
+  width: 51%;
+}
+
+.loading-bar .progress[amount="52"] {
+  width: 52%;
+}
+
+.loading-bar .progress[amount="53"] {
+  width: 53%;
+}
+
+.loading-bar .progress[amount="54"] {
+  width: 54%;
+}
+
+.loading-bar .progress[amount="55"] {
+  width: 55%;
+}
+
+.loading-bar .progress[amount="56"] {
+  width: 56%;
+}
+
+.loading-bar .progress[amount="57"] {
+  width: 57%;
+}
+
+.loading-bar .progress[amount="58"] {
+  width: 58%;
+}
+
+.loading-bar .progress[amount="59"] {
+  width: 59%;
+}
+
+.loading-bar .progress[amount="60"] {
+  width: 60%;
+}
+
+.loading-bar .progress[amount="61"] {
+  width: 61%;
+}
+
+.loading-bar .progress[amount="62"] {
+  width: 62%;
+}
+
+.loading-bar .progress[amount="63"] {
+  width: 63%;
+}
+
+.loading-bar .progress[amount="64"] {
+  width: 64%;
+}
+
+.loading-bar .progress[amount="65"] {
+  width: 65%;
+}
+
+.loading-bar .progress[amount="66"] {
+  width: 66%;
+}
+
+.loading-bar .progress[amount="67"] {
+  width: 67%;
+}
+
+.loading-bar .progress[amount="68"] {
+  width: 68%;
+}
+
+.loading-bar .progress[amount="69"] {
+  width: 69%;
+}
+
+.loading-bar .progress[amount="70"] {
+  width: 70%;
+}
+
+.loading-bar .progress[amount="71"] {
+  width: 71%;
+}
+
+.loading-bar .progress[amount="72"] {
+  width: 72%;
+}
+
+.loading-bar .progress[amount="73"] {
+  width: 73%;
+}
+
+.loading-bar .progress[amount="74"] {
+  width: 74%;
+}
+
+.loading-bar .progress[amount="75"] {
+  width: 75%;
+}
+
+.loading-bar .progress[amount="76"] {
+  width: 76%;
+}
+
+.loading-bar .progress[amount="77"] {
+  width: 77%;
+}
+
+.loading-bar .progress[amount="78"] {
+  width: 78%;
+}
+
+.loading-bar .progress[amount="79"] {
+  width: 79%;
+}
+
+.loading-bar .progress[amount="80"] {
+  width: 80%;
+}
+
+.loading-bar .progress[amount="81"] {
+  width: 81%;
+}
+
+.loading-bar .progress[amount="2"] {
+  width: 82%;
+}
+
+.loading-bar .progress[amount="83"] {
+  width: 83%;
+}
+
+.loading-bar .progress[amount="84"] {
+  width: 84%;
+}
+
+.loading-bar .progress[amount="85"] {
+  width: 85%;
+}
+
+.loading-bar .progress[amount="86"] {
+  width: 86%;
+}
+
+.loading-bar .progress[amount="87"] {
+  width: 87%;
+}
+
+.loading-bar .progress[amount="88"] {
+  width: 88%;
+}
+
+.loading-bar .progress[amount="89"] {
+  width: 89%;
+}
+
+.loading-bar .progress[amount="90"] {
+  width: 90%;
+}
+
+.loading-bar .progress[amount="91"] {
+  width: 91%;
+}
+
+.loading-bar .progress[amount="92"] {
+  width: 92%;
+}
+
+.loading-bar .progress[amount="93"] {
+  width: 93%;
+}
+
+.loading-bar .progress[amount="94"] {
+  width: 94%;
+}
+
+.loading-bar .progress[amount="95"] {
+  width: 95%;
+}
+
+.loading-bar .progress[amount="96"] {
+  width: 96%;
+}
+
+.loading-bar .progress[amount="97"] {
+  width: 97%;
+}
+
+.loading-bar .progress[amount="98"] {
+  width: 98%;
+}
+
+.loading-bar .progress[amount="99"] {
+  width: 99%;
+}
+
+.loading-bar .progress[amount="100"] {
+  width: 100%;
 }
