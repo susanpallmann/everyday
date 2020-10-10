@@ -2,29 +2,28 @@ function initializeButtons() {
 	$('.next-day').click(function (e) {
 		let currentDate = $('#written-date').text();
 		let dateSplit = currentDate.split('-');
-		console.log(dateSplit);
-		let currentDateObject = new Date(dateSplit[0], dateSplit[1] - 1, dateSplit[2]);
-		console.log(currentDateObject);
 		let dateActual = new Date(parseInt(dateSplit[0]), parseInt(dateSplit[1]) - 1, parseInt(dateSplit[2]));
 		let dateNext = dateActual.setDate(dateActual.getDate() + 1 );
 		let dateIntermediate = new Date(dateNext);
-		console.log(dateIntermediate);
 		let year = dateIntermediate.getFullYear();
 		let month = dateIntermediate.getMonth() + 1;
 		let day = dateIntermediate.getDate();
 		let dateFormatted = year + '-' + month + '-' + day;
-		console.log(dateFormatted);
-		//readDay(date, populateDayOverview);
+		readDay(dateFormatted, populateDayOverview);
 		e.preventDefault();
 	});
 	
 	$('.previous-day').click(function (e) {
 		let currentDate = $('#written-date').text();
 		let dateSplit = currentDate.split('-');
-		console.log(dateSplit);
-		let currentDateObject = new Date(dateSplit[0], dateSplit[1] - 1, dateSplit[2]);
-		console.log(currentDateObject);
-		//readDay(date, populateDayOverview);
+		let dateActual = new Date(parseInt(dateSplit[0]), parseInt(dateSplit[1]) - 1, parseInt(dateSplit[2]));
+		let dateNext = dateActual.setDate(dateActual.getDate() - 1 );
+		let dateIntermediate = new Date(dateNext);
+		let year = dateIntermediate.getFullYear();
+		let month = dateIntermediate.getMonth() + 1;
+		let day = dateIntermediate.getDate();
+		let dateFormatted = year + '-' + month + '-' + day;
+		readDay(dateFormatted, populateDayOverview);
 		e.preventDefault();
 	});
 }
