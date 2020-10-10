@@ -6,13 +6,29 @@ const r = React.createElement;
 // Verifying load order for testing (TODO: remove this)
 console.log("App file ready!"); // Creates our bubble elements used in the day overview screen
 
+class Custom extends React.Component {
+  render() {
+    if (this.props.propKey === "aaaMood") {
+      return r("p", null, "This is type aaaMood");
+    } else if (this.props.propKey === "caffeine") {
+      return r("p", null, "This is type caffeine");
+    } else {
+      return r("p", null, "This is type neither");
+    }
+  }
+
+} // Creates our bubble elements used in the day overview screen
+
+
 class Bubble extends React.Component {
   render() {
     return r("div", {
       className: "bubble"
     }, r("h3", {
       className: this.props.propKey
-    }, this.props.title), r("p", null, "You logged ", this.props.propValue, " ", this.props.quant, " for ", this.props.title.toLowerCase(), "."));
+    }, this.props.title), r("p", null, "You logged ", this.props.propValue, " ", this.props.quant, " for ", this.props.title.toLowerCase(), "."), r(Custom, {
+      type: this.props.propKey
+    }));
   }
 
 } // Searches to see if an object in the array specified has the value provided set as the "key"
