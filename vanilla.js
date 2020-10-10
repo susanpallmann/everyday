@@ -1,10 +1,10 @@
 function initializeButtons() {
-	$('next-day').click(function (e) {
+	$('.next-day').click(function (e) {
 		//readDay(date, populateDayOverview);
 		e.preventDefault();
 	});
 	
-	$('previous-day').click(function (e) {
+	$('.previous-day').click(function (e) {
 		let currentDate = $('#written-date').text();
 		let dateSplit = currentDate.split('-');
 		console.log(dateSplit);
