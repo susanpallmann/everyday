@@ -2,13 +2,15 @@ function initializeButtons() {
 	$('.next-day').click(function (e) {
 		let currentDate = $('#written-date').text();
 		let dateSplit = currentDate.split('-');
-		console.log(dateSplit);
-		let currentDateObject = new Date(dateSplit[0], dateSplit[1] - 1, dateSplit[2]);
-		console.log(currentDateObject);
-		let newDate = currentDateObject;
-		newDate.setDate(currentDateObject.getDate() + 1);
-		console.log(newDate);
-		console.log(newDate.getDate() + '-' + (newdate.getMonth()+1) + '-' + newdate.getFullYear());
+		let dateActual = new Date(parseInt(dateSeparated[0]), parseInt(dateSeparated[1]) - 1, parseInt(dateSeparated[2]));
+		let dateNext = dateActual.setDate(dateActual.getDate() + 1 );
+		let dateIntermediate = new Date(dateNext);
+		console.log(dateIntermediate);
+		let year = dateIntermediate.getFullYear();
+		let month = dateIntermediate.getMonth() + 1;
+		let day = dateIntermediate.getDate();
+		let dateFormatted = year + '-' + month + '-' + day;
+		console.log(dateFormatted);
 		//readDay(date, populateDayOverview);
 		e.preventDefault();
 	});
