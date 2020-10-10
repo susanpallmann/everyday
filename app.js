@@ -9,9 +9,9 @@ console.log("App file ready!"); // Creates our bubble elements used in the day o
 class Custom extends React.Component {
   render() {
     console.log(this.props.propKey);
-    if (this.props.propKey === "aaaMood") {
+    if (this.props.type === "aaaMood") {
       return r("p", null, "This is type aaaMood");
-    } else if (this.props.propKey === "caffeine") {
+    } else if (this.props.type === "caffeine") {
       return r("p", null, "This is type caffeine");
     } else {
       return r("p", null, "This is type neither");
