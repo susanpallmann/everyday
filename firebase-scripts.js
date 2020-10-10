@@ -24,7 +24,7 @@ function updateDay(date, data, callback = nocallback) {
 
 // Retrieves information from database about a specific date (parameter date), calls React script to load page (app.js)
 function readDay(date, callback) {
-    
+    $('#written-date').text(date);
     // First checks authentication to prevent the user from reading any directory other than
     // the one associated with their user ID.
     firebase.auth().onAuthStateChanged(function(user) {
