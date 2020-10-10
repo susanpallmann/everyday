@@ -1,5 +1,24 @@
 // Verifying load order for testing (TODO: remove this)
 console.log("App file ready!");
+
+class Custom extends React.Component {
+	render () {
+		if (this.props.propKey === "aaaMood") {
+			return (
+				<p>This is type aaaMood</p>
+			);  
+		} else if (this.props.propKey === "caffeine") {
+			return (
+				<p>This is type caffeine</p>
+			);
+		} else {
+			return (
+				<p>This is type neither</p>
+			);
+		}
+	}
+}
+
 // Creates our bubble elements used in the day overview screen
 class Bubble extends React.Component {
 	render () {
@@ -7,6 +26,7 @@ class Bubble extends React.Component {
 			<div className="bubble">
 				<h3 className={this.props.propKey}>{this.props.title}</h3>
 				<p>You logged {this.props.propValue} {this.props.quant} for {this.props.title.toLowerCase()}.</p>
+				<Custom type={this.props.propKey}/>
 			</div>
 		);
 	}
