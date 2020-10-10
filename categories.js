@@ -38,12 +38,7 @@ var aaaMood = {
 		"mood",
 		"sentiment_very_satisfied"
 	],
-	quant: [
-		"awful",
-		"poor",
-		"okay",
-		"good",
-		"great"
+	quant: ""
 	]
 };
 
