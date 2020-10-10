@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    class Bubble extends React.Component {
+	console.log("App file ready!");
+	class Bubble extends React.Component {
 		render () {
 			return (
 				<div className="bubble">
