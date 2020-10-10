@@ -9,7 +9,10 @@ console.log("App file ready!"); // Creates our bubble elements used in the day o
 class Custom extends React.Component {
   render() {
     if (this.props.type === "number") {
-      return r("p", null, "This is type number");
+      for (var i; i < parseInt(this.props.value); i++) {
+        return r("p", null, "This is type number");
+        console.log("This ran!");
+      }
     } else if (this.props.type === "select") {
       return r("p", null, "This is type select");
     } else {
