@@ -39,7 +39,6 @@ var aaaMood = {
 		"sentiment_very_satisfied"
 	],
 	quant: ""
-	]
 };
 
 var categories = [
