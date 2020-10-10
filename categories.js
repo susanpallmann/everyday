@@ -11,7 +11,7 @@ var sleep = {
 	keyword: "sleep",
 	title: "Sleep",
 	categIcon: "bedtime",
-	icon: null,
+	icon: "bedtime",
 	type: "number",
 	quant: "hours"
 };
