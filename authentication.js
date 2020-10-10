@@ -20,12 +20,16 @@ function checkLogInStatus() {
             }, 200);            
         } else {
             // No user is signed in.
-            $('main').remove();
-            $('header').remove();
-            $('footer').remove();
-            setTimeout(function(){
-                $('#splash').fadeIn(200);
-            }, 0);
+            if ($('main').hasClass('hide')) {
+            } else {
+                $('main').fadeOut(200);
+                $('header').fadeOut(200);
+                $('footer').fadeOut(200);
+                setTimeout(function(){
+                    $('#splash').fadeIn(200);
+                }, 200);
+            }
+            $('#splash').fadeIn(200);
         }
     });
 }
