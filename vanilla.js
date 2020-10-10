@@ -1,9 +1,6 @@
 $(document).ready(function() {
 	// Changes splash view mode to display log in screen
 	$('.nav-log-in').click(function(e) {
-		/*$('#splash-start').addClass('hide');
-		$('#splash-log-in').removeClass('hide');
-		$('#splash-sign-up').addClass('hide');*/
 		$('#splash-start').fadeOut(200);
 		$('#splash-log-in').fadeIn(200);
 		$('#splash-sign-up').fadeOut(200);
@@ -12,17 +9,17 @@ $(document).ready(function() {
 	
 	// Changes splash view mode to display sign up screen
 	$('.nav-sign-up').click(function(e) {
-		$('#splash-start').addClass('hide');
-		$('#splash-log-in').addClass('hide');
-		$('#splash-sign-up').removeClass('hide');
+		$('#splash-start').fadeOut(200);
+		$('#splash-log-in').fadeOut(200);
+		$('#splash-sign-up').fadeIn(200);
 		e.preventDefault();
 	});
 	
 	// Changes splash view mode to display main splash screen
 	$('.nav-back').click(function(e) {
-		$('#splash-log-in').addClass('hide');
-		$('#splash-start').removeClass('hide');
-		$('#splash-sign-up').addClass('hide');
+		$('#splash-log-in').fadeOut(200);
+		$('#splash-start').fadeIn(200);
+		$('#splash-sign-up').fadeOut(200);
 		e.preventDefault();
 	});
 });
