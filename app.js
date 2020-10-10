@@ -12,19 +12,19 @@ class Custom extends React.Component {
       console.log(this.props.value);
 
       for (var i; i < this.props.value; i++) {
-        let iconItem = r("span", {
+        let icon = /*#__PURE__*/React.createElement("span", {
           className: "large-icon"
-        }, this.props.icon);
-        iconArray.push(iconItem);
+        }, this.props.propIcon);
+        iconArray.push(icon);
       }
 
-      return r("div", {
+      return /*#__PURE__*/React.createElement("div", {
         className: "icon-set"
       }, iconArray);
     } else if (this.props.type === "select") {
-      return r("p", null, "This is type select");
+      return /*#__PURE__*/React.createElement("p", null, "This is type select");
     } else {
-      return r("p", null, "This is type unknown");
+      return /*#__PURE__*/React.createElement("p", null, "This is type unknown");
     }
   }
 
@@ -33,14 +33,14 @@ class Custom extends React.Component {
 
 class Bubble extends React.Component {
   render() {
-    return r("div", {
+    return /*#__PURE__*/React.createElement("div", {
       className: "bubble"
-    }, r("h3", {
+    }, /*#__PURE__*/React.createElement("h3", {
       className: this.props.propKey
-    }, this.props.title), r("p", null, "You logged ", this.props.propValue, " ", this.props.quant, " for ", this.props.title.toLowerCase(), "."), r(Custom, {
+    }, this.props.title), /*#__PURE__*/React.createElement("p", null, "You logged ", this.props.propValue, " ", this.props.quant, " for ", this.props.title.toLowerCase(), "."), /*#__PURE__*/React.createElement(Custom, {
       type: this.props.type,
       value: this.props.propValue,
-      icon: this.props.icon
+      propIcon: this.props.icon
     }));
   }
 
