@@ -339,6 +339,28 @@ input[type="text"], input[type="password"], input[type="number"] {
   font-weight: 500;
 }
 
+.bubble h3:before {
+  font-family: 'Material Icons';
+  -webkit-font-feature-settings: 'liga';
+  font-size: 18px;
+}
+
+.bubble h3.aaaMood:before {
+  content: "mood";
+}
+
+.bubble h3.caffeine:before {
+  content: "local_cafe";
+}
+
+.bubble h3.water:before {
+  content: "local_drink";
+}
+
+.bubble h3.sleep:before {
+  content: "bedtime";
+}
+
 #day-overview {
   position: relative;
   padding-top: calc(1em + 1.5em);
