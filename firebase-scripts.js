@@ -75,115 +75,7 @@ function readDay(date, callback) {
 /*
 once(eventType, successCallback, failureCallback) 	/* Promise<DataSnapshot> *//* once(eventType) */
 
-$(document).ready(function() {
-    
-    var caffeine = {
-	keyword: "caffeine",
-	title: "Caffeine",
-	categIcon: "local_cafe",
-	icon: "local_cafe",
-	type: "number",
-	quant: "beverages"
-};
-var sleep = {
-	keyword: "sleep",
-	title: "Sleep",
-	categIcon: "bedtime",
-	icon: null,
-	type: "number",
-	quant: "hours"
-};
-
-var water = {
-	keyword: "water",
-	title: "Water",
-	categIcon: "local_drink",
-	icon: "local_drink",
-	type: "number",
-	quant: "cups"
-};
-
-var aaaMood = {
-	keyword: "aaaMood",
-	title: "Mood",
-	categIcon: "mood",
-	icon: "null",
-	type: "select",
-	options: [
-		"sentiment_very_dissatisfied",
-		"sentiment_dissatisfied",
-		"sentiment_satisfied",
-		"mood",
-		"sentiment_very_satisfied"
-	],
-	quant: [
-		"awful",
-		"poor",
-		"okay",
-		"good",
-		"great"
-	]
-};
-
-var categories = [
-	caffeine,
-	sleep,
-	water,
-	aaaMood
-];
-    
-    class Bubble extends React.Component {
-    render () {
-      return (
-        <div className="bubble">
-          <h3 className={this.props.propKey}>{this.props.title}</h3>
-          <p>You logged {this.props.propValue} {this.props.quant} for {this.props.title.toLowerCase()}.</p>
-        </div>
-      );
-    }
-  }
-
-  // Searches to see if an object in the array specified has the value provided set as the "key"
-  function searchArray(word, array){
-    // For each item in the array
-	  console.log(array);
-	  console.log(word);
-    for (var i=0; i < array.length; i++) {
-	    console.log(array[i]);
-      // If the value under key "key" is equal to var keyword
-      if (array[i].keyword === word) {
-        // Returns the object
-	      console.log(array[i]);
-        return array[i];
-      }
-      // Else keeps iterating
-    }
-  }
-
-  // Function to render Day Overview section
-  function populateDayOverview(date, data) {
-    let dataElements = [];
-    for (const [key, value] of Object.entries(data)) {
-      let keyword = key;
-        console.log(keyword);
-      let thisObject = searchArray(keyword, categories);
-        console.log(thisObject);
-        console.log(thisObject.title);
-      let bubble = <Bubble 
-        propKey={keyword}
-        title={thisObject.title}
-        quant={thisObject.quant}
-        propValue = {value}
-      />;
-      dataElements.push(bubble);
-    }
-    ReactDOM.render(
-      <div>{dataElements}</div>,
-      document.getElementById('day-info')
-    );
-  }
-    
-    
+$(document).ready(function() { 
     let date = new Date();
     let year = date.getFullYear();
     let month = date.getMonth() + 1;
@@ -195,7 +87,6 @@ var categories = [
         "water": 5,
         "sleep": 6
     };
-    
     console.log(updateDay(date, data, sendCallbackMessage));
     readDay(date, populateDayOverview);
     /*
