@@ -72,7 +72,8 @@ function populateDayOverview(date, data) {
       title: thisObject.title,
       quant: thisObject.quant,
       propValue: value,
-      type: thisObject.type
+      type: thisObject.type,
+      icon: thisObject.icon
     }); // Pushes created bubble elements into our array dataElements
 
     dataElements.push(bubble);
