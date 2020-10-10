@@ -334,17 +334,19 @@ input[type="text"], input[type="password"], input[type="number"] {
   background-color: var(--lighter);
   border-radius: 10px 10px 0px 0px;
   margin: -1rem -1rem 1rem -1rem;
-  padding: 0.5rem 1rem;
+  padding: 1rem 0.5rem;
   text-transform: uppercase;
   font-weight: 500;
+  line-height: 0;
 }
 
 .bubble h3:before {
   font-family: 'Material Icons';
   -webkit-font-feature-settings: 'liga';
-  font-size: 18px;
+  font-size: 24px;
   text-transform: none;
   vertical-align: middle;
+  margin-right: 0.4rem;
 }
 
 .bubble h3.aaaMood:before {
