@@ -22,7 +22,7 @@ function updateDay(date, data, callback = nocallback) {
     });
 }
 
-// Sends information (parameter data, expected to be an object) about a specific date (parameter date) to the database
+// Sends information (parameter data, expected to be an object) about a specific user
 function updateCategory(data, callback = nocallback) {
 
     // First checks authentication to prevent the user from writing to any directory other than
