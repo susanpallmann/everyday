@@ -387,6 +387,11 @@ input[type="text"], input[type="password"], input[type="number"] {
   max-width: 500px;
 }
 
+#day-enter-screen {
+  max-width: 500px;
+  margin: auto;
+}
+
 #day-overview a {
   color: #fff;
   position: relative;
@@ -436,9 +441,6 @@ input[type="text"], input[type="password"], input[type="number"] {
 
 #edit-day {
   display: block;
-  width: 100%;
-  max-width: 350px;
-  margin: auto;
   text-decoration: none;
 }
 
