@@ -83,22 +83,26 @@ function searchArray(word, array) {
 
 function populateDayOverview(date, data) {
   let dataElements = []; // For each key/value passed in through parameter data (expected to be an object)
+  if (data !== "none") {
+	  for (const [key, value] of Object.entries(data)) {
+	    let keyword = key;
+	    let thisObject = searchArray(keyword, categories); // Creates bubble from our class Bubble, sending in some object properties as props
 
-  for (const [key, value] of Object.entries(data)) {
-    let keyword = key;
-    let thisObject = searchArray(keyword, categories); // Creates bubble from our class Bubble, sending in some object properties as props
+	    let bubble = r(Bubble, {
+	      propKey: keyword,
+	      title: thisObject.title,
+	      quant: thisObject.quant,
+	      propValue: value,
+	      type: thisObject.type,
+	      icon: thisObject.icon
+	    }); // Pushes created bubble elements into our array dataElements
 
-    let bubble = r(Bubble, {
-      propKey: keyword,
-      title: thisObject.title,
-      quant: thisObject.quant,
-      propValue: value,
-      type: thisObject.type,
-      icon: thisObject.icon
-    }); // Pushes created bubble elements into our array dataElements
-
-    dataElements.push(bubble);
-  } // Renders the array of bubbles to the designated class
+	    dataElements.push(bubble);
+	  } // Renders the array of bubbles to the designated class
+  } else {
+	  console.log("There is no data");
+	  dataElements.push( /*#__PURE__*/React.createElement("div", null, "No data exists here"));
+  }
 
 
   ReactDOM.render( r("div", null, dataElements), document.getElementById('day-info'));
