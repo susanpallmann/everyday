@@ -125,7 +125,49 @@ function populateDayOverview(date, data) {
 
 
 
+class NumberForm extends React.Component {
+	constructor(props) {
+    		super(props);
+    		this.handleIncrease = this.handleClick.bind(this);
+		this.handleDecrease = this.handleClick.bind(this);
+		this.handleClick = this.handleClick.bind(this);
+	}
 
+  	handleIncrease(e) {
+		e.preventDefault();
+		console.log('This item incremented');
+	}
+	
+	handleDecrease(e) {
+		e.preventDefault();
+		console.log('This item decremented');
+	}
+	
+	handleClick(e) {
+		e.preventDefault();
+		console.log('This item clicked');
+	}
+	
+	render () {
+		return (
+			<a href="" className="enter-previous end-edit">
+                  		<span className="material-icons-round">chevron_left</span> Back
+                	</a>
+                	<h2 id="enter-written-date">{this.props.propDate}</h2>
+                	<div class="loading-bar">
+                  		<div className="progress" amount="0"></div>
+                	</div>
+                	<h2 id="category-title">{this.props.title}</h2>
+                	<p id="category-query">How are you feeling today?</p>
+                	<div id="category-enter-screen">
+                	</div>
+                	<p>Selected: <span className="selected-value">none</span> <span class="selected-quant"></span></p>
+                	<div className="bottom-buttons">
+                  		<a href="" className="button enter-next" onClick={this.handleClick}>Continue</a>
+                	</div>
+		);
+	}
+}
 
 
 // Outlining this here at least for now.
@@ -135,7 +177,7 @@ function populateDayOverview(date, data) {
 //   - we'll first read from database, and then activate a callback function to proceed from there...
 
 
-function createEnterForm(categoryObject, information = null) {
+function createEnterForm(categoryObject, information = null, date, loadBar) {
 	let categoryTitle = categoryObject.title;
 	let categoryIcon = categoryObject.icon;
 	let categoryType = categoryObject.type;
@@ -144,9 +186,18 @@ function createEnterForm(categoryObject, information = null) {
 		if (information !== null) {
 			//do something with dataValue
 			console.log("we need to generate an icon-number field and populate " + information);
+			let number = information;
 		} else {
 			console.log("we need to generate an icon-number field");
+			let number = 0;
 		}
+	let form = <NumberForm 
+		number={number}
+		title = {categoryTitle}
+		propDate = {date}
+		propQuant = {categoryObject.quant}
+		propQuants = {categoryObject.quants}
+	/>
 	} else if (categoryType === "number") {
 		if (information !== null) {
 			//do something with dataValue
@@ -173,28 +224,26 @@ function createEnterForm(categoryObject, information = null) {
 
 function prepareEnterDay(date, data, categoryData) {
 	let dataElements = [];
+	let loadBar = determineEnterLoadingBar(categoryData);
 	// For each category the user is tracking
 	for (const [key, value] of Object.entries(categoryData)) {
 		let keyword = key;
 		let thisObject = searchArray(keyword, categories);
 		// If there is no data
 		if (data === "none") {
-			console.log("there is no data stored here");
 			// Create an empty form for this category
-			createEnterForm(thisObject, null);
+			//createEnterForm(thisObject, null, date, loadBar);
 		// If there is data
 		} else {
 			// If the data contains information on this category
 			if (data.hasOwnProperty(keyword)) {
 				let dataValue = data[keyword];
-				console.log("there is data stored for category " + keyword + " and it is " + dataValue);
 				// Create a filled form for this category
-				createEnterForm(thisObject, dataValue);
+				//createEnterForm(thisObject, dataValue, date, loadBar);
 			// If not...
 			} else {
-				console.log("although data exists for this date, there is no data stored for category " + keyword);
 				// Create an empty form for this category
-				createEnterForm(thisObject, null);
+				//createEnterForm(thisObject, null, date, loadBar);
 			}
 		}
 	}
