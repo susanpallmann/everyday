@@ -8,6 +8,7 @@ var caffeine = {
 	quant: "beverage",
 	quants: "beverages"
 };
+
 var alcohol = {
 	keyword: "alcohol",
 	title: "Alcohol",
@@ -17,6 +18,17 @@ var alcohol = {
 	quant: "drink",
 	quants: "drinks"
 };
+
+var exercise = {
+	keyword: "exercise",
+	title: "Exercise",
+	categIcon: "directions_run",
+	icon: "directions_run",
+	type: "true-false",
+	quant: "",
+	quants: ""
+};
+
 var sleep = {
 	keyword: "sleep",
 	title: "Sleep",
@@ -50,6 +62,14 @@ var aaaMood = {
 		"sentiment_satisfied",
 		"mood",
 		"sentiment_very_satisfied"
+	],
+	optionsText: [
+		"awful",
+		"bad",
+		"poor",
+		"okay",
+		"good",
+		"great"
 	],
 	quant: "",
 	quants: ""
