@@ -4,7 +4,7 @@ var caffeine = {
 	title: "Caffeine",
 	categIcon: "local_cafe",
 	icon: "local_cafe",
-	type: "number",
+	type: "icon-number",
 	quant: "beverages"
 };
 var sleep = {
@@ -21,7 +21,7 @@ var water = {
 	title: "Water",
 	categIcon: "local_drink",
 	icon: "local_drink",
-	type: "number",
+	type: "icon-number",
 	quant: "cups"
 };
 
