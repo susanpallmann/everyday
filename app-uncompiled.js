@@ -37,10 +37,16 @@ class Custom extends React.Component {
 // Creates our bubble elements used in the day overview screen
 class Bubble extends React.Component {
 	render () {
+		let Object = searchArray(this.props.propKey, categories);
+		if (this.props.propValue > 1 || this.props.propValue === 0) {
+			let quant = Object.quants;
+		} else {
+			let quant = Object.quant;
+		}
 		return (
 			<div className="bubble">
 				<h3 className={this.props.propKey}>{this.props.title}</h3>
-				<p>You logged {this.props.propValue} {this.props.quant} for {this.props.title.toLowerCase()}.</p>
+				<p>You logged {this.props.propValue} {quant} for {this.props.title.toLowerCase()}.</p>
 				<Custom type={this.props.type} value={this.props.propValue} propIcon={this.props.icon} />
 			</div>
 		);
