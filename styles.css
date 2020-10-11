@@ -342,6 +342,7 @@ a.bubble-link {
   display: inline-block;
   max-width: 500px;
   margin: auto;
+  width: 100%;
 }
 
 .bubble.alert-blue {
