@@ -3,7 +3,7 @@ console.log("App file ready!");
 
 class Custom extends React.Component {
 	render () {
-		if (this.props.type === "number") {
+		if (this.props.type === "icon-number") {
 			let iconArray = [];
 			console.log(this.props.value);
 			for (var i = 0; i < this.props.value; i++) {
