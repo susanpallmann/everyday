@@ -44,7 +44,6 @@ function updateCategory(data, callback = nocallback) {
 
 // Retrieves information from database about a specific date (parameter date), calls React script to load page (app.js)
 function readDay(date, callback, categoryData = null) {
-    $('#written-date').text(date);
     // First checks authentication to prevent the user from reading any directory other than
     // the one associated with their user ID.
     firebase.auth().onAuthStateChanged(function(user) {
@@ -144,6 +143,7 @@ $(document).ready(function() {
     updateDay("2020-10-11", data2);
     updateDay("2020-10-9", data3);
     readDay(date, populateDayOverview, null);
+    $('#written-date').text(date);
     updateCategory(data4);
     readCategory("2020-10-12", retrieveDayInfo);
     readCategory("2020-10-10", retrieveDayInfo);
