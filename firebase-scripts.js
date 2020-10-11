@@ -94,6 +94,7 @@ function readCategory(date, callback) {
                     });
                     // Pass in function to call React script here (populateDayOverview)
                     callback(date, data);
+		    console.log(data);
                 } else {
                     callback(null, null);
                 }
