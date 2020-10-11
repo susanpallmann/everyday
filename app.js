@@ -46,11 +46,19 @@ class Custom extends React.Component {
 
 class Bubble extends React.Component {
   render() {
+    let Object = searchArray(this.props.propKey, categories);
+
+    if (this.props.propValue > 1 || this.props.propValue === 0) {
+      let quant = Object.quants;
+    } else {
+      let quant = Object.quant;
+    }
+
     return /*#__PURE__*/React.createElement("div", {
       className: "bubble"
     }, /*#__PURE__*/React.createElement("h3", {
       className: this.props.propKey
-    }, this.props.title), /*#__PURE__*/React.createElement("p", null, "You logged ", this.props.propValue, " ", this.props.quant, " for ", this.props.title.toLowerCase(), "."), /*#__PURE__*/React.createElement(Custom, {
+    }, this.props.title), /*#__PURE__*/React.createElement("p", null, "You logged ", this.props.propValue, " ", quant, " for ", this.props.title.toLowerCase(), "."), /*#__PURE__*/React.createElement(Custom, {
       type: this.props.type,
       value: this.props.propValue,
       propIcon: this.props.icon
