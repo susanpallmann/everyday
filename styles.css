@@ -449,10 +449,14 @@ input[type="text"], input[type="password"], input[type="number"] {
 }
 
 /* Icons */
+.icon-set {
+  margin-top: 1rem;
+}
+
 .icon-set .large-icon {
   font-family: 'Material Icons';
   -webkit-font-feature-settings: 'liga';
-  font-size: 48px;
+  font-size: 36px;
   display: inline-block;
   color: var(--accent);
 }
