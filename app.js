@@ -156,7 +156,7 @@ function prepareEnterDay(date, data, categoryData) {
 		} else {
 			// If the data contains information on this category
 			if (data.hasOwnProperty(keyword)) {
-				let dataValue = data.keyword;
+				let dataValue = data[keyword];
 				console.log("there is data stored for category " + keyword + " and it is " + dataValue);
 				// Create a filled form for this category
 				createEnterForm(thisObject, dataValue);
