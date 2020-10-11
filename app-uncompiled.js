@@ -68,7 +68,7 @@ class AlertEnterDay extends React.Component {
 	
 	render () {
 		return (
-			<a href="#" onClick={this.handleClick}>
+			<a href="" className="bubble-link" onClick={this.handleClick}>
 				<div className="bubble alert-blue">
 					<p>You have not logged any information for this day. Would you like to do so now?</p>
 				</div>
