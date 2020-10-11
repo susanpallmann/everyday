@@ -144,4 +144,6 @@ $(document).ready(function() {
     updateDay("2020-10-9", data3);
     readDay(date, populateDayOverview, null);
     updateCategory(data4);
+    readCategory("2020-10-12", retrieveDayInfo);
+    readCategory("2020-10-10", retrieveDayInfo);
 });
