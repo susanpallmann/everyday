@@ -461,6 +461,12 @@ input[type="text"], input[type="password"], input[type="number"] {
   color: var(--accent);
 }
 
+.icon-set .big-number {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--accent-2);
+}
+
 .material-icons {
   vertical-align: middle;
 }
