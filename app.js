@@ -176,7 +176,6 @@ function prepareEnterDay(date, data, categoryData) {
 		let thisObject = searchArray(keyword, categories);
 		// If there is no data
 		if (data === "none") {
-			console.log("there is no data stored here");
 			// Create an empty form for this category
 			createEnterForm(thisObject, null);
 		// If there is data
@@ -184,12 +183,10 @@ function prepareEnterDay(date, data, categoryData) {
 			// If the data contains information on this category
 			if (data.hasOwnProperty(keyword)) {
 				let dataValue = data[keyword];
-				console.log("there is data stored for category " + keyword + " and it is " + dataValue);
 				// Create a filled form for this category
 				createEnterForm(thisObject, dataValue);
 			// If not...
 			} else {
-				console.log("although data exists for this date, there is no data stored for category " + keyword);
 				// Create an empty form for this category
 				createEnterForm(thisObject, null);
 			}
