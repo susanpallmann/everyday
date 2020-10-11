@@ -88,7 +88,7 @@ $(document).ready(function() {
 		}
 		// An added value, 100, for confirmation screen
 		amounts.push(100);
-		console.log(amounts)
+		return amounts;
 	}
 	determineEnterLoadingBar({item: "this", something: "that", another: "the other thing"});
 	});
