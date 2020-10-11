@@ -64,22 +64,22 @@ $(document).ready(function() {
     date = year + '-' + month + '-' + day;
     let data = {
         "aaaMood": 3,
-        "caffeine": 4,
-        "water": 5,
-        "sleep": 6
+        "caffeine": 1,
+        "water": 2,
+        "sleep": 7
     };
     
     let data2 = {
         "aaaMood": 1,
-        "caffeine": 2,
+        "caffeine": 3,
         "water": 3,
-        "sleep": 4
+        "sleep": 6
     };
     
     let data3 = {
-        "aaaMood": 8,
-        "caffeine": 8,
-        "water": 8,
+        "aaaMood": 5,
+        "caffeine": 2,
+        "water": 4,
         "sleep": 8
     };
     updateDay(date, data);
