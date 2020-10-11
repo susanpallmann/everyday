@@ -20,7 +20,11 @@ This web app is hosted on [GitHub Pages](https://pages.github.com/). Authenticat
 * **discount-bootstrap.css** - responsive grid system
 * **discount-bootstrap.js** - minor re-usable ui elements
 * **firebase-scripts.js** - js file containing all database interaction
-* **vanilla.js** - pure js/jQuery, all non-React UI elements
+* **vanilla.js** - pure js/jQuery, some non-React UI elements
 * **index.html** - initial page HTML, modified by React UI elements
 * **no-script.css** - in case of scripts not working
 * **styles.css** - overall styling and design
+
+## To Do Log
+
+1 Probably going to refactor firebase-scripts.js, app.js, and vanilla.js separation to make more sense
