@@ -342,6 +342,10 @@ input[type="text"], input[type="password"], input[type="number"] {
   background-color: var(--accent);
 }
 
+.bubble.alert-blue p {
+  margin-top: 0;
+}
+
 .bubble.alert-blue h3 {
   background-color: var(--accent);
 }
