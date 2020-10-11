@@ -1,6 +1,4 @@
 # everyday-react
-Another look at the EveryDay mood log app concept, but this time with React JS
-
 Concept: Susan Pallmann and Josh Ahlers
 
 Execution (Design & Development): Susan Pallmann
