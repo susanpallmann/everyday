@@ -106,7 +106,39 @@ function populateDayOverview(date, data) {
 // When the user *starts* entering the day, we need to do something specific:
 // - figure out how many categories there are
 //   - we'll first read from database, and then activate a callback function to proceed from there...
-//readCategory(callback);
+
+
+function prepareEnterDay(date, data, categoryData) {
+	let dataElements = [];
+	// For each category the user is tracking
+	for (const [key, value] of Object.entries(categoryData)) {
+		let keyword = key;
+		let thisObject = searchArray(keyword, categories);
+		// If there is no data
+		if (data === "none") {
+		// If there is data
+		} else {
+			// If the data contains information on this category
+			if (data.hasOwnProperty(keyword)) {
+				let dataValue = data.keyword;
+			// If not...
+			} else {
+			}
+		}
+	}
+	
+}
+
+function retrieveDayInfo(date, data) {
+	readDay(date, prepareEnterDay, data);
+}
+
+readCategory(date, retrieveDayInfo);
+
+// readCategory("2020-10-11", retrieveDayInfo);
+// returns date ("2020-10-11", {something}
+
+
 // Given data passed in (already filtered out false values)
 
 // - figure out how many/what loading bar increments we need to do (just some math, and maybe we'll want a limit on how many categories someone can track)
