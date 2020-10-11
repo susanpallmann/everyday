@@ -71,21 +71,26 @@ function searchArray(word, array){
 // React JS is giving me a warning here, but my code still works and I don't negotiate with terrorists. 
 function populateDayOverview(date, data) {
 	let dataElements = [];
-	// For each key/value passed in through parameter data (expected to be an object)
-	for (const [key, value] of Object.entries(data)) {
-		let keyword = key;
-		let thisObject = searchArray(keyword, categories);
-		// Creates bubble from our class Bubble, sending in some object properties as props
-		let bubble = <Bubble 
-			propKey={keyword}
-			title={thisObject.title}
-			quant={thisObject.quant}
-			propValue = {value}
-			type = {thisObject.type}
-			icon = {thisObject.icon}
-		/>;
-	// Pushes created bubble elements into our array dataElements
-	dataElements.push(bubble);
+	if (data !== "none") {
+		// For each key/value passed in through parameter data (expected to be an object)
+		for (const [key, value] of Object.entries(data)) {
+			let keyword = key;
+			let thisObject = searchArray(keyword, categories);
+			// Creates bubble from our class Bubble, sending in some object properties as props
+			let bubble = <Bubble 
+				propKey={keyword}
+				title={thisObject.title}
+				quant={thisObject.quant}
+				propValue = {value}
+				type = {thisObject.type}
+				icon = {thisObject.icon}
+			/>;
+		// Pushes created bubble elements into our array dataElements
+		dataElements.push(bubble);
+		}
+	} else {
+		console.log("There is no data");
+		dataElements.push(<div>No data exists here</div>);
 	}
 	// Renders the array of bubbles to the designated class
 	ReactDOM.render(
