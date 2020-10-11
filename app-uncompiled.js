@@ -111,7 +111,6 @@ function populateDayOverview(date, data) {
 		dataElements.push(bubble);
 		}
 	} else {
-		console.log("There is no data");
 		let alert = <AlertEnterDay />
 		dataElements.push(alert);
 	}
