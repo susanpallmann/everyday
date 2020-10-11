@@ -119,7 +119,7 @@ function prepareEnterDay(date, data, categoryData) {
 			// If the data contains information on this category
 			if (data.hasOwnProperty(keyword)) {
 				let dataValue = data.keyword;
-				console.log("there is data stored for category " + keyword + " and it is " + dataVlalue);
+				console.log("there is data stored for category " + keyword + " and it is " + dataValue);
 			// If not...
 			} else {
 				console.log("although data exists for this date, there is no data stored for category " + keyword);
