@@ -123,7 +123,6 @@ function populateDayOverview(date, data) {
 	    dataElements.push(bubble);
 	  } // Renders the array of bubbles to the designated class
       } else {
-	  console.log("There is no data");
 	  let alert = /*#__PURE__*/React.createElement(AlertEnterDay, null);
 	  dataElements.push(alert);
   }
