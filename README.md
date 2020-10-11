@@ -10,4 +10,4 @@ Execution (Design & Development): Susan Pallmann
 Sometimes moods can seem unpredictable when really there is an underlying cause behind it. EveryDay is an app concept designed to let users record their moods and daily behaviors. The hope is that tracking this data will let users notice patterns in how their behavior or habits affect their moods, and lead to better days overall.
 
 ## Technologies
-This web app is hosted on GitHub pages. Authentication and realtime database capabilities are powered by Google Firebase. UI elements are created using a combination of pure JavaScript/jQuery and React JS methods. Iconography is from Google's Material library, and fonts are from Google Fonts.
+This web app is hosted on [GitHub Pages](https://pages.github.com/). Authentication and realtime database capabilities are powered by [Google Firebase](https://firebase.google.com/). UI elements are created using a combination of pure JavaScript/[jQuery](https://jquery.com/) and [React JS](https://reactjs.org/) methods. Iconography is from [Google's Material library](https://material.io/), and fonts are from [Google Fonts](https://fonts.google.com/).
