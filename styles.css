@@ -478,6 +478,10 @@ input[type="text"], input[type="password"], input[type="number"] {
   text-decoration: none;
 }
 
+#enter-written-date {
+  text-align: center;
+}
+
 .loading-bar {
   height: 1rem;
   background-color: var(--lighter);
