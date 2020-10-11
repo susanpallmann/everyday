@@ -4,18 +4,17 @@ const r = React.createElement;
 // Compiled React code (jsx -> js) to go here.
 
 // Verifying load order for testing (TODO: remove this)
-console.log("App file ready!"); // Creates our bubble elements used in the day overview screen
+console.log("App file ready!"); 
+
 class Custom extends React.Component {
   render() {
     if (this.props.type === "icon-number") {
       let iconArray = [];
-      console.log(this.props.value);
 
       for (var i = 0; i < this.props.value; i++) {
         let icon = /*#__PURE__*/React.createElement("span", {
           className: "large-icon"
         }, this.props.propIcon);
-        console.log("this ran");
         iconArray.push(icon);
       }
 
@@ -31,17 +30,19 @@ class Custom extends React.Component {
     } else if (this.props.type === "mood") {
       let moodObject = searchArray("aaaMood", categories);
       let moodIcon = moodObject.options[parseInt(this.props.value) - 1];
-      console.log(moodIcon);
       return /*#__PURE__*/React.createElement("div", {
         className: "icon-set"
-      }, /*#__PURE__*/React.createElement("p", null, "This is special type mood"));
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "large-icon"
+      }, "moodIcon"), ";");
     } else {
       return /*#__PURE__*/React.createElement("p", null, "This is type unknown");
     }
   }
 
-} // Creates our bubble elements used in the day overview screen
+}
 
+// Creates our bubble elements used in the day overview screen
 
 class Bubble extends React.Component {
   render() {
