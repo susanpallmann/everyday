@@ -338,6 +338,14 @@ input[type="text"], input[type="password"], input[type="number"] {
   transition: all 0.2s;
 }
 
+.bubble.alert-blue {
+  background-color: var(--accent);
+}
+
+.bubble.alert-blue h3 {
+  background-color: var(--accent);
+}
+
 .bubble:hover {
   -ms-transform: scale(1.025);
   -webkit-transform: scale(1.025);
