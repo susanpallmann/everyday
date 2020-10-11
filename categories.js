@@ -33,9 +33,10 @@ var aaaMood = {
 	type: "mood",
 	options: [
 		"sentiment_very_dissatisfied",
+		"mood_bad",
 		"sentiment_dissatisfied",
 		"sentiment_satisfied",
-		"sentiment_satisfied_alt",
+		"mood",
 		"sentiment_very_satisfied"
 	],
 	quant: ""
