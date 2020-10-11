@@ -108,6 +108,42 @@ function populateDayOverview(date, data) {
 //   - we'll first read from database, and then activate a callback function to proceed from there...
 
 
+function createEnterForm(categoryObject, information = null) {
+	let categoryTitle = categoryObject.title;
+	let categoryIcon = categoryObject.icon;
+	let categoryType = categoryObject.type;
+	
+	if (categoryType === "icon-number") {
+		if (information !== null) {
+			//do something with dataValue
+			console.log("we need to generate an icon-number field and populate " + information);
+		} else {
+			console.log("we need to generate an icon-number field");
+		}
+	} else if (categoryType === "number") {
+		if (information !== null) {
+			//do something with dataValue
+			console.log("we need to generate a number field and populate " + information);
+		} else {
+			console.log("we need to generate a number field");
+		}
+	} else if (categoryType === "mood") {
+		if (information !== null) {
+			//do something with dataValue
+			console.log("we need to generate a mood field and populate " + information);
+		} else {
+			console.log("we need to generate a mood field");
+		}
+	} else {
+		if (information !== null) {
+			//do something with dataValue
+			console.log("we need to generate an unknown field and populate " + information);
+		} else {
+			console.log("we need to generate an unknown field");
+		}
+	}
+}
+
 function prepareEnterDay(date, data, categoryData) {
 	let dataElements = [];
 	// For each category the user is tracking
@@ -117,15 +153,21 @@ function prepareEnterDay(date, data, categoryData) {
 		// If there is no data
 		if (data === "none") {
 			console.log("there is no data stored here");
+			// Create an empty form for this category
+			createEnterForm(thisObject, null);
 		// If there is data
 		} else {
 			// If the data contains information on this category
 			if (data.hasOwnProperty(keyword)) {
 				let dataValue = data.keyword;
 				console.log("there is data stored for category " + keyword + " and it is " + dataValue);
+				// Create a filled form for this category
+				createEnterForm(thisObject, dataValue);
 			// If not...
 			} else {
 				console.log("although data exists for this date, there is no data stored for category " + keyword);
+				// Create an empty form for this category
+				createEnterForm(thisObject, null);
 			}
 		}
 	}
