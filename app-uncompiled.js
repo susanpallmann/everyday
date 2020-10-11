@@ -93,3 +93,40 @@ function populateDayOverview(date, data) {
 		document.getElementById('day-info')
 	);
 }
+
+
+
+
+
+
+
+
+// Outlining this here at least for now.
+
+// When the user *starts* entering the day, we need to do something specific:
+// - figure out how many categories there are
+//   - we'll first read from database, and then activate a callback function to proceed from there...
+//readCategory(callback);
+// Given data passed in (already filtered out false values)
+
+// - figure out how many/what loading bar increments we need to do (just some math, and maybe we'll want a limit on how many categories someone can track)
+//   - we'll want to pass on each increment on with our category values to the next function so the callback will need to take two parameters
+
+// Once we have out values we want to pass those on to the React part responsible for rendering
+// - For each category:
+//   - Get type from categories array
+//   - Do something specific to that type
+//   - Increment the loading bar (unless first category)
+//   - Check firebase to see if data exists under this category, update accordingly
+//   - Display in React
+//   - then initialize click handlers?
+//   - onClick of options / on fill of forms?, update database
+
+
+function ActionLink() {
+  function handleClick(e) {    e.preventDefault();    console.log('The link was clicked.');  }
+  return (
+    <a href="#" onClick={handleClick}>      Click me
+    </a>
+  );
+}
