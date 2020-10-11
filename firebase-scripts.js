@@ -83,21 +83,21 @@ $(document).ready(function() {
     let day = date.getDate();
     date = year + '-' + month + '-' + day;
     let data = {
-        "aaaMood": 3,
+        "aaaMood": "poor",
         "caffeine": 1,
         "water": 2,
         "sleep": 7
     };
     
     let data2 = {
-        "aaaMood": 4,
+        "aaaMood": "good",
         "caffeine": 3,
         "water": 3,
         "sleep": 6
     };
     
     let data3 = {
-        "aaaMood": 5,
+        "aaaMood": "great",
         "caffeine": 2,
         "water": 4,
         "sleep": 8
