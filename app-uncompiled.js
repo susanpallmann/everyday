@@ -20,7 +20,8 @@ class Custom extends React.Component {
 			);
 		} else if (this.props.type === "mood") {
 			let moodObject = searchArray("aaaMood", categories);
-			let indexValue = moodObject.optionsText.findIndex(this.props.value);
+			let checkValue = this.props.value;
+			let indexValue = moodObject.optionsText.findIndex(checkValue);
 			let moodIcon = moodObject.options[parseInt(indexValue)];
 			return (
 				<div className="icon-set">
