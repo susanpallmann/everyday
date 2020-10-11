@@ -54,7 +54,7 @@ function readDay(date, callback, categoryData = null) {
             var path = firebase.database().ref('users/' + uid + '/' + date);
             // Takes snapshot of data at this particular path
             path.once('value', function(snapshot) {
-                if (snapshot) {
+                if (snapshot.exists()) {
                     // Creating object "data" from each pair of key/values
                     let data = {};
                     snapshot.forEach((child) => {
@@ -82,7 +82,7 @@ function readCategory(date, callback) {
             var path = firebase.database().ref('users/' + uid + '/settings/tracking');
             // Takes snapshot of data at this particular path
             path.once('value', function(snapshot) {
-                if (snapshot) {
+                if (snapshot.exists()) {
                     // Creating object "data" from each pair of key/values
                     let data = {};
                     snapshot.forEach((child) => {
