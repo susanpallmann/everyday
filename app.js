@@ -29,7 +29,7 @@ class Custom extends React.Component {
         className: "big-number"
       }, this.props.value));
     } else if (this.props.type === "mood") {
-      let moodObject = searchArray("mood", categories);
+      let moodObject = searchArray("aaaMood", categories);
       let moodIcon = moodObject.options[parseInt(this.props.value) - 1];
       console.log(moodIcon);
       return /*#__PURE__*/React.createElement("div", {
