@@ -30,7 +30,7 @@ var aaaMood = {
 	title: "Mood",
 	categIcon: "mood",
 	icon: "null",
-	type: "select",
+	type: "mood",
 	options: [
 		"sentiment_very_dissatisfied",
 		"sentiment_dissatisfied",
