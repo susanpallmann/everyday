@@ -5,7 +5,17 @@ var caffeine = {
 	categIcon: "local_cafe",
 	icon: "local_cafe",
 	type: "icon-number",
-	quant: "beverages"
+	quant: "beverage",
+	quants: "beverages"
+};
+var alcohol = {
+	keyword: "alcohol",
+	title: "Alcohol",
+	categIcon: "local_bar",
+	icon: "local_bar",
+	type: "icon-number",
+	quant: "drink",
+	quants: "drinks"
 };
 var sleep = {
 	keyword: "sleep",
@@ -13,7 +23,8 @@ var sleep = {
 	categIcon: "bedtime",
 	icon: "bedtime",
 	type: "number",
-	quant: "hours"
+	quant: "hour",
+	quants: "hours"
 };
 
 var water = {
@@ -22,7 +33,8 @@ var water = {
 	categIcon: "local_drink",
 	icon: "local_drink",
 	type: "icon-number",
-	quant: "cups"
+	quant: "cup",
+	quants: "cups"
 };
 
 var aaaMood = {
@@ -39,7 +51,8 @@ var aaaMood = {
 		"mood",
 		"sentiment_very_satisfied"
 	],
-	quant: ""
+	quant: "",
+	quants: ""
 };
 
 var categories = [
