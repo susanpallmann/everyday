@@ -23,7 +23,7 @@ class Custom extends React.Component {
 			let moodIcon = moodObject.options[parseInt(this.props.value) - 1];
 			return (
 				<div className="icon-set">
-					<span className="large-icon">{moodIcon}</span>;
+					<span className="large-icon">{moodIcon}</span>
 				</div>
 			);
 		} else {
