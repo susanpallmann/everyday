@@ -116,13 +116,16 @@ function prepareEnterDay(date, data, categoryData) {
 		let thisObject = searchArray(keyword, categories);
 		// If there is no data
 		if (data === "none") {
+			console.log("there is no data stored here");
 		// If there is data
 		} else {
 			// If the data contains information on this category
 			if (data.hasOwnProperty(keyword)) {
 				let dataValue = data.keyword;
+				console.log("there is data stored for category " + keyword + " and it is " + dataVlalue);
 			// If not...
 			} else {
+				console.log("although data exists for this date, there is no data stored for category " + keyword);
 			}
 		}
 	}
@@ -133,10 +136,10 @@ function retrieveDayInfo(date, data) {
 	readDay(date, prepareEnterDay, data);
 }
 
-readCategory(date, retrieveDayInfo);
-
+readCategory("2020-10-12", retrieveDayInfo);
+readCategory("2020-10-10", retrieveDayInfo);
 // readCategory("2020-10-11", retrieveDayInfo);
-// returns date ("2020-10-11", {something}
+// returns date ("2020-10-11", {something}, {categories}
 
 
 // Given data passed in (already filtered out false values)
