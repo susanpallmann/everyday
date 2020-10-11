@@ -34,7 +34,7 @@ class Custom extends React.Component {
         className: "icon-set"
       }, /*#__PURE__*/React.createElement("span", {
         className: "large-icon"
-      }, "moodIcon"), ";");
+      }, moodIcon));
     } else {
       return /*#__PURE__*/React.createElement("p", null, "This is type unknown");
     }
