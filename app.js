@@ -68,10 +68,18 @@ class Bubble extends React.Component {
 } 
 
 class AlertEnterDay extends React.Component {
+  handleClick(e) {
+    e.preventDefault();
+    console.log('The link was clicked.');
+  }
+
   render() {
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React.createElement("a", {
+      href: "#",
+      onClick: handleClick
+    }, /*#__PURE__*/React.createElement("div", {
       className: "bubble alert-blue"
-    }, /*#__PURE__*/React.createElement("p", null, "You have not logged any information for this day. Would you like to do so now?"));
+    }, /*#__PURE__*/React.createElement("p", null, "You have not logged any information for this day. Would you like to do so now?")));
   }
 
 }
