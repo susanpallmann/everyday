@@ -59,7 +59,6 @@ class AlertEnterDay extends React.Component {
 	render () {
 		return (
 			<div className="bubble alert-blue">
-				<h3 className="alert-blue redirect">No data</h3>
 				<p>You have not logged any information for this day. Would you like to do so now?</p>
 			</div>
 		);
