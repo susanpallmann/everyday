@@ -14,6 +14,12 @@ class Custom extends React.Component {
 			return (
 				<div className="icon-set">{iconArray}</div>
 			);
+		} else if (this.props.type === "number") {
+			return (
+				<div className="icon-set">
+					<span className="big-number">{this.props.value}</span>
+				</div>
+			);
 		} else if (this.props.type === "select") {
 			return (
 				<p>This is type select</p>
