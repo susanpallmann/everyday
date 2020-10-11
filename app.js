@@ -47,11 +47,11 @@ class Custom extends React.Component {
 class Bubble extends React.Component {
   render() {
     let Object = searchArray(this.props.propKey, categories);
-
+    var quant;
     if (this.props.propValue > 1 || this.props.propValue === 0) {
-      let quant = Object.quants;
+      quant = Object.quants;
     } else {
-      let quant = Object.quant;
+      quant = Object.quant;
     }
 
     return /*#__PURE__*/React.createElement("div", {
