@@ -132,6 +132,3 @@ function prepareEnterDay(date, data, categoryData) {
 function retrieveDayInfo(date, data) {
 	readDay(date, prepareEnterDay, data);
 }
-
-readCategory("2020-10-12", retrieveDayInfo);
-readCategory("2020-10-10", retrieveDayInfo);
