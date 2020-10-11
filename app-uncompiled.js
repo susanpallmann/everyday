@@ -20,9 +20,14 @@ class Custom extends React.Component {
 					<span className="big-number">{this.props.value}</span>
 				</div>
 			);
-		} else if (this.props.type === "select") {
+		} else if (this.props.type === "mood") {
+			let moodObject = searchArray("mood", categories);
+			let moodIcon = moodObject.options[parseInt(this.props.value) - 1];
+			console.log(moodIcon);
 			return (
-				<p>This is type select</p>
+				<div className="icon-set">
+					<p>This is special type mood</p>
+				</div>
 			);
 		} else {
 			return (
