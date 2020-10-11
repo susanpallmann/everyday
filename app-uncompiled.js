@@ -55,6 +55,17 @@ class Bubble extends React.Component {
 	}
 }
 
+class AlertEnterDay extends React.Component {
+	render () {
+		return (
+			<div className="bubble alert-blue">
+				<h3 className="alert-blue redirect">No data</h3>
+				<p>You have not logged any information for this day. Would you like to do so now?</p>
+			</div>
+		);
+	}
+}
+
 // Searches to see if an object in the array specified has the value provided set as the "key"
 function searchArray(word, array){
 	// For each item in the array (each category type)
@@ -90,7 +101,8 @@ function populateDayOverview(date, data) {
 		}
 	} else {
 		console.log("There is no data");
-		dataElements.push(<div>No data exists here</div>);
+		let alert = <AlertEnterDay />
+		dataElements.push(alert);
 	}
 	// Renders the array of bubbles to the designated class
 	ReactDOM.render(
