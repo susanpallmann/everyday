@@ -29,7 +29,8 @@ class Custom extends React.Component {
       }, this.props.value));
     } else if (this.props.type === "mood") {
       let moodObject = searchArray("aaaMood", categories);
-      let indexValue = moodObject.optionsText.findIndex(this.props.value);
+      let checkValue = this.props.value;
+      let indexValue = moodObject.optionsText.findIndex(checkValue);
       let moodIcon = moodObject.options[parseInt(indexValue)];
       return /*#__PURE__*/React.createElement("div", {
         className: "icon-set"
@@ -42,7 +43,6 @@ class Custom extends React.Component {
   }
 
 }
-
 // Creates our bubble elements used in the day overview screen
 
 class Bubble extends React.Component {
