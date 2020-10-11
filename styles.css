@@ -357,7 +357,7 @@ input[type="text"], input[type="password"], input[type="number"] {
   color: var(--accent);
 }
 
-.bubble.alert-blue p {
+#day-overview .bubble.alert-blue p {
   margin-top: 0;
 }
 
