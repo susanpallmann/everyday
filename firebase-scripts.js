@@ -70,7 +70,7 @@ $(document).ready(function() {
     };
     
     let data2 = {
-        "aaaMood": 1,
+        "aaaMood": 4,
         "caffeine": 3,
         "water": 3,
         "sleep": 6
