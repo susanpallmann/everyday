@@ -20,7 +20,7 @@ $(document).ready(function() {
 	});
 	
 	$('.next-day').click(function (e) {
-		$('#day-info').fadeOut(200);
+		$('#day-overview').fadeOut(200);
 		setTimeout(function(){
 			let currentDate = $('#written-date').text();
 			let dateSplit = currentDate.split('-');
@@ -32,13 +32,13 @@ $(document).ready(function() {
 			let day = dateIntermediate.getDate();
 			let dateFormatted = year + '-' + month + '-' + day;
 			readDay(dateFormatted, populateDayOverview);
-			$('#day-info').fadeIn(200);
+			$('#day-overview').fadeIn(200);
 		}, 200);
 		e.preventDefault();
 	});
 	
 	$('.previous-day').click(function (e) {
-		$('#day-info').fadeOut(200);
+		$('#day-overview').fadeOut(200);
 		setTimeout(function(){
 			let currentDate = $('#written-date').text();
 			let dateSplit = currentDate.split('-');
@@ -50,7 +50,7 @@ $(document).ready(function() {
 			let day = dateIntermediate.getDate();
 			let dateFormatted = year + '-' + month + '-' + day;
 			readDay(dateFormatted, populateDayOverview);
-			$('#day-info').fadeIn(200);
+			$('#day-overview').fadeIn(200);
 		}, 200);
 		e.preventDefault();
 	});
