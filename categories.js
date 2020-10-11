@@ -6,9 +6,7 @@ var caffeine = {
 	icon: "local_cafe",
 	type: "icon-number",
 	quant: "beverage",
-	quants: "beverages",
-	min: 0,
-	max: 20
+	quants: "beverages"
 };
 
 var alcohol = {
@@ -18,9 +16,7 @@ var alcohol = {
 	icon: "local_bar",
 	type: "icon-number",
 	quant: "drink",
-	quants: "drinks",
-	min: 0,
-	max: 20
+	quants: "drinks"
 };
 
 var exercise = {
@@ -30,9 +26,7 @@ var exercise = {
 	icon: "directions_run",
 	type: "true-false",
 	quant: "",
-	quants: "",
-	min: null,
-	max: null
+	quants: ""
 };
 
 var sleep = {
@@ -42,9 +36,7 @@ var sleep = {
 	icon: "bedtime",
 	type: "number",
 	quant: "hour",
-	quants: "hours",
-	min: 0,
-	max: 24
+	quants: "hours"
 };
 
 var water = {
@@ -54,9 +46,7 @@ var water = {
 	icon: "local_drink",
 	type: "icon-number",
 	quant: "cup",
-	quants: "cups",
-	min: 0,
-	max: 20
+	quants: "cups"
 };
 
 var aaaMood = {
@@ -82,9 +72,7 @@ var aaaMood = {
 		"great"
 	],
 	quant: "",
-	quants: "",
-	min: null,
-	max: null
+	quants: ""
 };
 
 var categories = [
