@@ -338,6 +338,12 @@ input[type="text"], input[type="password"], input[type="number"] {
   transition: all 0.2s;
 }
 
+a.bubble-link {
+  display: inline-block;
+  max-width: 500px;
+  margin: auto;
+}
+
 .bubble.alert-blue {
   background-color: var(--accent);
   position: relative;
