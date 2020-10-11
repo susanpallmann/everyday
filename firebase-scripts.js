@@ -72,6 +72,36 @@ function readDay(date, callback) {
     });
 }
 
+function readCategory(callback) {
+    // First checks authentication to prevent the user from reading any directory other than
+    // the one associated with their user ID.
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            // User is signed in.
+            let uid = user.uid;
+            var path = firebase.database().ref('users/' + uid + '/settings/tracking');
+            // Takes snapshot of data at this particular path
+            path.once('value', function(snapshot) {
+                if (snapshot) {
+                    // Creating object "data" from each pair of key/values
+                    let data = {};
+                    snapshot.forEach((child) => {
+                        let key = child.key;
+                        let value = child.val();
+			if (value) {
+                        	data[key] = value;
+			}
+                    });
+                    // Pass in function to call React script here (populateDayOverview)
+                    callback(data);
+                } else {
+                    callback(null);
+                }
+            });
+        }
+    });
+}
+
 $(document).ready(function() {
     // Verifying load order for testing (TODO: remove this)
     console.log("Firebase JS file ready!");
