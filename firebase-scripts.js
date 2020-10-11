@@ -54,7 +54,7 @@ function readDay(date, callback, categoryData = null) {
             var path = firebase.database().ref('users/' + uid + '/' + date);
             // Takes snapshot of data at this particular path
             path.once('value', function(snapshot) {
-                if (date) {
+                if (path) {
                     // Creating object "data" from each pair of key/values
                     let data = {};
                     snapshot.forEach((child) => {
