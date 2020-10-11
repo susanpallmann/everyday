@@ -27,4 +27,4 @@ This web app is hosted on [GitHub Pages](https://pages.github.com/). Authenticat
 
 ## To Do Log
 
-1 Probably going to refactor firebase-scripts.js, app.js, and vanilla.js separation to make more sense
+1. Probably going to refactor firebase-scripts.js, app.js, and vanilla.js separation to make more sense
