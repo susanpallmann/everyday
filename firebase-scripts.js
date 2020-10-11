@@ -43,7 +43,7 @@ function updateCategory(data, callback = nocallback) {
 }
 
 // Retrieves information from database about a specific date (parameter date), calls React script to load page (app.js)
-function readDay(date, callback) {
+function readDay(date, callback, categoryData = null) {
     $('#written-date').text(date);
     // First checks authentication to prevent the user from reading any directory other than
     // the one associated with their user ID.
@@ -63,9 +63,9 @@ function readDay(date, callback) {
                         data[key] = value;
                     });
                     // Pass in function to call React script here (populateDayOverview)
-                    callback(date, data);
+                    callback(date, data, categoryData);
                 } else {
-                    callback(date, "none");
+                    callback(date, "none", categoryData);
                 }
             });
         }
@@ -142,6 +142,6 @@ $(document).ready(function() {
     updateDay(date, data);
     updateDay("2020-10-11", data2);
     updateDay("2020-10-9", data3);
-    readDay(date, populateDayOverview);
+    readDay(date, populateDayOverview, null);
     updateCategory(data4);
 });
