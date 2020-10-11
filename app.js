@@ -65,9 +65,20 @@ class Bubble extends React.Component {
     }));
   }
 
-} // Searches to see if an object in the array specified has the value provided set as the "key"
+} 
 
+class AlertEnterDay extends React.Component {
+  render() {
+    return /*#__PURE__*/React.createElement("div", {
+      className: "bubble alert-blue"
+    }, /*#__PURE__*/React.createElement("h3", {
+      className: "alert-blue redirect"
+    }, "No data"), /*#__PURE__*/React.createElement("p", null, "You have not logged any information for this day. Would you like to do so now?"));
+  }
 
+}
+
+// Searches to see if an object in the array specified has the value provided set as the "key"
 function searchArray(word, array) {
   // For each item in the array (each category type)
   for (var i = 0; i < array.length; i++) {
@@ -99,9 +110,10 @@ function populateDayOverview(date, data) {
 
 	    dataElements.push(bubble);
 	  } // Renders the array of bubbles to the designated class
-  } else {
+      } else {
 	  console.log("There is no data");
-	  dataElements.push( /*#__PURE__*/React.createElement("div", null, "No data exists here"));
+	  let alert = /*#__PURE__*/React.createElement(AlertEnterDay, null);
+	  dataElements.push(alert);
   }
 
 
