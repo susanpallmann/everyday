@@ -38,16 +38,20 @@ $(document).ready(function() {
 	});
 	
 	$('.previous-day').click(function (e) {
-		let currentDate = $('#written-date').text();
-		let dateSplit = currentDate.split('-');
-		let dateActual = new Date(parseInt(dateSplit[0]), parseInt(dateSplit[1]) - 1, parseInt(dateSplit[2]));
-		let dateNext = dateActual.setDate(dateActual.getDate() - 1 );
-		let dateIntermediate = new Date(dateNext);
-		let year = dateIntermediate.getFullYear();
-		let month = dateIntermediate.getMonth() + 1;
-		let day = dateIntermediate.getDate();
-		let dateFormatted = year + '-' + month + '-' + day;
-		readDay(dateFormatted, populateDayOverview);
+		$('#day-info').fadeOut(200);
+		setTimeout(function(){
+			let currentDate = $('#written-date').text();
+			let dateSplit = currentDate.split('-');
+			let dateActual = new Date(parseInt(dateSplit[0]), parseInt(dateSplit[1]) - 1, parseInt(dateSplit[2]));
+			let dateNext = dateActual.setDate(dateActual.getDate() - 1 );
+			let dateIntermediate = new Date(dateNext);
+			let year = dateIntermediate.getFullYear();
+			let month = dateIntermediate.getMonth() + 1;
+			let day = dateIntermediate.getDate();
+			let dateFormatted = year + '-' + month + '-' + day;
+			readDay(dateFormatted, populateDayOverview);
+			$('#day-info').fadeIn(200);
+		}, 200);
 		e.preventDefault();
 	});
 	
