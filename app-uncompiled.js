@@ -5,10 +5,8 @@ class Custom extends React.Component {
 	render () {
 		if (this.props.type === "icon-number") {
 			let iconArray = [];
-			console.log(this.props.value);
 			for (var i = 0; i < this.props.value; i++) {
 				let icon = <span className="large-icon">{this.props.propIcon}</span>;
-				console.log("this ran");
 				iconArray.push(icon);
 			}
 			return (
@@ -23,10 +21,9 @@ class Custom extends React.Component {
 		} else if (this.props.type === "mood") {
 			let moodObject = searchArray("aaaMood", categories);
 			let moodIcon = moodObject.options[parseInt(this.props.value) - 1];
-			console.log(moodIcon);
 			return (
 				<div className="icon-set">
-					<p>This is special type mood</p>
+					<span className="large-icon">moodIcon</span>;
 				</div>
 			);
 		} else {
