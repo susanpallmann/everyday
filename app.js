@@ -7,7 +7,7 @@ const r = React.createElement;
 console.log("App file ready!"); // Creates our bubble elements used in the day overview screen
 class Custom extends React.Component {
   render() {
-    if (this.props.type === "number") {
+    if (this.props.type === "icon-number") {
       let iconArray = [];
       console.log(this.props.value);
 
