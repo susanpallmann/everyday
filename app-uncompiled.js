@@ -56,11 +56,19 @@ class Bubble extends React.Component {
 }
 
 class AlertEnterDay extends React.Component {
+
+	handleClick(e) {
+		e.preventDefault();
+		console.log('The link was clicked.');
+	}
+	
 	render () {
 		return (
-			<div className="bubble alert-blue">
-				<p>You have not logged any information for this day. Would you like to do so now?</p>
-			</div>
+			<a href="#" onClick={handleClick}>
+				<div className="bubble alert-blue">
+					<p>You have not logged any information for this day. Would you like to do so now?</p>
+				</div>
+			</a>
 		);
 	}
 }
@@ -212,12 +220,3 @@ function retrieveDayInfo(date, data) {
 //   - Display in React
 //   - then initialize click handlers?
 //   - onClick of options / on fill of forms?, update database
-
-
-function ActionLink() {
-  function handleClick(e) {    e.preventDefault();    console.log('The link was clicked.');  }
-  return (
-    <a href="#" onClick={handleClick}>      Click me
-    </a>
-  );
-}
