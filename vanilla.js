@@ -78,12 +78,13 @@ $(document).ready(function() {
 		let increment = Math.round(100 / quantity);
 		// Preparing an array for containing values
 		let amounts = [];
-		// For the amount of increments (quantity), except for the last one
-		for (var i = 0; i < quantity - 1; i++) {
+		// For the amount of increments (quantity)
+		for (var i = 0; i < quantity; i++) {
 			// add increment to array
 			let amount = i*increment;
 			amounts.push(amount)
 		}
+		// An added value, 100, for confirmation screen
 		amounts.push(100);
 		console.log(amounts)
 	}
