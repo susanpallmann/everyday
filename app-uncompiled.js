@@ -21,7 +21,7 @@ class Custom extends React.Component {
 				</div>
 			);
 		} else if (this.props.type === "mood") {
-			let moodObject = searchArray("mood", categories);
+			let moodObject = searchArray("aaaMood", categories);
 			let moodIcon = moodObject.options[parseInt(this.props.value) - 1];
 			console.log(moodIcon);
 			return (
