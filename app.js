@@ -80,7 +80,8 @@ class AlertEnterDay extends React.Component {
 
   render() {
     return /*#__PURE__*/React.createElement("a", {
-      href: "#",
+      href: "",
+      className: "bubble-link",
       onClick: this.handleClick
     }, /*#__PURE__*/React.createElement("div", {
       className: "bubble alert-blue"
