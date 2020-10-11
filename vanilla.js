@@ -70,7 +70,25 @@ $(document).ready(function() {
 		let currentDate = $('#written-date').text();
 		e.preventDefault();
 	});
-});
+	
+	function determineEnterLoadingBar(data) {
+		// Determines how many categories are in this data set
+		let quantity = Object.keys(data).length;
+		// Determines percentage value of each category
+		let increment = Math.round(100 / quantity);
+		// Preparing an array for containing values
+		let amounts = [];
+		// For the amount of increments (quantity), except for the last one
+		for (var i = 0; i < quantity - 1; i++) {
+			// add increment to array
+			let amount = i*increment;
+			amounts.push(amount)
+		}
+		amounts.push(100);
+		console.log(amounts)
+	}
+	determineEnterLoadingBar({item: "this", something: "that", another: "the other thing"});
+	});
 
 // Appends error message (parameter message) to a specific element (parameter element)
 function appendError(element, message) {
