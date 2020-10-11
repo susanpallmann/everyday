@@ -340,14 +340,24 @@ input[type="text"], input[type="password"], input[type="number"] {
 
 .bubble.alert-blue {
   background-color: var(--accent);
+  position: relative;
+}
+
+.bubble.alert-blue:after {
+  content: "chevron-right";
+  display: inline-block;
+  color: #fff;
+  position: absolute;
+  right: 0.5rem;
+  font-family: "Material Icons Round";
+  top: 50%;
+  -webkit-font-feature-settings: 'liga';
+  display: inline-block;
+  color: var(--accent);
 }
 
 .bubble.alert-blue p {
   margin-top: 0;
-}
-
-.bubble.alert-blue h3 {
-  background-color: var(--accent);
 }
 
 .bubble:hover {
