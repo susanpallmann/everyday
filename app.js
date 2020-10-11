@@ -71,9 +71,7 @@ class AlertEnterDay extends React.Component {
   render() {
     return /*#__PURE__*/React.createElement("div", {
       className: "bubble alert-blue"
-    }, /*#__PURE__*/React.createElement("h3", {
-      className: "alert-blue redirect"
-    }, "No data"), /*#__PURE__*/React.createElement("p", null, "You have not logged any information for this day. Would you like to do so now?"));
+    }, /*#__PURE__*/React.createElement("p", null, "You have not logged any information for this day. Would you like to do so now?"));
   }
 
 }
