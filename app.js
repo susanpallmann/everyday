@@ -22,6 +22,12 @@ class Custom extends React.Component {
       return /*#__PURE__*/React.createElement("div", {
         className: "icon-set"
       }, iconArray);
+    } else if (this.props.type === "number") {
+      return /*#__PURE__*/React.createElement("div", {
+        className: "icon-set"
+      }, /*#__PURE__*/React.createElement("span", {
+        className: "big-number"
+      }, this.props.value));
     } else if (this.props.type === "select") {
       return /*#__PURE__*/React.createElement("p", null, "This is type select");
     } else {
