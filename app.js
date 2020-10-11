@@ -103,3 +103,34 @@ function populateDayOverview(date, data) {
 
   ReactDOM.render( r("div", null, dataElements), document.getElementById('day-info'));
 }
+
+
+function prepareEnterDay(date, data, categoryData) {
+	let dataElements = [];
+	// For each category the user is tracking
+	for (const [key, value] of Object.entries(categoryData)) {
+		let keyword = key;
+		let thisObject = searchArray(keyword, categories);
+		// If there is no data
+		if (data === "none") {
+			console.log("there is no data stored here");
+		// If there is data
+		} else {
+			// If the data contains information on this category
+			if (data.hasOwnProperty(keyword)) {
+				let dataValue = data.keyword;
+				console.log("there is data stored for category " + keyword + " and it is " + dataVlalue);
+			// If not...
+			} else {
+				console.log("although data exists for this date, there is no data stored for category " + keyword);
+			}
+		}
+	}
+	
+}
+
+function retrieveDayInfo(date, data) {
+	readDay(date, prepareEnterDay, data);
+}
+
+readCategory("2020-10-12", retrieveDayInfo);
