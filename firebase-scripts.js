@@ -72,7 +72,7 @@ function readDay(date, callback) {
     });
 }
 
-function readCategory(callback) {
+function readCategory(date, callback) {
     // First checks authentication to prevent the user from reading any directory other than
     // the one associated with their user ID.
     firebase.auth().onAuthStateChanged(function(user) {
@@ -93,9 +93,9 @@ function readCategory(callback) {
 			}
                     });
                     // Pass in function to call React script here (populateDayOverview)
-                    callback(data);
+                    callback(date, data);
                 } else {
-                    callback(null);
+                    callback(null, null);
                 }
             });
         }
