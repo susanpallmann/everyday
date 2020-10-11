@@ -185,7 +185,7 @@ footer nav#main-nav ul li a span {
 .error-message:before {
   display: inline-block;
   content: "error";
-  font-family: 'Material Icons';
+  font-family: 'Material Icons Round';
   -webkit-font-feature-settings: 'liga';
   color: var(--error-border);
   font-size: 18px;
@@ -356,7 +356,7 @@ input[type="text"], input[type="password"], input[type="number"] {
 }
 
 .bubble h3:before {
-  font-family: 'Material Icons';
+  font-family: 'Material Icons Round';
   -webkit-font-feature-settings: 'liga';
   font-size: 24px;
   text-transform: none;
@@ -454,7 +454,7 @@ input[type="text"], input[type="password"], input[type="number"] {
 }
 
 .icon-set .large-icon {
-  font-family: 'Material Icons';
+  font-family: 'Material Icons Round';
   -webkit-font-feature-settings: 'liga';
   font-size: 36px;
   display: inline-block;
