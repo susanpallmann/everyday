@@ -32,6 +32,7 @@ $(document).ready(function() {
 			let day = dateIntermediate.getDate();
 			let dateFormatted = year + '-' + month + '-' + day;
 			readDay(dateFormatted, populateDayOverview, null);
+			$('#written-date').text(dateFormatted);
 			$('#day-overview').fadeIn(200);
 		}, 200);
 		e.preventDefault();
@@ -50,6 +51,7 @@ $(document).ready(function() {
 			let day = dateIntermediate.getDate();
 			let dateFormatted = year + '-' + month + '-' + day;
 			readDay(dateFormatted, populateDayOverview, null);
+			$('#written-date').text(dateFormatted);
 			$('#day-overview').fadeIn(200);
 		}, 200);
 		e.preventDefault();
