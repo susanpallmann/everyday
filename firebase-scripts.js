@@ -65,7 +65,7 @@ function readDay(date, callback) {
                     // Pass in function to call React script here (populateDayOverview)
                     callback(date, data);
                 } else {
-                    callback(null, {exists: false});
+                    callback(date, "none");
                 }
             });
         }
