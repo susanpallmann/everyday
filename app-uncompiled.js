@@ -1,6 +1,8 @@
 // Verifying load order for testing (TODO: remove this)
 console.log("App file ready!");
 
+// On the day overview tab, under each category is some kind of visualization for the data
+// This class creates the appropriate visualization depending on the type of data
 class Custom extends React.Component {
 	render () {
 		if (this.props.type === "icon-number") {
