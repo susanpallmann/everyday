@@ -955,10 +955,12 @@ a.bubble-link {
   width: 100%;
   display: inline-block;
   font-weight: 600;
+  font-family: "Poppins";
 }
 
 #category-enter-screen .icon-container .icon-row .icon-column.icon-span4 span.material-icons-round {
   font-weight: 400;
+  font-family: "Material Icons Round";
 }
 
 #category-enter-screen .icon-container .icon-row .icon-column.icon-span4 span {
