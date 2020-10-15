@@ -953,6 +953,11 @@ a.bubble-link {
 }
 
 @media only screen and (min-width: 500px) {
+  #category-enter-screen .icon-container {
+    max-width: 216px;
+    margin: auto;
+  }
+
   #category-enter-screen .icon-container .icon-row .icon-column.icon-span4 {
     width: 16.66%;
   }
