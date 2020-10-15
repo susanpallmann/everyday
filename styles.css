@@ -950,7 +950,8 @@ a.bubble-link {
 
 #category-enter-screen .icon-container .icon-row .icon-column.icon-span4 {
   width: 33.33%;
-  margin: 8px;
+  padding: 8px;
+  box-sizing: border-box;
 }
 
 #category-enter-screen .icon-container .icon-row .icon-column.icon-span4 span {
