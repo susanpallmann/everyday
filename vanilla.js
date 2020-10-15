@@ -72,26 +72,7 @@ $(document).ready(function() {
 		let currentDate = $('#written-date').text();
 		e.preventDefault();
 	});
-	
-	function determineEnterLoadingBar(data) {
-		// Determines how many categories are in this data set
-		let quantity = Object.keys(data).length;
-		// Determines percentage value of each category
-		let increment = Math.round(100 / quantity);
-		// Preparing an array for containing values
-		let amounts = [];
-		// For the amount of increments (quantity)
-		for (var i = 0; i < quantity; i++) {
-			// add increment to array
-			let amount = i*increment;
-			amounts.push(amount)
-		}
-		// An added value, 100, for confirmation screen
-		amounts.push(100);
-		return amounts;
-	}
-	determineEnterLoadingBar({item: "this", something: "that", another: "the other thing"});
-	});
+});
 
 // Appends error message (parameter message) to a specific element (parameter element)
 function appendError(element, message) {
@@ -101,4 +82,22 @@ function appendError(element, message) {
 // Removes error message element from specific element (parameter element)
 function clearError(element) {
 	element.find('.error-message').remove();
+}
+
+function determineEnterLoadingBar(data) {
+	// Determines how many categories are in this data set
+	let quantity = Object.keys(data).length;
+	// Determines percentage value of each category
+	let increment = Math.round(100 / quantity);
+	// Preparing an array for containing values
+	let amounts = [];
+	// For the amount of increments (quantity)
+	for (var i = 0; i < quantity; i++) {
+		// add increment to array
+		let amount = i*increment;
+		amounts.push(amount)
+	}
+	// An added value, 100, for confirmation screen
+	amounts.push(100);
+	return amounts;
 }
