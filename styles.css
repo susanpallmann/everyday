@@ -930,3 +930,24 @@ a.bubble-link {
 .loading-bar .progress[amount="100"] {
   width: 100%;
 }
+
+/* Responsive Grid System for log icon layouts 
+(I'm not reusing discount bootstrap because it'd be about as much work to create exceptions as it will be to make new classes) */
+
+#category-enter-screen .icon-container {
+}
+
+#category-enter-screen .icon-container .icon-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#category-enter-screen .icon-container .icon-row .icon-column.icon-span4 {
+  width: 33.33%;
+}
+
+@media only screen and (min-width: 500px) {
+  #category-enter-screen .icon-container .icon-row .icon-column.icon-span4 {
+  width: 16.66%;
+}
+}
