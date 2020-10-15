@@ -953,6 +953,10 @@ a.bubble-link {
   margin: 8px;
 }
 
+#category-enter-screen .icon-container .icon-row .icon-column.icon-span4 .material-icons-round {
+  color: var(--lighter);
+}
+
 @media only screen and (min-width: 500px) {
   #category-enter-screen .icon-container {
     max-width: 480px;
