@@ -966,4 +966,13 @@ a.bubble-link {
   #category-enter-screen .icon-container .icon-row .icon-column.icon-span4 {
     width: 16.66%;
   }
+  
+  #category-enter-screen.enforce-break .icon-container {
+    max-width: 240px;
+    margin: auto;
+  }
+
+  #category-enter-screen.enforce-break .icon-container .icon-row .icon-column.icon-span4 {
+    width: 33.33%;
+  }
 }
