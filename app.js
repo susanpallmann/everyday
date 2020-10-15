@@ -271,8 +271,8 @@ function prepareEnterDay(date, data, categoryData) {
     } else {
       // If the data contains information on this category
       if (data.hasOwnProperty(keyword)) {
-        let dataValue = data[keyword]; // Create a filled form for this category
-        //createEnterForm(thisObject, dataValue, date, loadBar);
+        let dataValue = data[keyword];
+        createEnterForm(thisObject, dataValue, date, loadBar); //createEnterForm(thisObject, dataValue, date, loadBar);
         // If not...
       } else {// Create an empty form for this category
           //createEnterForm(thisObject, null, date, loadBar);
