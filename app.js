@@ -131,70 +131,171 @@ function populateDayOverview(date, data) {
   ReactDOM.render( r("div", null, dataElements), document.getElementById('day-info'));
 }
 
+class NumberForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleIncrease = this.handleIncrease.bind(this);
+    this.handleDecrease = this.handleDecrease.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
 
-function createEnterForm(categoryObject, information = null) {
-	let categoryTitle = categoryObject.title;
-	let categoryIcon = categoryObject.icon;
-	let categoryType = categoryObject.type;
-	
-	if (categoryType === "icon-number") {
-		if (information !== null) {
-			//do something with dataValue
-			console.log("we need to generate an icon-number field and populate " + information);
-		} else {
-			console.log("we need to generate an icon-number field");
-		}
-	} else if (categoryType === "number") {
-		if (information !== null) {
-			//do something with dataValue
-			console.log("we need to generate a number field and populate " + information);
-		} else {
-			console.log("we need to generate a number field");
-		}
-	} else if (categoryType === "mood") {
-		if (information !== null) {
-			//do something with dataValue
-			console.log("we need to generate a mood field and populate " + information);
-		} else {
-			console.log("we need to generate a mood field");
-		}
-	} else {
-		if (information !== null) {
-			//do something with dataValue
-			console.log("we need to generate an unknown field and populate " + information);
-		} else {
-			console.log("we need to generate an unknown field");
-		}
-	}
+  handleIncrease(e) {
+    e.preventDefault();
+    console.log('This item incremented');
+  }
+
+  handleDecrease(e) {
+    e.preventDefault();
+    console.log('This item decremented');
+  }
+
+  handleClick(e) {
+    e.preventDefault();
+    console.log('This item clicked');
+  }
+
+  render() {
+    return /*#__PURE__*/React.createElement("div", {
+      className: "icon-container"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "icon-row"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "icon-column icon-span4"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: ""
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "icon-column icon-span4"
+    }, /*#__PURE__*/React.createElement("a", {
+      onClick: this.handleIncrease,
+      href: ""
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "material-icons-round"
+    }, "keyboard_arrow_up"))), /*#__PURE__*/React.createElement("div", {
+      className: "icon-column icon-span4"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: ""
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "icon-column icon-span4"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: ""
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "icon-column icon-span4"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "material-icons-round"
+    }, this.props.icon)), /*#__PURE__*/React.createElement("div", {
+      className: "icon-column icon-span4"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "number-log"
+    }, this.props.number)), /*#__PURE__*/React.createElement("div", {
+      className: "icon-column icon-span4"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: ""
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "icon-column icon-span4"
+    }, /*#__PURE__*/React.createElement("a", {
+      onClick: this.handleDecrease,
+      href: ""
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "material-icons-round"
+    }, "keyboard_arrow_down"))), /*#__PURE__*/React.createElement("div", {
+      className: "icon-column icon-span4"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: ""
+    }))));
+  }
+
+} // Outlining this here at least for now.
+// When the user *starts* entering the day, we need to do something specific:
+// - figure out how many categories there are
+//   - we'll first read from database, and then activate a callback function to proceed from there...
+
+
+function createEnterForm(categoryObject, information = null, date, loadBar) {
+  let categoryTitle = categoryObject.title;
+  let categoryIcon = categoryObject.icon;
+  let categoryType = categoryObject.type;
+
+  if (categoryType === "icon-number") {
+    if (information !== null) {
+      //do something with dataValue
+      console.log("we need to generate an icon-number field and populate " + information);
+      let number = information;
+    } else {
+      console.log("we need to generate an icon-number field");
+      let number = 0;
+    }
+
+    let form = /*#__PURE__*/React.createElement(NumberForm, {
+      number: number,
+      title: categoryTitle,
+      propDate: date,
+      propQuant: categoryObject.quant,
+      propQuants: categoryObject.quants,
+      icon: categoryIcon
+    });
+    ReactDOM.render(form, document.getElementById('category-enter-screen'));
+  } else if (categoryType === "number") {
+    if (information !== null) {
+      //do something with dataValue
+      console.log("we need to generate a number field and populate " + information);
+    } else {
+      console.log("we need to generate a number field");
+    }
+  } else if (categoryType === "mood") {
+    if (information !== null) {
+      //do something with dataValue
+      console.log("we need to generate a mood field and populate " + information);
+    } else {
+      console.log("we need to generate a mood field");
+    }
+  } else {
+    if (information !== null) {
+      //do something with dataValue
+      console.log("we need to generate an unknown field and populate " + information);
+    } else {
+      console.log("we need to generate an unknown field");
+    }
+  }
 }
 
 function prepareEnterDay(date, data, categoryData) {
-	let dataElements = [];
-	// For each category the user is tracking
-	for (const [key, value] of Object.entries(categoryData)) {
-		let keyword = key;
-		let thisObject = searchArray(keyword, categories);
-		// If there is no data
-		if (data === "none") {
-			// Create an empty form for this category
-			createEnterForm(thisObject, null);
-		// If there is data
-		} else {
-			// If the data contains information on this category
-			if (data.hasOwnProperty(keyword)) {
-				let dataValue = data[keyword];
-				// Create a filled form for this category
-				createEnterForm(thisObject, dataValue);
-			// If not...
-			} else {
-				// Create an empty form for this category
-				createEnterForm(thisObject, null);
-			}
-		}
-	}
-	
+  let dataElements = [];
+  let loadBar = determineEnterLoadingBar(categoryData); // For each category the user is tracking
+
+  for (const [key, value] of Object.entries(categoryData)) {
+    let keyword = key;
+    let thisObject = searchArray(keyword, categories); // If there is no data
+
+    if (data === "none") {// Create an empty form for this category
+      //createEnterForm(thisObject, null, date, loadBar);
+      // If there is data
+    } else {
+      // If the data contains information on this category
+      if (data.hasOwnProperty(keyword)) {
+        let dataValue = data[keyword]; // Create a filled form for this category
+        //createEnterForm(thisObject, dataValue, date, loadBar);
+        // If not...
+      } else {// Create an empty form for this category
+          //createEnterForm(thisObject, null, date, loadBar);
+        }
+    }
+  }
 }
 
 function retrieveDayInfo(date, data) {
-	readDay(date, prepareEnterDay, data);
-}
+  readDay(date, prepareEnterDay, data);
+} // readCategory("2020-10-11", retrieveDayInfo);
+// returns date ("2020-10-11", {something}, {categories}
+// Given data passed in (already filtered out false values)
+// - figure out how many/what loading bar increments we need to do (just some math, and maybe we'll want a limit on how many categories someone can track)
+//   - we'll want to pass on each increment on with our category values to the next function so the callback will need to take two parameters
+// Once we have out values we want to pass those on to the React part responsible for rendering
+// - For each category:
+//   - Get type from categories array
+//   - Do something specific to that type
+//   - Increment the loading bar (unless first category)
+//   - Check firebase to see if data exists under this category, update accordingly
+//   - Display in React
+//   - then initialize click handlers?
+//   - onClick of options / on fill of forms?, update database
+//   - ???
