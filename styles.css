@@ -170,8 +170,10 @@ footer nav#main-nav ul li a span {
 }
 
 .has-buttons .column.span12 {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
+  padding-bottom: 5rem;
+  box-sizing: border-box;
 }
 
 /* Errors */
