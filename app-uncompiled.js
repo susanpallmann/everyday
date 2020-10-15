@@ -148,16 +148,17 @@ class NumberForm extends React.Component {
 		return (
 			<div className="icon-container">
                     		<div className="icon-row">
-				<div className="icon-column icon-span4"><span className=""></span></div>
-				<div className="icon-column icon-span4"><a onClick={this.handleIncrease} href=""><span className="material-icons-round">keyboard_arrow_up</span></a></div>
-				<div className="icon-column icon-span4"><span className=""></span></div>
-				<div className="icon-column icon-span4"><span className=""></span></div>
-				<div className="icon-column icon-span4"><span className="material-icons-round">{this.props.icon}</span></div>
-				<div className="icon-column icon-span4"><span className="number-log">{this.props.number}</span></div>
-				<div className="icon-column icon-span4"><span className=""></span></div>
-				<div className="icon-column icon-span4"><a onClick={this.handleDecrease} href=""><span className="material-icons-round">keyboard_arrow_down</span></a></div>
-				<div className="icon-column icon-span4"><span className=""></span></div>
-			 </div>
+					<div className="icon-column icon-span4"><span className=""></span></div>
+					<div className="icon-column icon-span4"><a onClick={this.handleIncrease} href=""><span className="material-icons-round">keyboard_arrow_up</span></a></div>
+					<div className="icon-column icon-span4"><span className=""></span></div>
+					<div className="icon-column icon-span4"><span className=""></span></div>
+					<div className="icon-column icon-span4"><span className="material-icons-round">{this.props.icon}</span></div>
+					<div className="icon-column icon-span4"><span className="number-log">{this.props.number}</span></div>
+					<div className="icon-column icon-span4"><span className=""></span></div>
+					<div className="icon-column icon-span4"><a onClick={this.handleDecrease} href=""><span className="material-icons-round">keyboard_arrow_down</span></a></div>
+					<div className="icon-column icon-span4"><span className=""></span></div>
+				</div>
+			</div>
 		);
 	}
 }
@@ -236,7 +237,7 @@ function prepareEnterDay(date, data, categoryData) {
 			// If the data contains information on this category
 			if (data.hasOwnProperty(keyword)) {
 				let dataValue = data[keyword];
-				// Create a filled form for this category
+				createEnterForm(thisObject, dataValue, date, loadBar);
 				//createEnterForm(thisObject, dataValue, date, loadBar);
 			// If not...
 			} else {
