@@ -948,12 +948,12 @@ a.bubble-link {
   width: 33.33%;
 }
 
-#category-enter-screen .icon-container .icon-row .icon-column.icon-span4 .material-icons-round {
+#category-enter-screen .icon-container .icon-row .icon-column.icon-span4 span {
   font-size: 64px;
   margin: 8px;
 }
 
-#category-enter-screen .icon-container .icon-row .icon-column.icon-span4 .material-icons-round {
+#category-enter-screen .icon-container .icon-row .icon-column.icon-span4 span {
   color: var(--lighter);
 }
 
