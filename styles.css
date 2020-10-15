@@ -935,7 +935,7 @@ a.bubble-link {
 (I'm not reusing discount bootstrap because it'd be about as much work to create exceptions as it will be to make new classes) */
 
 #category-enter-screen .icon-container {
-  max-width: 216px;
+  max-width: 192px;
   margin: auto;
 }
 
@@ -949,12 +949,12 @@ a.bubble-link {
 }
 
 #category-enter-screen .icon-container .icon-row .icon-column.icon-span4 .material-icons-round {
-  font-size: 72px;
+  font-size: 64px;
 }
 
 @media only screen and (min-width: 500px) {
   #category-enter-screen .icon-container {
-    max-width: 432px;
+    max-width: 384px;
     margin: auto;
   }
 
