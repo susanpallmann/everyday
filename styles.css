@@ -951,6 +951,14 @@ a.bubble-link {
 #category-enter-screen .icon-container .icon-row .icon-column.icon-span4 span {
   font-size: 64px;
   margin: 8px;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  font-weight: 600;
+}
+
+#category-enter-screen .icon-container .icon-row .icon-column.icon-span4 span.material-icons-round {
+  font-weight: 400;
 }
 
 #category-enter-screen .icon-container .icon-row .icon-column.icon-span4 span {
