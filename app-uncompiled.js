@@ -121,15 +121,11 @@ function populateDayOverview(date, data) {
 	);
 }
 
-
-
-
-
 class NumberForm extends React.Component {
 	constructor(props) {
     		super(props);
-    		this.handleIncrease = this.handleClick.bind(this);
-		this.handleDecrease = this.handleClick.bind(this);
+    		this.handleIncrease = this.handleIncrease.bind(this);
+		this.handleDecrease = this.handleDecrease.bind(this);
 		this.handleClick = this.handleClick.bind(this);
 	}
 
@@ -150,21 +146,18 @@ class NumberForm extends React.Component {
 	
 	render () {
 		return (
-			<a href="" className="enter-previous end-edit">
-                  		<span className="material-icons-round">chevron_left</span> Back
-                	</a>
-                	<h2 id="enter-written-date">{this.props.propDate}</h2>
-                	<div class="loading-bar">
-                  		<div className="progress" amount="0"></div>
-                	</div>
-                	<h2 id="category-title">{this.props.title}</h2>
-                	<p id="category-query">How are you feeling today?</p>
-                	<div id="category-enter-screen">
-                	</div>
-                	<p>Selected: <span className="selected-value">none</span> <span class="selected-quant"></span></p>
-                	<div className="bottom-buttons">
-                  		<a href="" className="button enter-next" onClick={this.handleClick}>Continue</a>
-                	</div>
+			<div className="icon-container">
+                    		<div className="icon-row">
+				<div className="icon-column icon-span4"><span className=""></span></div>
+				<div className="icon-column icon-span4"><a onClick={this.handleIncrease} href=""><span className="material-icons-round">keyboard_arrow_up</span></a></div>
+				<div className="icon-column icon-span4"><span className=""></span></div>
+				<div className="icon-column icon-span4"><span className=""></span></div>
+				<div className="icon-column icon-span4"><span className="material-icons-round">{this.props.icon}</span></div>
+				<div className="icon-column icon-span4"><span className="number-log">{this.props.number}</span></div>
+				<div className="icon-column icon-span4"><span className=""></span></div>
+				<div className="icon-column icon-span4"><a onClick={this.handleDecrease} href=""><span className="material-icons-round">keyboard_arrow_down</span></a></div>
+				<div className="icon-column icon-span4"><span className=""></span></div>
+			 </div>
 		);
 	}
 }
@@ -191,13 +184,18 @@ function createEnterForm(categoryObject, information = null, date, loadBar) {
 			console.log("we need to generate an icon-number field");
 			let number = 0;
 		}
-	let form = <NumberForm 
-		number={number}
-		title = {categoryTitle}
-		propDate = {date}
-		propQuant = {categoryObject.quant}
-		propQuants = {categoryObject.quants}
-	/>
+		let form = <NumberForm 
+			number={number}
+			title = {categoryTitle}
+			propDate = {date}
+			propQuant = {categoryObject.quant}
+			propQuants = {categoryObject.quants}
+			icon = {categoryIcon}
+		/>
+		ReactDOM.render(
+			form,
+			document.getElementById('category-enter-screen')
+		);
 	} else if (categoryType === "number") {
 		if (information !== null) {
 			//do something with dataValue
