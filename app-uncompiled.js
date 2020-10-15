@@ -177,13 +177,14 @@ function createEnterForm(categoryObject, information = null, date, loadBar) {
 	let categoryType = categoryObject.type;
 	
 	if (categoryType === "icon-number") {
+		let num = 0;
 		if (information !== null) {
 			//do something with dataValue
 			console.log("we need to generate an icon-number field and populate " + information);
-			let number = information;
+			number = information;
 		} else {
 			console.log("we need to generate an icon-number field");
-			let number = 0;
+			number = 0;
 		}
 		let form = <NumberForm 
 			number={number}
