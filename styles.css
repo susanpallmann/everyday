@@ -489,13 +489,13 @@ a.bubble-link {
 .icon-set .large-icon {
   font-family: 'Material Icons Round';
   -webkit-font-feature-settings: 'liga';
-  font-size: 36px;
+  font-size: 48px;
   display: inline-block;
   color: var(--accent);
 }
 
 .icon-set .big-number {
-    font-size: 36px;
+    font-size: 48px;
     font-weight: 600;
     color: var(--accent-2);
 }
@@ -935,7 +935,7 @@ a.bubble-link {
 (I'm not reusing discount bootstrap because it'd be about as much work to create exceptions as it will be to make new classes) */
 
 #category-enter-screen .icon-container {
-  max-width: 240px;
+  max-width: 192px;
   margin: auto;
 }
 
@@ -949,7 +949,7 @@ a.bubble-link {
 }
 
 #category-enter-screen .icon-container .icon-row .icon-column.icon-span4 span {
-  font-size: 64px;
+  font-size: 48px;
   margin: 8px;
   text-align: center;
   width: 100%;
@@ -969,7 +969,7 @@ a.bubble-link {
 
 @media only screen and (min-width: 500px) {
   #category-enter-screen .icon-container {
-    max-width: 480px;
+    max-width: 384px;
     margin: auto;
   }
 
@@ -978,7 +978,7 @@ a.bubble-link {
   }
   
   #category-enter-screen.enforce-break .icon-container {
-    max-width: 240px;
+    max-width: 192px;
     margin: auto;
   }
 
