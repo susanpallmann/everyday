@@ -934,6 +934,10 @@ a.bubble-link {
 /* Responsive Grid System for log icon layouts 
 (I'm not reusing discount bootstrap because it'd be about as much work to create exceptions as it will be to make new classes) */
 
+#category-enter-screen {
+  padding: 2em 0;
+}
+
 #category-enter-screen .icon-container {
   max-width: 192px;
   margin: auto;
