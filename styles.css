@@ -173,6 +173,7 @@ footer nav#main-nav ul li a span {
   min-height: 100vh;
   position: relative;
   padding-bottom: 5rem;
+  padding-top: 5rem;
   box-sizing: border-box;
 }
 
