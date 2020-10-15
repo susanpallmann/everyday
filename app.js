@@ -209,7 +209,6 @@ class NumberForm extends React.Component {
 // - figure out how many categories there are
 //   - we'll first read from database, and then activate a callback function to proceed from there...
 
-
 function createEnterForm(categoryObject, information = null, date, loadBar) {
   let categoryTitle = categoryObject.title;
   let categoryIcon = categoryObject.icon;
