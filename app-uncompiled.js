@@ -256,22 +256,44 @@ function retrieveDayInfo(date, data) {
 	readDay(date, prepareEnterDay, data);
 }
 
-// readCategory("2020-10-11", retrieveDayInfo);
-// returns date ("2020-10-11", {something}, {categories}
 
 
-// Given data passed in (already filtered out false values)
 
-// - figure out how many/what loading bar increments we need to do (just some math, and maybe we'll want a limit on how many categories someone can track)
-//   - we'll want to pass on each increment on with our category values to the next function so the callback will need to take two parameters
+// Function to retrieve categories we're tracking
 
-// Once we have out values we want to pass those on to the React part responsible for rendering
-// - For each category:
-//   - Get type from categories array
-//   - Do something specific to that type
-//   - Increment the loading bar (unless first category)
-//   - Check firebase to see if data exists under this category, update accordingly
-//   - Display in React
-//   - then initialize click handlers?
-//   - onClick of options / on fill of forms?, update database
-//   - ???
+// Function to read database for specified date and creates array/object of categories and data (orders mood first)
+	// Read database
+	// For each item in categories array, fill data if it was found in the data retrieved from database (but check for mood first)
+	// If data wasn't found, do something else we'll look for later
+	// Return reordered array
+
+// Function to when given a position in the array, and the array itself,
+	// Do stuff SUSAN EDIT THIS FIRST
+
+// Function to update the page, given data type, data (if it exists), loading bar, and date
+
+
+
+// When user starts their log for a given day, we need to get: a list of categories we're going to be tracking and the date we're logging for
+// We'll want to change the date on the screen for this
+
+// Parameters date
+// Return categories
+
+// With this information, we need to search the database for information in any of those categories and keep all of this information together (maybe an array or something)
+// If we do make this an array, we need to store the LACK of information reliably, maybe a codeword or just null, idk
+
+// Parameters date, categories
+// Return array of data
+
+// This array then should be passed, unchanging, into a function to set up our log form. For each stage in the form, we need to load the appropriate data visualization option
+// and if data exists, populate that into the form. If there is data in the mood section, we'll want to add a class to the overall container to style things the right color
+// In addition to changing the visualization, click handlers need to do the correct thing... so it sounds like this whole piece needs to be react :(
+// Need to see if the current category is first or last, and do unique things to the next/back buttons if so.
+// Otherwise next/back buttons need to iterate to the next or previous category (this is complicated)
+
+//
+
+// During each screen if the user selects something new, update the database? Or only when they hit next? Maybe next
+
+// On submit, return user to homescreen
