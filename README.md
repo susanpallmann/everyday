@@ -13,3 +13,5 @@ This web app is hosted on [GitHub Pages](https://pages.github.com/). Authenticat
 
 ## Well This Looks Like a Mess
 You're not wrong! I'm currently working on a total rebuild over in the **rebuild** branch, you should check that out instead.
+
+The original plan here was to use React for just a few elements in the app, and build the rest with HTML and jQuery. The new build is instead fully powered by React (with Firebase additions to come in later).
