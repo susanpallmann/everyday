@@ -76,7 +76,6 @@ footer {
   background-color: var(--lighter);
   box-shadow: 0px 0px 60px var(--background);
   z-index: 5;
-  max-width: 800px;
 }
 
 footer nav#main-nav ul {
