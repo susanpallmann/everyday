@@ -11,22 +11,5 @@ Sometimes moods can seem unpredictable when really there is an underlying cause 
 ## Resources Used
 This web app is hosted on [GitHub Pages](https://pages.github.com/). Authentication and realtime database capabilities are powered by [Google Firebase](https://firebase.google.com/). UI elements are created using a combination of pure JavaScript/[jQuery](https://jquery.com/) and [React JS](https://reactjs.org/) methods. The [online Babel compiler resource](https://babeljs.io/) was used to translate code written in jsx to js. Iconography is from [Google's Material library](https://material.io/), and fonts are from [Google Fonts](https://fonts.google.com/). The responsive grid system in place is pulled from my [Discount Bootstrap](https://github.com/susanpallmann/discount-bootstrap) project.
 
-## Files
-
-* **app-uncompiled.js** - jsx verion of app.js, for development purposes only
-* **app.js** - js compiled version of app-uncompiled.js, production version
-* **authentication.js** - functions used in authentication (except for when checking if user is logged in to access certain database paths)
-* **categories.js** - js file containing objects representing the different types of categories the user can track using this app (rather than saving all of this to the database)
-* **discount-bootstrap.css** - responsive grid system
-* **discount-bootstrap.js** - minor re-usable ui elements
-* **firebase-scripts.js** - js file containing all database interaction
-* **vanilla.js** - pure js/jQuery, some non-React UI elements
-* **index.html** - initial page HTML, modified by React UI elements
-* **no-script.css** - in case of scripts not working
-* **styles.css** - overall styling and design
-
-## To Do Log
-
-1. hgfdsdhjk
-
-2. Probably going to refactor firebase-scripts.js, app.js, and vanilla.js separation to make more sense/better separate concerns
+## Well This Looks Like a Mess
+You're not wrong! I'm currently working on a total rebuild over in the **rebuild** branch, you should check that out instead.
