@@ -6,7 +6,7 @@ class Logo extends React.Component {
   render() {
     return (
       <div className="logo">
-        <img src="images/everyday-white.svg" alt="everyday logo" />
+        <img src="assets/images/everyday-white.svg" alt="everyday logo" />
       </div>
     );
   }
