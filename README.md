@@ -5,7 +5,7 @@
 
 **Version:** 4
 
-**Prototype URL:** https://susanpallmann.github.io/everyday-react/
+**Prototype URL:** https://susanpallmann.github.io/everyday/
 
 ## Contents
 
