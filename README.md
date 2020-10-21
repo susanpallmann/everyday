@@ -1,4 +1,3 @@
-![Icon](https://susanpallmann.github.io/everyday/assets/images/favicon.png)
 # everyday
 **Concept:** Susan Pallmann and Josh Ahlers
 
