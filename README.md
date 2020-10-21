@@ -8,6 +8,15 @@
 **Prototype URL:** https://susanpallmann.github.io/everyday/
 
 ## Contents
+* [Overview](#overview)
+* [Resources Used](#resources-used)
+* [Process](#process)
+  * [Exploring the Problem Space](#exploring-the-problem-space)
+  * [User Interviews](#user-interviews)
+  * [Initial Design](#initial-design)
+  * [User Testing](#user-testing)
+  * [Redesign](#redesign)
+  * [Development](#development)
 
 ## Overview
 Sometimes moods can seem unpredictable when really there is an underlying cause behind it. EveryDay is a web-app prototype designed to let users record their moods and daily behaviors. The hope is that tracking this data will let users notice patterns in how their behavior or habits affect their moods, and lead to better days overall.
