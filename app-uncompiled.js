@@ -395,7 +395,7 @@ class LogInForm extends React.Component {
   
   render() {
     return (
-      <div className="full-height footer-space">
+      <div className="full-height header-space footer-space">
         <form id="log-in">
           <h1>Log in</h1>
           <label htmlFor="log-in-email">Email</label>
@@ -436,7 +436,7 @@ class SignUpForm extends React.Component {
   
   render() {
     return (
-      <div className="full-height footer-space">
+      <div className="full-height header-space footer-space">
         <form id="sign-up">
           <h1>Sign Up</h1>
           <label htmlFor="sign-up-email">Email</label>
