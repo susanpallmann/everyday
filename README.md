@@ -1,14 +1,16 @@
 # everyday-react
-Concept: Susan Pallmann and Josh Ahlers
+**Concept:** Susan Pallmann and Josh Ahlers
 
-Execution (Research, Design, & Development): Susan Pallmann
+**Execution** (Research, Design, & Development)**:** Susan Pallmann
 
-Rebuild #4
+**Version:** 4
+
+**Prototype URL:** https://susanpallmann.github.io/everyday-react/
 
 ## Contents
 
 ## Overview
-Sometimes moods can seem unpredictable when really there is an underlying cause behind it. EveryDay is an app concept designed to let users record their moods and daily behaviors. The hope is that tracking this data will let users notice patterns in how their behavior or habits affect their moods, and lead to better days overall.
+Sometimes moods can seem unpredictable when really there is an underlying cause behind it. EveryDay is a web-app prototype designed to let users record their moods and daily behaviors. The hope is that tracking this data will let users notice patterns in how their behavior or habits affect their moods, and lead to better days overall.
 
 ## Resources Used
 This web app is hosted on [GitHub Pages](https://pages.github.com/). Authentication and realtime database capabilities are powered by [Google Firebase](https://firebase.google.com/). UI elements are created using [React JS](https://reactjs.org/). The [online Babel compiler resource](https://babeljs.io/) was used to translate code written in jsx to js. Iconography is from [Google's Material library](https://material.io/), and fonts are from [Google Fonts](https://fonts.google.com/). The responsive grid system in place is pulled from my [Discount Bootstrap](https://github.com/susanpallmann/discount-bootstrap) project.
