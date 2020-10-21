@@ -251,7 +251,7 @@ class SignUpForm extends React.Component {
     return (
       <div className="full-height footer-space">
         <form id="sign-up">
-          <h1>Log in</h1>
+          <h1>Sign Up</h1>
           <label htmlFor="sign-up-email">Email</label>
           <br />
           <input type="text" name="sign-up-email" id="sign-up-email" placeholder="email" />
@@ -290,7 +290,7 @@ class HomeNav extends React.Component {
     return (
       <div className="full-height footer-space header-space">
         <Heading />
-        <h1>Home State</h1>
+        <h1>Home</h1>
         <Calendar />
         <Nav home={this.goHome} viewDay={this.goViewDay} selected="home"/>
       </div>
