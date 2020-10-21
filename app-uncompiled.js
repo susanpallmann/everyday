@@ -1,3 +1,107 @@
+/* Firebase-related functions we'll need later */
+/*function nocallback() {
+}
+
+// Sends information (parameter data, expected to be an object) about a specific date (parameter date) to the database
+function updateDay(date, data, callback = nocallback) {
+
+    // First checks authentication to prevent the user from writing to any directory other than
+    // the one associated with their user ID.
+    var user = firebase.auth().currentUser;
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            // User is signed in.
+            let uid = user.uid;
+            // Update info at specific path
+            var path = firebase.database().ref('users/' + uid + '/' + date);
+            path.update(data, function () {callback(true)});
+        } else {
+            // No user is signed in.
+            callback(false);
+        }
+    });
+}
+
+// Sends information (parameter data, expected to be an object) about a specific user
+function updateCategory(data, callback = nocallback) {
+
+    // First checks authentication to prevent the user from writing to any directory other than
+    // the one associated with their user ID.
+    var user = firebase.auth().currentUser;
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            // User is signed in.
+            let uid = user.uid;
+            // Update info at specific path
+            var path = firebase.database().ref('users/' + uid + '/settings/tracking');
+            path.update(data, function () {callback(true)});
+        } else {
+            // No user is signed in.
+            callback(false);
+        }
+    });
+}
+
+// Retrieves information from database about a specific date (parameter date), calls React script to load page (app.js)
+function readDay(date, callback, categoryData = null) {
+    // First checks authentication to prevent the user from reading any directory other than
+    // the one associated with their user ID.
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            // User is signed in.
+            let uid = user.uid;
+            var path = firebase.database().ref('users/' + uid + '/' + date);
+            // Takes snapshot of data at this particular path
+            path.once('value', function(snapshot) {
+                if (snapshot.exists()) {
+                    // Creating object "data" from each pair of key/values
+                    let data = {};
+                    snapshot.forEach((child) => {
+                        let key = child.key;
+                        let value = child.val();
+                        data[key] = value;
+                    });
+                    // Pass in function to call React script here (populateDayOverview)
+                    callback(date, data, categoryData);
+                } else {
+                    callback(date, "none", categoryData);
+                }
+            });
+        }
+    });
+}
+
+function readCategory(date, callback) {
+    // First checks authentication to prevent the user from reading any directory other than
+    // the one associated with their user ID.
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            // User is signed in.
+            let uid = user.uid;
+            var path = firebase.database().ref('users/' + uid + '/settings/tracking');
+            // Takes snapshot of data at this particular path
+            path.once('value', function(snapshot) {
+                if (snapshot.exists()) {
+                    // Creating object "data" from each pair of key/values
+                    let data = {};
+                    snapshot.forEach((child) => {
+                        let key = child.key;
+                        let value = child.val();
+			if (value) {
+                        	data[key] = value;
+			}
+                    });
+                    // Pass in function to call React script here (populateDayOverview)
+                    callback(date, data);
+                } else {
+                    callback(null, null);
+                }
+            });
+        }
+    });
+}
+*/
+
 /* Some common elements we'll be reusing throughout the app */
 
 // Creates a div with the logo centered in it
