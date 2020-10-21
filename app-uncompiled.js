@@ -365,7 +365,7 @@ class Splash extends React.Component {
   
   render() {
     return (
-      <div className="blue-background footer-space">
+      <div className="blue-background header-space footer-space">
         <Logo />
         <footer className="bottom-buttons">
           <div className="button" onClick={this.goLogIn}>Log In</div>
