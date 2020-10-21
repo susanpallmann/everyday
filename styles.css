@@ -288,6 +288,7 @@ input[type="text"], input[type="password"], input[type="number"] {
 .full-height {
   position: relative;
   min-height: 100vh;
+  overflow-y: hidden;
   box-sizing: border-box;
 }
 
@@ -303,6 +304,7 @@ input[type="text"], input[type="password"], input[type="number"] {
   background-color: var(--accent);
   color: var(--white);
   position: relative;
+  overflow-y: hidden;
   min-height: 100vh;
   box-sizing: border-box;
 }
