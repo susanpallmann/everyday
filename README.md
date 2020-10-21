@@ -1,4 +1,4 @@
-# everyday-react
+# everyday
 **Concept:** Susan Pallmann and Josh Ahlers
 
 **Execution** (Research, Design, & Development)**:** Susan Pallmann
