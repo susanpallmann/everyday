@@ -15,7 +15,7 @@
   --mood-5: #506498;
   --error-border: #F56D6D;
   --error-background: rgba(245, 109, 109, 0.35);
-  --dark-button-hover: #4C98CF;
+  --dark-button-hover: #065375;
   --white: #fff; /* This looks stupid, but if I add "light mode" later I'll want an easy way to change this. */
 }
 
@@ -58,8 +58,19 @@ header {
   background-color: var(--accent);
   box-shadow: 0px 0px 8px var(--background);
   box-sizing: border-box;
-  padding: 1em;
   z-index: 5;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
+  transition: all 0.2s;
+  max-width: 800px;
+  height: 50px
+}
+
+header .logo {
+  max-width: 160px;
+}
+
+header:hover {
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.20);
 }
 
 header h1 {
@@ -74,8 +85,14 @@ footer {
   text-align: center;
   color: var(--white);
   background-color: var(--lighter);
-  box-shadow: 0px 0px 60px var(--background);
   z-index: 5;
+  max-width: 800px;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
+  transition: all 0.2s;
+}
+
+footer:hover {
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.20);
 }
 
 footer nav#main-nav ul {
@@ -219,7 +236,7 @@ footer nav#main-nav ul li a span {
   font-size: 1em;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.2s;
   width: 100%;
   text-align: center;
   text-decoration: none;
@@ -238,6 +255,8 @@ footer nav#main-nav ul li a span {
 .button:nth-child(2n):focus {
   background-color: var(--accent-2);
   color: var(--white);
+  box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.20);
+  z-index: 2;
 }
 
 .button.button-switch {
@@ -266,29 +285,65 @@ input[type="text"], input[type="password"], input[type="number"] {
 }
 
 /* Splash */
-#splash-start {
-  background-color: var(--accent);
-  color: var(--white);
+.full-height {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-#splash-start .button {
+.header-space {
+  padding-top: 50px;
+}
+
+.footer-space {
+  padding-bottom: 50px;
+}
+
+.blue-background {
+  background-color: var(--accent);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.blue-background .button {
   background-color: var(--background);
 }
 
-#splash-start .button:nth-child(2n) {
+.blue-background .button:nth-child(2n) {
   background-color: var(--lighter);
 }
-
-#splash-start .button:hover,
-#splash-start .button:active,
-#splash-start .button:focus,
-#splash-start .button:nth-child(2n):hover,
-#splash-start .button:nth-child(2n):focus,
-#splash-start .button:nth-child(2n):active {
+.blue-background .button:hover,
+.blue-background .button:active,
+.blue-background .button:focus,
+.blue-background .button:nth-child(2n):hover,
+.blue-background .button:nth-child(2n):focus,
+.blue-background .button:nth-child(2n):active {
   background-color: var(--dark-button-hover);
   color: var(--white);
 }
 
+.logo-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.logo {
+  width: 180px;
+  margin: auto;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: auto;
+  transform: translateY(-50%);
+}
+/*
 #calendar {
   background-color: var(--background);
 }
@@ -326,7 +381,7 @@ input[type="text"], input[type="password"], input[type="number"] {
 
 .day[valid="true"][filled="true"][mood="5"] {
   background-color: var(--mood-5);
-}
+}*/
 
 /* Bubbles */
 .bubble {
@@ -377,6 +432,7 @@ a.bubble-link {
   -webkit-transform: scale(1.025);
   transform: scale(1.025);
   box-shadow: 0px 0px 40px var(--background);
+  z-index: 2;
 }
 
 .bubble h3 {
@@ -994,4 +1050,51 @@ a.bubble-link {
   #category-enter-screen.enforce-break .icon-container .icon-row .icon-column.icon-span4 {
     width: 33.33%;
   }
+}
+
+/* Calendar Styles */
+#calendar {
+  font-size: 0;
+  max-width: 350px;
+  margin: auto;
+}
+
+#calendar .day-small {
+  width: calc(14.28% - 4px);
+  display: inline-block;
+  padding-bottom: calc(14.28% - 4px);
+  margin: 2px;
+  background-color: var(--lighter);
+}
+
+#calendar .day-large {
+}
+
+#calendar .calendar-navigation {
+  position: relative;
+  height: 24px;
+}
+
+#calendar .month {
+  font-size: 1rem;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0.2em;
+  text-align: center;
+}
+
+#calendar .arrow-left {
+  float: left;
+}
+
+#calendar .arrow-right {
+  float: right;
+}
+
+#calendar .calendar-views {
+  text-align: right;
+  padding: 1rem 0;
 }

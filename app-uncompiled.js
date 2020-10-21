@@ -1,299 +1,399 @@
-// Verifying load order for testing (TODO: remove this)
-console.log("App file ready!");
+/* Some common elements we'll be reusing throughout the app */
 
-// On the day overview tab, under each category is some kind of visualization for the data
-// This class creates the appropriate visualization depending on the type of data
-class Custom extends React.Component {
-	render () {
-		if (this.props.type === "icon-number") {
-			let iconArray = [];
-			for (var i = 0; i < this.props.value; i++) {
-				let icon = <span className="large-icon">{this.props.propIcon}</span>;
-				iconArray.push(icon);
-			}
-			return (
-				<div className="icon-set">{iconArray}</div>
-			);
-		} else if (this.props.type === "number") {
-			return (
-				<div className="icon-set">
-					<span className="big-number">{this.props.value}</span>
-				</div>
-			);
-		} else if (this.props.type === "mood") {
-			let moodObject = searchArray("aaaMood", categories);
-			let indexValue = moodObject.optionsText.indexOf(this.props.value);
-			let moodIcon = moodObject.options[parseInt(indexValue)];
-			return (
-				<div className="icon-set">
-					<span className="large-icon">{moodIcon}</span>
-				</div>
-			);
-		} else {
-			return (
-				<p>This is type unknown</p>
-			);
-		}
-	}
+// Creates a div with the logo centered in it
+// Note: this should be created inside of containers that are position: relative
+class Logo extends React.Component {
+  render() {
+    return (
+      <div className="logo">
+        <img src="images/everyday-white.svg" alt="everyday logo" />
+      </div>
+    );
+  }
 }
 
-// Creates our bubble elements used in the day overview screen
-class Bubble extends React.Component {
-	render () {
-		let Object = searchArray(this.props.propKey, categories);
-		var quant;
-		if (this.props.propValue > 1 || this.props.propValue === 0) {
-			quant = Object.quants;
-		} else {
-			quant = Object.quant;
-		}
-		return (
-			<div className="bubble">
-				<h3 className={this.props.propKey}>{this.props.title}</h3>
-				<p>You logged {this.props.propValue} {quant} for {this.props.title.toLowerCase()}.</p>
-				<Custom type={this.props.type} value={this.props.propValue} propIcon={this.props.icon} />
-			</div>
-		);
-	}
+class Heading extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  
+  render() {
+    return (
+      <header>
+        <div className="logo-container">
+          <Logo />
+        </div>
+      </header>
+    );
+  }
 }
 
-class AlertEnterDay extends React.Component {
-	constructor(props) {
-    		super(props);
-    		this.handleClick = this.handleClick.bind(this);
-	}
-
-  	handleClick(e) {
-		e.preventDefault();
-		console.log('The link was clicked.');
-	}
-	
-	render () {
-		return (
-			<a href="" className="bubble-link" onClick={this.handleClick}>
-				<div className="bubble alert-blue">
-					<p>You have not logged any information for this day. Would you like to do so now?</p>
-				</div>
-			</a>
-		);
-	}
+class Nav extends React.Component {
+  constructor(props) {
+    super(props);
+    this.goHome = this.goHome.bind(this);
+    this.goViewDay = this.goViewDay.bind(this);
+  }
+  
+  goHome(e) {
+    e.preventDefault();
+    this.props.home(e.target.value);
+  }
+  
+  goViewDay(e) {
+    e.preventDefault();
+    this.props.viewDay(e.target.value);
+  }
+  
+  render() {
+    let selected = this.props.selected;
+    let home = <li><a href="" onClick={this.goHome}><i className="material-icons-round">home</i><span>Home</span></a></li>;
+    let today = <li><a href="" onClick={this.goViewDay}><i className="material-icons-round">today</i><span>Today</span></a></li>;
+    
+    if (selected == "home") {
+      home = <li className="selected"><a href="" onClick={this.goHome}><i className="material-icons-round">home</i><span>Home</span></a></li>;
+    } else if (selected == "today") {
+      today = <li className="selected"><a href="" onClick={this.goViewDay}><i className="material-icons-round">today</i><span>Today</span></a></li>;
+    } else {
+    }
+    
+    return (
+      <footer>
+      <nav id="main-nav">
+        <ul>
+          {home}
+          {today}
+        </ul>
+      </nav>
+    </footer>
+    );
+  }
 }
 
-// Searches to see if an object in the array specified has the value provided set as the "key"
-function searchArray(word, array){
-	// For each item in the array (each category type)
-	for (var i=0; i < array.length; i++) {
-		// If the value under key "keyword" is equal to var word
-		if (array[i].keyword === word) {
-			// Returns the object
-			return array[i];
-		}
-	}
+class Calendar extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  // For month view
+  // Need to know how many weeks to display
+  // Need to know how many invalid days to show before first day of month
+  // Need to know how many invalid days to show after last day of month
+  // Then for each valid day we want to create an element by loading the mood
+  // Also need to make it so that arrows change the month, not the week
+  /*
+  function weekCount(year, month_number, startDayOfWeek) {
+    // month_number is in the range 1..12
+
+    // Get the first day of week week day (0: Sunday, 1: Monday, ...)
+    var firstDayOfWeek = startDayOfWeek || 0;
+
+    var firstOfMonth = new Date(year, month_number-1, 1);
+    var lastOfMonth = new Date(year, month_number, 0);
+    var numberOfDaysInMonth = lastOfMonth.getDate();
+    var firstWeekDay = (firstOfMonth.getDay() - firstDayOfWeek + 7) % 7;
+
+    var used = firstWeekDay + numberOfDaysInMonth;
+
+    return Math.ceil( used / 7);
+  }
+  */
+  
+  
+  // For week view
+  // Only need to render today and the previous 6 days
+  // Also need to make it so that arrows change the week, not the month
+  render() {
+    return (
+      <div id="calendar">
+        <div className="calendar-heading">
+          <div className="calendar-navigation">
+            <span className="material-icons-round arrow-left">keyboard_arrow_left</span>
+            <p className="month">October</p>
+            <span className="material-icons-round arrow-right">keyboard_arrow_right</span>
+          </div>
+          <div className="calendar-views">
+            <span className="material-icons-round">view_module</span>
+            <span className="material-icons-round">view_stream</span>
+          </div>
+        </div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+        <div className="day-small"></div>
+      </div>
+    );
+  }
 }
 
-// Function to render Day Overview section
-// React JS is giving me a warning here, but my code still works and I don't negotiate with terrorists. 
-function populateDayOverview(date, data) {
-	let dataElements = [];
-	if (data !== "none") {
-		// For each key/value passed in through parameter data (expected to be an object)
-		for (const [key, value] of Object.entries(data)) {
-			let keyword = key;
-			let thisObject = searchArray(keyword, categories);
-			// Creates bubble from our class Bubble, sending in some object properties as props
-			let bubble = <Bubble 
-				propKey={keyword}
-				title={thisObject.title}
-				quant={thisObject.quant}
-				propValue = {value}
-				type = {thisObject.type}
-				icon = {thisObject.icon}
-			/>;
-		// Pushes created bubble elements into our array dataElements
-		dataElements.push(bubble);
-		}
-	} else {
-		let alert = <AlertEnterDay />
-		dataElements.push(alert);
-	}
-	// Renders the array of bubbles to the designated class
-	ReactDOM.render(
-		<div>{dataElements}</div>,
-		document.getElementById('day-info')
-	);
+/* Different main screen states */
+
+// Creates Splash screen
+class Splash extends React.Component {
+  constructor(props) {
+    super(props);
+    this.goLogIn = this.goLogIn.bind(this);
+    this.goSignUp = this.goSignUp.bind(this);
+  }
+  
+  // Handles state change for log in button
+  goLogIn(e) {
+    this.props.logIn(e.target.value);
+  }
+  
+  // Handles state change for sign up button
+  goSignUp(e) {
+    this.props.signUp(e.target.value);
+  }
+  
+  render() {
+    return (
+      <div className="blue-background footer-space">
+        <Logo />
+        <footer className="bottom-buttons">
+          <div className="button" onClick={this.goLogIn}>Log In</div>
+          <div className="button" onClick={this.goSignUp}>Sign Up</div>
+        </footer>
+      </div>
+    );
+  }
 }
 
-class NumberForm extends React.Component {
-	constructor(props) {
-    		super(props);
-    		this.handleIncrease = this.handleIncrease.bind(this);
-		this.handleDecrease = this.handleDecrease.bind(this);
-		this.handleClick = this.handleClick.bind(this);
-	}
-
-  	handleIncrease(e) {
-		e.preventDefault();
-		console.log('This item incremented');
-	}
-	
-	handleDecrease(e) {
-		e.preventDefault();
-		console.log('This item decremented');
-	}
-	
-	handleClick(e) {
-		e.preventDefault();
-		console.log('This item clicked');
-	}
-	
-	render () {
-		return (
-			<div className="icon-container">
-                    		<div className="icon-row">
-					<div className="icon-column icon-span4"><span className=""></span></div>
-					<div className="icon-column icon-span4"><a onClick={this.handleIncrease} href=""><span className="material-icons-round">keyboard_arrow_up</span></a></div>
-					<div className="icon-column icon-span4"><span className=""></span></div>
-					<div className="icon-column icon-span4"><span className=""></span></div>
-					<div className="icon-column icon-span4"><span className="material-icons-round">{this.props.icon}</span></div>
-					<div className="icon-column icon-span4"><span className="number-log">{this.props.number}</span></div>
-					<div className="icon-column icon-span4"><span className=""></span></div>
-					<div className="icon-column icon-span4"><a onClick={this.handleDecrease} href=""><span className="material-icons-round">keyboard_arrow_down</span></a></div>
-					<div className="icon-column icon-span4"><span className=""></span></div>
-				</div>
-			</div>
-		);
-	}
+// Creates Log in screen
+class LogInForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.goHome = this.goHome.bind(this);
+    this.goSplash = this.goSplash.bind(this);
+  }
+  
+  goHome(e) {
+    this.props.home(e.target.value);
+  }
+  
+  // Handles state change for sign up button
+  goSplash(e) {
+    this.props.splash(e.target.value);
+  }
+  
+  render() {
+    return (
+      <div className="full-height footer-space">
+        <form id="log-in">
+          <h1>Log in</h1>
+          <label htmlFor="log-in-email">Email</label>
+          <br />
+          <input type="text" name="log-in-email" id="log-in-email" placeholder="email" />
+          <br />
+          <label htmlFor="log-in-password">Password</label>
+          <br />
+          <input type="password" name="log-in-password" id="log-in-password" placeholder="password" />
+          <div className="error-container"></div>
+          <footer className="bottom-buttons">
+            <div className="button" onClick={this.goHome}>Log In</div>
+            <div className="button" onClick={this.goSplash}>Back</div>
+          </footer>
+        </form>
+      </div>
+    );
+  }
 }
 
-
-// Outlining this here at least for now.
-
-// When the user *starts* entering the day, we need to do something specific:
-// - figure out how many categories there are
-//   - we'll first read from database, and then activate a callback function to proceed from there...
-
-
-function createEnterForm(categoryObject, information = null, date, loadBar) {
-	let categoryTitle = categoryObject.title;
-	let categoryIcon = categoryObject.icon;
-	let categoryType = categoryObject.type;
-	
-	if (categoryType === "icon-number") {
-		let num = 0;
-		if (information !== null) {
-			//do something with dataValue
-			console.log("we need to generate an icon-number field and populate " + information);
-			number = information;
-		} else {
-			console.log("we need to generate an icon-number field");
-			number = 0;
-		}
-		let form = <NumberForm 
-			number={number}
-			title = {categoryTitle}
-			propDate = {date}
-			propQuant = {categoryObject.quant}
-			propQuants = {categoryObject.quants}
-			icon = {categoryIcon}
-		/>
-		ReactDOM.render(
-			form,
-			document.getElementById('category-enter-screen')
-		);
-	} else if (categoryType === "number") {
-		if (information !== null) {
-			//do something with dataValue
-			console.log("we need to generate a number field and populate " + information);
-		} else {
-			console.log("we need to generate a number field");
-		}
-	} else if (categoryType === "mood") {
-		if (information !== null) {
-			//do something with dataValue
-			console.log("we need to generate a mood field and populate " + information);
-		} else {
-			console.log("we need to generate a mood field");
-		}
-	} else {
-		if (information !== null) {
-			//do something with dataValue
-			console.log("we need to generate an unknown field and populate " + information);
-		} else {
-			console.log("we need to generate an unknown field");
-		}
-	}
+// Creates Sign up screen
+class SignUpForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.goHome = this.goHome.bind(this);
+    this.goSplash = this.goSplash.bind(this);
+  }
+  
+  // Handles state change for log in button
+  goHome(e) {
+    this.props.home(e.target.value);
+  }
+  
+  // Handles state change for sign up button
+  goSplash(e) {
+    this.props.splash(e.target.value);
+  }
+  
+  render() {
+    return (
+      <div className="full-height footer-space">
+        <form id="sign-up">
+          <h1>Log in</h1>
+          <label htmlFor="sign-up-email">Email</label>
+          <br />
+          <input type="text" name="sign-up-email" id="sign-up-email" placeholder="email" />
+          <br />
+          <label htmlFor="sign-up-password">Password</label>
+          <br />
+          <input type="password" name="sign-up-password" id="sign-up-password" placeholder="password" />
+          <div className="error-container"></div>
+          <footer className="bottom-buttons">
+            <div className="button" onClick={this.goHome}>Sign Up</div>
+            <div className="button" onClick={this.goSplash}>Back</div>
+          </footer>
+        </form>
+      </div>
+    );
+  }
 }
 
-function prepareEnterDay(date, data, categoryData) {
-	let dataElements = [];
-	let loadBar = determineEnterLoadingBar(categoryData);
-	// For each category the user is tracking
-	for (const [key, value] of Object.entries(categoryData)) {
-		let keyword = key;
-		let thisObject = searchArray(keyword, categories);
-		// If there is no data
-		if (data === "none") {
-			// Create an empty form for this category
-			//createEnterForm(thisObject, null, date, loadBar);
-		// If there is data
-		} else {
-			// If the data contains information on this category
-			if (data.hasOwnProperty(keyword)) {
-				let dataValue = data[keyword];
-				createEnterForm(thisObject, dataValue, date, loadBar);
-				//createEnterForm(thisObject, dataValue, date, loadBar);
-			// If not...
-			} else {
-				// Create an empty form for this category
-				//createEnterForm(thisObject, null, date, loadBar);
-			}
-		}
-	}
-	
+class HomeNav extends React.Component {
+  constructor(props) {
+    super(props);
+    this.goHome = this.goHome.bind(this);
+    this.goViewDay = this.goViewDay.bind(this)
+  }
+  
+  goHome() {
+    this.props.home();
+  }
+  
+  // Handles state change for sign up button
+  goViewDay() {
+    this.props.viewDay();
+  }
+  
+  render() {
+    return (
+      <div className="full-height footer-space header-space">
+        <Heading />
+        <h1>Home State</h1>
+        <Calendar />
+        <Nav home={this.goHome} viewDay={this.goViewDay} selected="home"/>
+      </div>
+    );
+  }
 }
 
-function retrieveDayInfo(date, data) {
-	readDay(date, prepareEnterDay, data);
+class TodayView extends React.Component {
+  constructor(props) {
+    super(props);
+    this.goHome = this.goHome.bind(this);
+    this.goViewDay = this.goViewDay.bind(this)
+  }
+  
+  goHome() {
+    this.props.home();
+  }
+  
+  // Handles state change for sign up button
+  goViewDay() {
+    this.props.viewDay();
+  }
+  
+  render() {
+    return (
+      <div className="full-height footer-space header-space">
+        <Heading />
+        <h1>View Day State</h1>
+        <Nav home={this.goHome} viewDay={this.goViewDay} selected="today"/>
+      </div>
+    );
+  }
 }
 
+/* App main */
 
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {viewState: "splash"};
+    
+    this.goSplash = this.goSplash.bind(this);
+    this.goLogIn = this.goLogIn.bind(this);
+    this.goSignUp = this.goSignUp.bind(this);
+    this.goHome = this.goHome.bind(this);
+    this.goViewDay = this.goViewDay.bind(this);
+    this.goLogDay = this.goLogDay.bind(this);
+  }
+  
+  goSplash() {
+    this.setState({viewState: "splash"});
+  }
+  
+  goLogIn() {
+    this.setState({viewState: "logIn"});
+  }
+  
+  goSignUp() {
+    this.setState({viewState: "signUp"});
+  }
+  
+  goHome() {
+    this.setState({viewState: "home"});
+  }
+  
+  goViewDay() {
+    this.setState({viewState: "viewDay"});
+  }
+  
+  goLogDay() {
+    this.setState({viewState: "logDay"});
+  }
+  
+  render() {
+    let viewState = this.state.viewState;
+    let container;
+    if (viewState == "splash") {
+      container = <Splash logIn={this.goLogIn} signUp={this.goSignUp}/>;
+    } else if (viewState == "logIn") {
+      container = <LogInForm home={this.goHome} splash={this.goSplash}/>;
+    } else if (viewState == "signUp") {
+      container = <SignUpForm home={this.goHome} splash={this.goSplash}/>;
+    } else if (viewState == "home") {
+      container = <HomeNav home={this.goHome} viewDay={this.goViewDay}/>;
+    } else if (viewState == "viewDay") {
+      container = <TodayView home={this.goHome} viewDay={this.goViewDay}/>;
+    } else if (viewState == "logDay") {
+      container = <h1>Log Day State</h1>;
+    } else {
+      container = <h1>Unknown State</h1>;
+    }
+    
+    return (
+      <div>
+        {container}
+      </div>
+    );
+  }
+}
 
+/* Render call */
 
-// Function to retrieve categories we're tracking
-
-// Function to read database for specified date and creates array/object of categories and data (orders mood first)
-	// Read database
-	// For each item in categories array, fill data if it was found in the data retrieved from database (but check for mood first)
-	// If data wasn't found, do something else we'll look for later
-	// Return reordered array
-
-// Function to when given a position in the array, and the array itself,
-	// Do stuff SUSAN EDIT THIS FIRST
-
-// Function to update the page, given data type, data (if it exists), loading bar, and date
-
-
-
-// When user starts their log for a given day, we need to get: a list of categories we're going to be tracking and the date we're logging for
-// We'll want to change the date on the screen for this
-
-// Parameters date
-// Return categories
-
-// With this information, we need to search the database for information in any of those categories and keep all of this information together (maybe an array or something)
-// If we do make this an array, we need to store the LACK of information reliably, maybe a codeword or just null, idk
-
-// Parameters date, categories
-// Return array of data
-
-// This array then should be passed, unchanging, into a function to set up our log form. For each stage in the form, we need to load the appropriate data visualization option
-// and if data exists, populate that into the form. If there is data in the mood section, we'll want to add a class to the overall container to style things the right color
-// In addition to changing the visualization, click handlers need to do the correct thing... so it sounds like this whole piece needs to be react :(
-// Need to see if the current category is first or last, and do unique things to the next/back buttons if so.
-// Otherwise next/back buttons need to iterate to the next or previous category (this is complicated)
-
-//
-
-// During each screen if the user selects something new, update the database? Or only when they hit next? Maybe next
-
-// On submit, return user to homescreen
+ReactDOM.render(
+  <App viewState={"home"} />,
+  document.getElementById('root')
+);
