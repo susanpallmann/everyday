@@ -52,14 +52,14 @@ One design choice that will certainly stand out is the fact that dark mode is th
 
 #### Minimal Interaction
 One of the common concerns brought up by users in the initial interviews was that logging information daily can become a chore, or too tedious to become a habit. To combat this, the daily logging forms are designed to be able to be completed in as few interactions as possible.
-User Testing
 
+### User Testing
 * Proof of some assumptions
 * New thoughts and problems
 
-#### Redesign
+### Redesign
 
-#### Development
+### Development
 * Why React?
 * Flow Chart
 * Diagraming States
