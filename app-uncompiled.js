@@ -584,3 +584,5 @@ ReactDOM.render(
   <App viewState={"home"} />,
   document.getElementById('root')
 );
+
+// Magic Comment
