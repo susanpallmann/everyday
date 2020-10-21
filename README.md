@@ -1,7 +1,7 @@
 # everyday-react
 Concept: Susan Pallmann and Josh Ahlers
 
-Execution (Design & Development): Susan Pallmann
+Execution (Research, Design, & Development): Susan Pallmann
 
 Rebuild #4
 
